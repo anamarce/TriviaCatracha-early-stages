@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class UIInitActive : InitAction {
+public class UiInitMyActive : InitMyAction {
 	
 	public bool Active=true;
 	

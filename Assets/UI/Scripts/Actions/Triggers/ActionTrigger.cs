@@ -6,17 +6,17 @@ public class ActionTrigger : MonoBehaviour {
 	
 	
 	
-	public Action [] actions;
+	public MyAction [] MyActions;
 	
 	
 	
 	void Awake () {
-	    actions = this.transform.GetComponentsInChildren<Action>();
+	    MyActions = this.transform.GetComponentsInChildren<MyAction>();
 	}
 	
 	public void ExecuteAllActions()
 	{
-		foreach(var action in actions)
+		foreach(var action in MyActions)
 		{
 			action.ActionTriggered();
 		}
