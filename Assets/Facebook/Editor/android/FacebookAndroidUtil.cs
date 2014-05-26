@@ -46,7 +46,7 @@ namespace UnityEditor.FacebookEditor
                     if (!DoesCommandExist("keytool"))
                     {
                         setupError = ERROR_NO_KEYTOOL;
-                        return null;
+                       // return null;
                     }
                     debugKeyHash = GetKeyHash("androiddebugkey", DebugKeyStorePath, "android");
                 }
@@ -121,6 +121,7 @@ namespace UnityEditor.FacebookEditor
             var proc = new Process();
 			if (Application.platform == UnityEngine.RuntimePlatform.WindowsEditor)
             {
+
                 proc.StartInfo.FileName = "cmd";
                 proc.StartInfo.Arguments = @"/C" + command;
             }
@@ -133,6 +134,7 @@ namespace UnityEditor.FacebookEditor
             proc.StartInfo.CreateNoWindow = true;
             proc.Start();
             proc.WaitForExit();
+
 			if (Application.platform == UnityEngine.RuntimePlatform.WindowsEditor)
             {
                 return proc.ExitCode == 0;
