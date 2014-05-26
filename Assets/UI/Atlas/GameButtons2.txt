@@ -1,0 +1,252 @@
+{"frames": {
+
+"Achievements.png":
+{
+	"frame": {"x":518,"y":682,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Backward_tono1.png":
+{
+	"frame": {"x":260,"y":928,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Backward_tono2.png":
+{
+	"frame": {"x":260,"y":844,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Best-Score.png":
+{
+	"frame": {"x":2,"y":2,"w":388,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":388,"h":90},
+	"sourceSize": {"w":388,"h":90}
+},
+"Best-Score_354x82.png":
+{
+	"frame": {"x":392,"y":2,"w":354,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":354,"h":82},
+	"sourceSize": {"w":354,"h":82}
+},
+"Forward_tono1.png":
+{
+	"frame": {"x":260,"y":760,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Forward_tono2.png":
+{
+	"frame": {"x":2,"y":936,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Game-Circle.png":
+{
+	"frame": {"x":2,"y":852,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Levels_tono1.png":
+{
+	"frame": {"x":2,"y":768,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Levels_tono2.png":
+{
+	"frame": {"x":2,"y":684,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Main Menu.png":
+{
+	"frame": {"x":260,"y":676,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Menu_game.png":
+{
+	"frame": {"x":518,"y":598,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Next.png":
+{
+	"frame": {"x":2,"y":600,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Off_tono1.png":
+{
+	"frame": {"x":260,"y":592,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Off_tono2.png":
+{
+	"frame": {"x":518,"y":514,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"On_tono1.png":
+{
+	"frame": {"x":2,"y":516,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"On_tono2.png":
+{
+	"frame": {"x":260,"y":508,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Quit2.png":
+{
+	"frame": {"x":648,"y":430,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Resume.png":
+{
+	"frame": {"x":2,"y":432,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Resume_naranja.png":
+{
+	"frame": {"x":726,"y":346,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Retry.png":
+{
+	"frame": {"x":726,"y":262,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Retry_Aqua.png":
+{
+	"frame": {"x":726,"y":178,"w":256,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":82},
+	"sourceSize": {"w":256,"h":82}
+},
+"Score.png":
+{
+	"frame": {"x":726,"y":86,"w":256,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":90},
+	"sourceSize": {"w":256,"h":90}
+},
+"Score_233x82.png":
+{
+	"frame": {"x":776,"y":514,"w":233,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":233,"h":82},
+	"sourceSize": {"w":233,"h":82}
+},
+"You Lose.png":
+{
+	"frame": {"x":518,"y":848,"w":256,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":68},
+	"sourceSize": {"w":256,"h":68}
+},
+"You Win.png":
+{
+	"frame": {"x":518,"y":766,"w":256,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":80},
+	"sourceSize": {"w":256,"h":80}
+},
+"You-Lose_310x82.png":
+{
+	"frame": {"x":336,"y":424,"w":310,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":310,"h":82},
+	"sourceSize": {"w":310,"h":82}
+},
+"You-Win_264x82.png":
+{
+	"frame": {"x":748,"y":2,"w":264,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":264,"h":82},
+	"sourceSize": {"w":264,"h":82}
+},
+"watch-replay-button-example.png":
+{
+	"frame": {"x":2,"y":94,"w":332,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":332,"h":336},
+	"sourceSize": {"w":344,"h":344}
+},
+"watch-replays-button-example.png":
+{
+	"frame": {"x":392,"y":86,"w":332,"h":336},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":0,"w":332,"h":336},
+	"sourceSize": {"w":344,"h":344}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "GameButtons2.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3fbaa6495f0a4f3430d3d4348d898db6$"
+}
+}

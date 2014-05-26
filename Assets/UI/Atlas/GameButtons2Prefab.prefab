@@ -1,0 +1,597 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: GameButtons2Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: cb72804ed08fcc74999b8048d2f40ac9, type: 2}
+  sprites:
+  - name: Achievements
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 682
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 682
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Backward_tono1
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 928
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 928
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Backward_tono2
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 844
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 844
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Best-Score
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 2
+      width: 388
+      height: 90
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 2
+      width: 388
+      height: 90
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Best-Score_354x82
+    outer:
+      serializedVersion: 2
+      x: 392
+      y: 2
+      width: 354
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 392
+      y: 2
+      width: 354
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Forward_tono1
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 760
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 760
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Forward_tono2
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 936
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 936
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Game-Circle
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 852
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 852
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Levels_tono1
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 768
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 768
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Levels_tono2
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 684
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 684
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Main Menu
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 676
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 676
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Menu_game
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 598
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 598
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Next
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 600
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 600
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Off_tono1
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 592
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 592
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Off_tono2
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 514
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 514
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: On_tono1
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 516
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 516
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: On_tono2
+    outer:
+      serializedVersion: 2
+      x: 260
+      y: 508
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 260
+      y: 508
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Quit2
+    outer:
+      serializedVersion: 2
+      x: 648
+      y: 430
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 648
+      y: 430
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Resume
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 432
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 432
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Resume_naranja
+    outer:
+      serializedVersion: 2
+      x: 726
+      y: 346
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 726
+      y: 346
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Retry
+    outer:
+      serializedVersion: 2
+      x: 726
+      y: 262
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 726
+      y: 262
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Retry_Aqua
+    outer:
+      serializedVersion: 2
+      x: 726
+      y: 178
+      width: 256
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 726
+      y: 178
+      width: 256
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Score
+    outer:
+      serializedVersion: 2
+      x: 726
+      y: 86
+      width: 256
+      height: 90
+    inner:
+      serializedVersion: 2
+      x: 726
+      y: 86
+      width: 256
+      height: 90
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Score_233x82
+    outer:
+      serializedVersion: 2
+      x: 776
+      y: 514
+      width: 233
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 776
+      y: 514
+      width: 233
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: watch-replay-button-example
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 94
+      width: 332
+      height: 336
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 94
+      width: 332
+      height: 336
+    rotated: 0
+    paddingLeft: .0180722885
+    paddingRight: .0180722885
+    paddingTop: 0
+    paddingBottom: .0238095243
+  - name: watch-replays-button-example
+    outer:
+      serializedVersion: 2
+      x: 392
+      y: 86
+      width: 332
+      height: 336
+    inner:
+      serializedVersion: 2
+      x: 392
+      y: 86
+      width: 332
+      height: 336
+    rotated: 0
+    paddingLeft: .0180722885
+    paddingRight: .0180722885
+    paddingTop: 0
+    paddingBottom: .0238095243
+  - name: You Lose
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 848
+      width: 256
+      height: 68
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 848
+      width: 256
+      height: 68
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: You Win
+    outer:
+      serializedVersion: 2
+      x: 518
+      y: 766
+      width: 256
+      height: 80
+    inner:
+      serializedVersion: 2
+      x: 518
+      y: 766
+      width: 256
+      height: 80
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: You-Lose_310x82
+    outer:
+      serializedVersion: 2
+      x: 336
+      y: 424
+      width: 310
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 336
+      y: 424
+      width: 310
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: You-Win_264x82
+    outer:
+      serializedVersion: 2
+      x: 748
+      y: 2
+      width: 264
+      height: 82
+    inner:
+      serializedVersion: 2
+      x: 748
+      y: 2
+      width: 264
+      height: 82
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
