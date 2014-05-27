@@ -1,3 +1,6 @@
 lastUpgrade=00900
 proj.AppId=894361824833
 android.SetupDone=true
+ios.ClientId=894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com
+ios.BundleId=com.xtudio16.triviageek
+ios.SetupDone=true
