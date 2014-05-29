@@ -50,5 +50,11 @@ public class TestParse : MonoBehaviour {
 
 		}
 
+		if (GUI.Button(new Rect(10, 270, 200, 50), "Test AdBuddiz Ads"))
+		{
+			Application.LoadLevel("AdBuddizExample");
+
+		}
+
 	}
 }
