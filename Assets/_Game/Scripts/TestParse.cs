@@ -8,7 +8,7 @@ public class TestParse : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+	    Managers.Social.InitializeSocialManager();
 	}
 	
 	// Update is called once per frame
@@ -54,6 +54,12 @@ public class TestParse : MonoBehaviour {
 		{
 			Application.LoadLevel("AdBuddizExample");
 
+		}
+
+		if (GUI.Button(new Rect(10, 470, 200, 50), "Show Facebook Console"))
+		{
+			Application.LoadLevel("InteractiveConsole");
+			
 		}
 
 	}

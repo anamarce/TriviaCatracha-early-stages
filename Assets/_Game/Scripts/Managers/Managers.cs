@@ -6,6 +6,13 @@ using System.Collections;
 
     public class Managers : MonoBehaviour
     {
+
+	   private static SocialManager socialManager;
+		public static SocialManager Social
+		{
+			get { Validate();return socialManager; }
+		}
+
         private static GameManager gameManager;
         public static GameManager Game
         {
@@ -40,7 +47,7 @@ using System.Collections;
         static void Validate()
         {
             if(gameManager==null || audioManager ==null  || effectsManager==null
-               || dataManager == null || platformManager == null )
+		   || dataManager == null || platformManager == null || socialManager == null  )
             {
                 Application.LoadLevel("Xtudio16StartScene");
 		    
@@ -53,6 +60,7 @@ using System.Collections;
 	    
 		
             //Find the references
+            socialManager = GetComponent<SocialManager>();
             gameManager = GetComponent<GameManager>();
             audioManager = GetComponent<AudioManager>();
             dataManager = GetComponent<DataManager>();

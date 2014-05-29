@@ -37,9 +37,13 @@ public sealed class InteractiveConsole : MonoBehaviour
 
     void LoginCallback(FBResult result)
     {
+		status = "Login Call Back : " + result.Error;
         if (result.Error != null)
+		{
             lastResponse = "Error Response:\n" + result.Error;
-        else if (!FB.IsLoggedIn)
+		    
+		}
+		else if (!FB.IsLoggedIn)
         {
             lastResponse = "Login cancelled by Player";
         }
@@ -47,6 +51,7 @@ public sealed class InteractiveConsole : MonoBehaviour
         {
             lastResponse = "Login was successful!";
         }
+		status = lastResponse;
     }
 
     private void CallFBLogout()

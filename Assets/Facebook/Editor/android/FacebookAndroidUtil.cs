@@ -46,7 +46,7 @@ namespace UnityEditor.FacebookEditor
                     if (!DoesCommandExist("keytool"))
                     {
                         setupError = ERROR_NO_KEYTOOL;
-                       // return null;
+                      // return null;
                     }
                     debugKeyHash = GetKeyHash("androiddebugkey", DebugKeyStorePath, "android");
                 }
