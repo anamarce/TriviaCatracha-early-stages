@@ -8,7 +8,7 @@ public class SocialManager : MonoBehaviour {
 
 	public bool userAuthenticated =false;
 	void Start () {
-		
+
 	}
 
 	public void InitializeSocialManager()

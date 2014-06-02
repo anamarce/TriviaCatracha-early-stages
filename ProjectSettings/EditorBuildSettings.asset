@@ -10,6 +10,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_UI/Scenes/MainScene.unity
   - enabled: 1
-    path: Assets/ExampleScene/AdBuddizExample.unity
-  - enabled: 1
-    path: Assets/Examples/InteractiveConsole.unity
+    path: Assets/_UI/Scenes/StartTransitionScene.unity
