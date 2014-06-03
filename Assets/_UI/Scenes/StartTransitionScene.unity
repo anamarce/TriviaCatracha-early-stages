@@ -373,7 +373,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1967236017}
   - 114: {fileID: 1967236016}
-  - 114: {fileID: 1967236018}
   m_Layer: 0
   m_Name: DelayGameObject
   m_TagString: Untagged
@@ -405,17 +404,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1967236018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1967236015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 935f87f6a9a651a48993b52d420a9448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2145648417
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +413,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2145648418}
   - 114: {fileID: 2145648419}
+  - 114: {fileID: 2145648420}
   m_Layer: 8
   m_Name: UI Root (2D)
   m_TagString: Untagged
@@ -460,3 +449,14 @@ MonoBehaviour:
   manualHeight: 720
   minimumHeight: 320
   maximumHeight: 1536
+--- !u!114 &2145648420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2145648417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 935f87f6a9a651a48993b52d420a9448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

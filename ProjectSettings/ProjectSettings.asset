@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  AndroidProfiler: 0
+  AndroidProfiler: 1
   defaultScreenOrientation: 0
   targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Xtudio16
-  productName: Trivia Geek Challenge
+  productName: Trivia Geek Match
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024

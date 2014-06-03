@@ -1,0 +1,11 @@
+MainTitle = Partido de Geek Trivia
+changelanguage = Cambiar Lenguage
+settingstitle = Opciones
+newmatch  = # Nueva Partida>
+matches = # Partidas>
+leaderboards = # Tablas de Lideres>
+achievements = # Logros>
+signout = Desloguearse>
+signin = Autenticar>
+settings = Opciones>
+quit = Salir>

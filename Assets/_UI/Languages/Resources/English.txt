@@ -1,0 +1,11 @@
+MainTitle = Trivia Geek Match
+changelanguage = Change Language
+settingstitle = Settings
+newmatch  = # New Match>
+matches = # Matches>
+leaderboards = # LeaderBoards>
+achievements = # Achievements>
+signout = Sign Out>
+signin = Sign In>
+settings = Settings>
+quit = Quit>

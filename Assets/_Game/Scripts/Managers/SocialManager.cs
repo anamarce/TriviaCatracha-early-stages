@@ -8,12 +8,12 @@ public class SocialManager : MonoBehaviour {
 
 	public bool userAuthenticated =false;
 	void Start () {
-
+		GooglePlayGames.PlayGamesPlatform.Activate();
 	}
 
 	public void InitializeSocialManager()
 	{
-		GooglePlayGames.PlayGamesPlatform.Activate();
+
 	//	if (!Social.localUser.authenticated) 
 	//	{
 			// Authenticate
@@ -29,5 +29,29 @@ public class SocialManager : MonoBehaviour {
 
 		//}
 	}
+	public void SignIn()
+	{
+		if (!Social.localUser.authenticated) 
+		{
+			((PlayGamesPlatform)Social.Active).Authenticate
+				(
+					(bool success) => 
+					{
+					userAuthenticated = true;
+				}
+				,false);
+		}
 
+	}
+	public bool IsAuthenticated()
+	{
+		return Social.localUser.authenticated;
+	}
+	public void SignOut()
+	{
+		if (Social.localUser.authenticated) 
+		{
+			((PlayGamesPlatform) Social.Active).SignOut();
+		}
+	}
 }

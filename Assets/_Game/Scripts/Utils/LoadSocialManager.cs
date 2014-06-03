@@ -5,7 +5,7 @@ public class LoadSocialManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Managers.Social.InitializeSocialManager();
+		Managers.Social.SignIn();
 	}
 	
 
