@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &807789360
 Transform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 825e4c8fb52eebc45815ccabc62ea686, type: 2}
   mTex: {fileID: 2800000, guid: 465d7278a3d2623479e805852274850f, type: 3}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .0661764741, g: .00437932555, b: .00437932555, a: 1}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11400000, guid: a661ac6a177cff44eb607fff4074f0b1, type: 2}
@@ -196,8 +196,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1431865750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 2, z: 0}
-  m_LocalScale: {x: 581, y: 879, z: 1}
+  m_LocalPosition: {x: -1, y: 3, z: 0}
+  m_LocalScale: {x: 543, y: 778, z: 1}
   m_Children: []
   m_Father: {fileID: 129945161}
 --- !u!114 &1431865752
@@ -223,7 +223,7 @@ MonoBehaviour:
     width: 1
     height: 1
   mShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  mTexture: {fileID: 2800000, guid: d9a27efcd9420c84c9f2babce81fd77e, type: 3}
+  mTexture: {fileID: 2800000, guid: 33cae8fdc445edd49a3255f55a456975, type: 3}
 --- !u!1 &1797503852
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964194903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.593406618, y: 0, z: 0}
+  m_LocalPosition: {x: -1.18356168, y: .592105269, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 129945161}
@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb35830b3bf6bd24bb9740a8d6b816cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 1
+  DelayTime: 2
   SceneName: MainScene
 --- !u!4 &1967236017
 Transform:

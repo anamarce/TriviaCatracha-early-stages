@@ -11,3 +11,9 @@ EditorBuildSettings:
     path: Assets/_UI/Scenes/MainScene.unity
   - enabled: 1
     path: Assets/_UI/Scenes/StartTransitionScene.unity
+  - enabled: 1
+    path: Assets/_UI/Scenes/NewMatchScene.unity
+  - enabled: 1
+    path: Assets/_UI/Scenes/MatchLobbyScene.unity
+  - enabled: 1
+    path: Assets/_UI/Scenes/MatchPlayingScene.unity
