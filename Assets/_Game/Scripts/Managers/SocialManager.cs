@@ -52,6 +52,24 @@ public class SocialManager : MonoBehaviour {
 		if (Social.localUser.authenticated) 
 		{
 			((PlayGamesPlatform) Social.Active).SignOut();
+			userAuthenticated = false;
 		}
 	}
+
+	public void ShowLeaderboardUI() {
+		if (userAuthenticated) {
+			Social.ShowLeaderboardUI();
+		}
+		else
+			SignIn();
+	}
+
+	public void ShowAchievementsUI() {
+		if (userAuthenticated) {
+			Social.ShowAchievementsUI();
+		}
+		else
+			SignIn();
+	}
+
 }
