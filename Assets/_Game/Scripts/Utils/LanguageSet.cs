@@ -5,6 +5,7 @@ public class LanguageSet : MonoBehaviour {
 
 	// Use this for initialization
 	public UIPopupList popuplist;
+    public SoundSet soundSetList;
 	void Start () {
 		if (popuplist!=null)
 		{
@@ -20,5 +21,7 @@ public class LanguageSet : MonoBehaviour {
 		Managers.Game.preferences.CurrentLanguage = val;
 		Managers.Game.preferences.SavePreferences();
 		Localization.instance.currentLanguage = Managers.Game.preferences.CurrentLanguage;
-	}
+	    if (soundSetList!=null)
+            soundSetList.RefreshOptions();
+    }
 }

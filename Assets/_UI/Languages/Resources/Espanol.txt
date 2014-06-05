@@ -18,3 +18,6 @@ numberopponents = Numero de Oponentes
 quickmatch = Partida Rapida (Oponentes al azar) >
 invitematch= Crear Partida (Seleccionar Oponentes) >
 or = O
+sound = Sonido
+on = Encendido
+off = Apagado

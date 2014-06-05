@@ -18,5 +18,6 @@ numberopponents = Number of Opponents
 quickmatch = Quick Match (Random Opponents) >
 invitematch= Create Match (Select Opponents) >
 or = OR
-
-
+sound = Sound
+on = On
+off = Off
