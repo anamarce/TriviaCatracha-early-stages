@@ -1,5 +1,5 @@
 MainTitle = Partido de Geek Trivia
-changelanguage = Cambiar Lenguage
+changelanguage = Cambiar Lenguaje
 settingstitle = Opciones
 newmatch  = # Nueva Partida>
 newmatchtitle = Nueva Partida
@@ -12,3 +12,9 @@ settings = Opciones>
 quit = Salir>
 back = < Regresar
 about = Acerca>
+english = Ingles
+spanish = Espanol
+numberopponents = Numero de Oponentes
+quickmatch = Partida Rapida (Oponentes al azar) >
+invitematch= Crear Partida (Seleccionar Oponentes) >
+or = O

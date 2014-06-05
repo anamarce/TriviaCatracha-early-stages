@@ -8,7 +8,7 @@ public class TestParse : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    Managers.Social.InitializeSocialManager();
+	  
 	}
 	
 	// Update is called once per frame

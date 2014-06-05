@@ -24,7 +24,7 @@ public struct Geek {
 };
 
 public class MatchData {
-    private const int Header = 100100; // sanity check for serialization
+    private const int Header = 100100; // Para numero de version
 	private int numberplayers=0;
 	private int status=0;
 	private string datematch="";

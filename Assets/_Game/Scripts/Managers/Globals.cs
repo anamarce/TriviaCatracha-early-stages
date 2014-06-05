@@ -64,7 +64,7 @@ namespace x16
             public static string MainScene = "MainScene";
           
 
-            public static readonly string[] Languages = {"English","Spanish"};
+            public static readonly string[] Languages = {"English","Espanol"};
            
 
 

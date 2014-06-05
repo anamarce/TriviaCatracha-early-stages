@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 129945161}
   - 114: {fileID: 129945162}
-  - 114: {fileID: 129945163}
   m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
@@ -125,20 +124,6 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
---- !u!114 &129945163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 129945160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d349c0fa4d5f2a4fa91e1a5a51a5adf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 129945162}
-  delay: 3
-  deltaalpha: .0199999996
 --- !u!1001 &219594459
 Prefab:
   m_ObjectHideFlags: 0
@@ -342,7 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771c13df7a4e3664ca839defa2b04e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userAuthenticated: 0
 --- !u!1 &766972597
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,8 +390,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807789359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 45, z: -1}
-  m_LocalScale: {x: 410, y: 366, z: 1}
+  m_LocalPosition: {x: -2, y: 66, z: -1}
+  m_LocalScale: {x: 410, y: 331, z: 1}
   m_Children: []
   m_Father: {fileID: 129945161}
 --- !u!114 &807789361
@@ -701,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb35830b3bf6bd24bb9740a8d6b816cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 2
+  DelayTime: 3
   SceneName: StartTransitionScene
 --- !u!4 &1967236017
 Transform:

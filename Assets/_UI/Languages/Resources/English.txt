@@ -12,3 +12,11 @@ settings = Settings>
 quit = Quit>
 back = < Back
 about = About>
+english = English
+spanish = Spanish
+numberopponents = Number of Opponents
+quickmatch = Quick Match (Random Opponents) >
+invitematch= Create Match (Select Opponents) >
+or = OR
+
+

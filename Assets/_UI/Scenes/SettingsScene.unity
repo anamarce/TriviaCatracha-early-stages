@@ -74,57 +74,6 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &53014349
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 53014350}
-  - 114: {fileID: 53014351}
-  m_Layer: 8
-  m_Name: TextureBackGround
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &53014350
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53014349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 3, z: 0}
-  m_LocalScale: {x: 543, y: 778, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2021607478}
---- !u!114 &53014351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 53014349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5c5ca47aa5c01740810b7c66662099f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
-  mTex: {fileID: 0}
-  mColor: {r: .985294104, g: .985294104, b: .985294104, a: .458823532}
-  mPivot: 4
-  mDepth: 0
-  mRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  mShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  mTexture: {fileID: 2800000, guid: 33cae8fdc445edd49a3255f55a456975, type: 3}
 --- !u!1 &249504186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,7 +1095,7 @@ MonoBehaviour:
   position: 0
   items:
   - English
-  - Spanish
+  - Espanol
   padding: {x: 4, y: 2}
   textScale: 2
   textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1244,7 +1193,6 @@ Transform:
   - {fileID: 1443166761}
   - {fileID: 1221564906}
   - {fileID: 1470233438}
-  - {fileID: 53014350}
   m_Father: {fileID: 1824131558}
 --- !u!114 &2021607479
 MonoBehaviour:
