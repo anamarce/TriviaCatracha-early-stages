@@ -12,6 +12,7 @@ public class SocialManager : MonoBehaviour {
 	// the match the player is being offered to play right now
 	TurnBasedMatch mIncomingMatch = null;
 	Invitation mIncomingInvite = null;
+    private string matchLanguage = "EN";
 	private string mErrorMessage = null;
 
 	void Start () {
@@ -34,17 +35,19 @@ public class SocialManager : MonoBehaviour {
 	protected void OnMatchStarted(bool success, TurnBasedMatch match) {
 		//EndStandBy();
 		if (!success) {
+
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";
-			return;
+			Debug.Log(mErrorMessage);
+            return;
 		}
 		
-		//gameObject.GetComponent<PlayGui>().LaunchMatch(match);
+        Debug.Log(match.ToString());
+		//LaunchMatch(match);
 	}
 
 	protected void OnGotInvitation(Invitation invitation, bool shouldAutoAccept) {
 		if (invitation.InvitationType != Invitation.InvType.TurnBased) {
-			// wrong type of invitation!
-			return;
+		     return;
 		}
 		
 		if (shouldAutoAccept) {
@@ -55,15 +58,21 @@ public class SocialManager : MonoBehaviour {
 			mIncomingInvite = invitation;
 		}
 	}
+
+    public void SetMatchLanguage(string language)
+    {
+        matchLanguage = language;
+
+    }
+
+    public string GetMatchLanguage()
+    {
+        return matchLanguage;
+    }
 	public void InitializeSocialManager()
 	{
 
-	//	if (!Social.localUser.authenticated) 
-	//	{
-			// Authenticate
-        
-		// Social.localUser.Authenticate
-        ((PlayGamesPlatform)Social.Active).Authenticate
+	   ((PlayGamesPlatform)Social.Active).Authenticate
         (
               (bool success) => 
               {
@@ -71,7 +80,7 @@ public class SocialManager : MonoBehaviour {
 	    	  }
          ,false);
 
-		//}
+		
 	}
 	public void SignIn()
 	{
@@ -116,4 +125,22 @@ public class SocialManager : MonoBehaviour {
 			SignIn();
 	}
 
+    public void CreateQuickMatch(int MinOpponents, int MaxOpponents)
+    {
+        PlayGamesPlatform.Instance.TurnBased.CreateQuickMatch(MinOpponents, MaxOpponents,
+                   0, OnMatchStarted);
+
+    }
+    public void CreateMatch(int MinOpponents, int MaxOpponents)
+    {
+        PlayGamesPlatform.Instance.TurnBased.CreateWithInvitationScreen(MinOpponents, MaxOpponents,
+                   0, OnMatchStarted);
+
+    }
+
+    public void ShowAndAcceptMatchInvitations()
+    {
+
+        PlayGamesPlatform.Instance.TurnBased.AcceptFromInbox(OnMatchStarted);
+    }
 }
