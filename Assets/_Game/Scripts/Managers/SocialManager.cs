@@ -16,7 +16,9 @@ public class SocialManager : MonoBehaviour {
 	private string mErrorMessage = null;
     private TurnBasedMatch mMatch = null;
     private MatchData mMatchData = null;
-	void Start () {
+    public  string mFinalMessage = null;
+	
+    void Start () {
 		GooglePlayGames.PlayGamesPlatform.Activate();
 		//TODO para deploy quitar la linea
 		PlayGamesPlatform.DebugLogEnabled = true;
@@ -76,7 +78,7 @@ public class SocialManager : MonoBehaviour {
         bool canPlay = (mMatch.Status == TurnBasedMatch.MatchStatus.Active &&
                 mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
 
-     
+      
         // if the match is in the completed state, acknowledge it
         if (mMatch.Status == TurnBasedMatch.MatchStatus.Complete) {
             PlayGamesPlatform.Instance.TurnBased.AcknowledgeFinished(mMatch.MatchId,
@@ -90,9 +92,46 @@ public class SocialManager : MonoBehaviour {
         // set up the objects to show the match to the player
         ShowMatch(canPlay);
     }
+    private string ExplainWhyICantPlay()
+    {
+        switch (mMatch.Status)
+        {
+            case TurnBasedMatch.MatchStatus.Active:
+                break;
+            case TurnBasedMatch.MatchStatus.Complete:
+                
+                return mMatchData.GeekIdWon == mMatch.SelfParticipantId ? "Match finished. YOU WIN!" :
+                        "Match finished. YOU LOST!";
+                break;
+            case TurnBasedMatch.MatchStatus.Cancelled:
+            case TurnBasedMatch.MatchStatus.Expired:
+                return "This match was cancelled.";
+            case TurnBasedMatch.MatchStatus.AutoMatching:
+                return "This match is awaiting players.";
+            default:
+                return "This match can't continue due to an error.";
+        }
 
+        if (mMatch.TurnStatus != TurnBasedMatch.MatchTurnStatus.MyTurn)
+        {
+            return "It's not your turn yet!";
+        }
+
+        return "Error";
+    }
     protected void ShowMatch(bool canPlay)
     {
+        if (canPlay)
+        {
+            Debug.Log("Su turno : id: " + mMatch.SelfParticipantId + " Status:" +mMatch.Status.ToString());
+        }
+        else
+        {
+            mFinalMessage = ExplainWhyICantPlay();
+            Debug.Log(mFinalMessage);
+            Debug.Log("Not Yet id: " + mMatch.SelfParticipantId + " Status:" + mMatch.Status.ToString());
+     
+        }
         Application.LoadLevel("MatchLobbyScene");
 
     }

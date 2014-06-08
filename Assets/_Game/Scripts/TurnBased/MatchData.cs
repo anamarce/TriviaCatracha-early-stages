@@ -30,13 +30,13 @@ public class Geek {
 
 public class MatchData {
     private const int Header = 201461; // Para numero de version
-	private int numberplayers=0;
-	private int status=0;
-	private string datematch="";
-	private string language="";
-	private int CurrentIndexPlayer=-1;
-	private List<Geek> geeks = new List<Geek>();
-	private string GeekIdWon="";
+    public int numberplayers = 0;
+    public int status = 0;
+    public string datematch = "";
+    public string language = "";
+    public int CurrentIndexPlayer = -1;
+    public List<Geek> geeks = new List<Geek>();
+	public string GeekIdWon="";
      
 
     public MatchData() {

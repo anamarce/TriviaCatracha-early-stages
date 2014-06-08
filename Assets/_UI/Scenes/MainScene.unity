@@ -1428,6 +1428,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1176004896}
+  - 114: {fileID: 1176004897}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -1446,6 +1447,19 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 1811870980}
+--- !u!114 &1176004897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1176004895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 555b029050a128846be1cbb796c57b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
 --- !u!1 &1192169022
 GameObject:
   m_ObjectHideFlags: 0
