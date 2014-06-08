@@ -12,8 +12,9 @@ namespace x16
         public override void ActionPerformed()
         {
             if (!Managers.Social.IsAuthenticated()) return;
-			Managers.Social.ShowAchievementsUI();
-
+            
+            Managers.Social.ShowAchievementsUI();
+            
         }
 
     }

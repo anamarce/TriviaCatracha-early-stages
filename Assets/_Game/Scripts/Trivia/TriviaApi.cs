@@ -13,7 +13,19 @@ public class TriviaQuestion
 	public int indexAnswer ;
 	public string [] options = {"","","",""} ;  // siempre sera un array de 4 strings
 
-
+    public TriviaQuestion()
+    {
+        // Just for testing
+         ObjectId="1";
+	     IdQuestion=2;
+	     Question="What is the  name of this Game?";
+	     indexAnswer=1 ;
+        options[0] = "No name";
+        options[1] = "Trivia Geek Match";
+        options[2] = "Tetris";
+        options[3] = "Who cares";
+         
+    }
 }
 
 // Lo hace singleton

@@ -14,7 +14,8 @@ public class SocialManager : MonoBehaviour {
 	Invitation mIncomingInvite = null;
     private string matchLanguage = "EN";
 	private string mErrorMessage = null;
-
+    private TurnBasedMatch mMatch = null;
+    private MatchData mMatchData = null;
 	void Start () {
 		GooglePlayGames.PlayGamesPlatform.Activate();
 		//TODO para deploy quitar la linea
@@ -32,18 +33,69 @@ public class SocialManager : MonoBehaviour {
 		}
 	}
 
-	protected void OnMatchStarted(bool success, TurnBasedMatch match) {
-		//EndStandBy();
-		if (!success) {
+	protected void OnMatchStarted(bool success, TurnBasedMatch match) 
+    {
+	   if (!success) {
 
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";
 			Debug.Log(mErrorMessage);
             return;
 		}
 		
-        Debug.Log(match.ToString());
-		//LaunchMatch(match);
+      LaunchMatch(match);
 	}
+
+    protected void Reset()
+    {
+        mMatch = null;
+        mMatchData = null;
+      
+    }
+    protected void LaunchMatch(TurnBasedMatch match) {
+        Reset();
+        mMatch = match;
+        //MakeActive();
+
+        if (mMatch == null) {
+            throw new System.Exception("Can't be started without a match!");
+        }
+        try {
+            // Note that mMatch.Data might be null (when we are starting a new match).
+            // MatchData.MatchData() correctly deals with that and initializes a
+            // brand-new match in that case.
+            mMatchData = new MatchData(mMatch.Data);
+        } catch (MatchData.UnsupportedMatchFormatException ex) {
+           
+            Debug.LogWarning("Failed to parse match data: " + ex.Message);
+            return;
+        }
+
+     
+      //  mMyMark = mMatchData.GetMyMark(match.SelfParticipantId);
+
+        bool canPlay = (mMatch.Status == TurnBasedMatch.MatchStatus.Active &&
+                mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
+
+     
+        // if the match is in the completed state, acknowledge it
+        if (mMatch.Status == TurnBasedMatch.MatchStatus.Complete) {
+            PlayGamesPlatform.Instance.TurnBased.AcknowledgeFinished(mMatch.MatchId,
+                    (bool success) => {
+                if (!success) {
+                    Debug.LogError("Error acknowledging match finish.");
+                }
+            });
+        }
+
+        // set up the objects to show the match to the player
+        ShowMatch(canPlay);
+    }
+
+    protected void ShowMatch(bool canPlay)
+    {
+        Application.LoadLevel("MatchLobbyScene");
+
+    }
 
 	protected void OnGotInvitation(Invitation invitation, bool shouldAutoAccept) {
 		if (invitation.InvitationType != Invitation.InvType.TurnBased) {

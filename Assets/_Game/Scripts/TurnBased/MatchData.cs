@@ -6,12 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 
 
-public struct Geek {
+public class Geek {
 	public string id;
 	public string name;
 	public int correctAnswers;
 
-
+    public Geek()
+    {
+        this.id = "";
+        this.name = "";
+        this.correctAnswers = 0;
+    }
 	public Geek(string id, string name,int answers) {
 
 		this.id=id;
@@ -24,12 +29,12 @@ public struct Geek {
 };
 
 public class MatchData {
-    private const int Header = 100100; // Para numero de version
+    private const int Header = 201461; // Para numero de version
 	private int numberplayers=0;
 	private int status=0;
 	private string datematch="";
 	private string language="";
-	private int CurrentIndexPlayer=0;
+	private int CurrentIndexPlayer=-1;
 	private List<Geek> geeks = new List<Geek>();
 	private string GeekIdWon="";
      
@@ -40,15 +45,15 @@ public class MatchData {
 
     public MatchData(byte[] b) : this() {
         if (b != null) {
-           // ReadFromBytes(b);
+            ReadFromBytes(b);
             ComputeWinner();
         }
+        else
+        {
+            Debug.Log("Game has started, matchDataNull");
+        }
     }
-
-   
-
-
-
+    
     private void ComputeWinner() 
 	{
       
@@ -81,41 +86,26 @@ public class MatchData {
         return buf;
     }
 */
- /*   private void ReadFromBytes(byte[] b) {
+   private void ReadFromBytes(byte[] b) {
         BinaryReader r = new BinaryReader(new MemoryStream(b));
         int header = r.ReadInt32();
         if (header != Header) {
-            // we don't know how to parse this version; user has to upgrade game
-            throw new UnsupportedMatchFormatException("Board data header " + header +
+            // Wrong header
+            throw new UnsupportedMatchFormatException("Match data header " + header +
                     " not recognized.");
         }
 
-        int len = (int)r.ReadByte();
-        mParticipantIdX = new string(r.ReadChars(len));
+       this.numberplayers = r.ReadInt32();
+       this.status = r.ReadInt32();
+       datematch=r.ReadString();
+       language = r.ReadString();
+	   CurrentIndexPlayer=r.ReadInt32();
+       
+       ComputeWinner();
 
-        int x;
-        for (x = 0; x < mBoard.Length; x++) {
-            mBoard[x] = r.ReadChars(mBoard.Length);
-        }
-        ComputeWinner();
-
-        mBlockDescs.Clear();
-        int blockDescs = r.ReadInt32(), i;
-        for (i = 0; i < blockDescs; i++) {
-            float px, py, pz, rx, ry, rz, rw;
-            char mark = r.ReadChar();
-            px = r.ReadSingle();
-            py = r.ReadSingle();
-            pz = r.ReadSingle();
-            rx = r.ReadSingle();
-            ry = r.ReadSingle();
-            rz = r.ReadSingle();
-            rw = r.ReadSingle();
-            mBlockDescs.Add(new BlockDesc(mark, new Vector3(px, py, pz),
-                    new Quaternion(rx, ry, rz, rw)));
-        }
+       
     }
-*/
+
   
     public class UnsupportedMatchFormatException : System.Exception {
         public UnsupportedMatchFormatException(string message) : base(message) {}
