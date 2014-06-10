@@ -21,3 +21,5 @@ or = OR
 sound = Sound
 on = On
 off = Off
+matchlobby = Match Lobby
+players = Players

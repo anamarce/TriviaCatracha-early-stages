@@ -21,3 +21,5 @@ or = O
 sound = Sonido
 on = Encendido
 off = Apagado
+matchlobby = Partida en Curso
+players = Jugadores
