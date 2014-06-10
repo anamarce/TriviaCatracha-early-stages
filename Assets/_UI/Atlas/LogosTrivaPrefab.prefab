@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: LogosAtlasPrefab
+  m_Name: LogosTrivaPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,39 +38,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 825e4c8fb52eebc45815ccabc62ea686, type: 2}
+  material: {fileID: 2100000, guid: 543979742e196cd44816e91d1479ec9f, type: 2}
   sprites:
-  - name: Memeko_Logo
+  - name: GeekLogo1
     outer:
       serializedVersion: 2
-      x: 306
-      y: 2
-      width: 105
-      height: 512
+      x: 2
+      y: 762
+      width: 256
+      height: 256
     inner:
       serializedVersion: 2
-      x: 306
-      y: 2
-      width: 105
-      height: 512
-    rotated: 1
+      x: 2
+      y: 762
+      width: 256
+      height: 256
+    rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Touch to Start
+  - name: GeekLogo2
     outer:
       serializedVersion: 2
       x: 2
-      y: 470
+      y: 504
       width: 256
-      height: 50
+      height: 256
     inner:
       serializedVersion: 2
       x: 2
-      y: 470
+      y: 504
       width: 256
-      height: 50
+      height: 256
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: GeekLogo3
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 246
+      width: 256
+      height: 256
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 246
+      width: 256
+      height: 256
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -94,24 +112,6 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: XtudioLogoAlpha
-    outer:
-      serializedVersion: 2
-      x: 2
-      y: 246
-      width: 284
-      height: 222
-    inner:
-      serializedVersion: 2
-      x: 2
-      y: 246
-      width: 284
-      height: 222
-    rotated: 0
-    paddingLeft: .0316901393
-    paddingRight: .0316901393
-    paddingTop: .0450450443
-    paddingBottom: .0450450443
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

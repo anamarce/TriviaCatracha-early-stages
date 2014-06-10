@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &807789360
 Transform:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807789359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 32, z: 0}
-  m_LocalScale: {x: 307, y: 289, z: 1}
+  m_LocalPosition: {x: -4, y: 42, z: 0}
+  m_LocalScale: {x: 357, y: 341, z: 1}
   m_Children: []
   m_Father: {fileID: 129945161}
 --- !u!114 &807789361
@@ -162,13 +162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
-  mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
+  mMat: {fileID: 2100000, guid: 543979742e196cd44816e91d1479ec9f, type: 2}
+  mTex: {fileID: 2800000, guid: 6de20a8bbbb140f4eaa35ea7dcca7458, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
-  mSpriteName: FrameRockSimpleGreyscale80
+  mAtlas: {fileID: 11400000, guid: d743711c7a8ce534c83b7f6f9d8e68a7, type: 2}
+  mSpriteName: GeekLogo3
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &969190778
 Transform:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 4
