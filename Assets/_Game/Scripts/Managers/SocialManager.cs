@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 using GooglePlayGames;
@@ -14,8 +15,8 @@ public class SocialManager : MonoBehaviour {
 	Invitation mIncomingInvite = null;
     private string matchLanguage = "EN";
 	private string mErrorMessage = null;
-    private TurnBasedMatch mMatch = null;
-    private MatchData mMatchData = null;
+    public  TurnBasedMatch mMatch = null;
+    public MatchData mMatchData = null;
     public  string mFinalMessage = null;
 	
     void Start () {
@@ -52,6 +53,17 @@ public class SocialManager : MonoBehaviour {
         mMatch = null;
         mMatchData = null;
       
+    }
+
+    public List<Participant> GetCurrentMatchParticipants()
+    {
+        if (mMatch != null)
+            return mMatch.Participants;
+        else
+        {
+            return null;
+        }
+
     }
     protected void LaunchMatch(TurnBasedMatch match) {
         Reset();

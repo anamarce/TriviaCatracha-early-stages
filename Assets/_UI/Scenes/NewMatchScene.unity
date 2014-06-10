@@ -533,7 +533,6 @@ MonoBehaviour:
   items:
   - 1
   - 2
-  - 3
   padding: {x: 4, y: 2}
   textScale: 1.5
   textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1867,8 +1866,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1434660657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.91856217, y: -27.3052979, z: -.995678246}
-  m_LocalScale: {x: 42, y: 37, z: 1}
+  m_LocalPosition: {x: 3.34667683, y: -27.9978027, z: -.999921978}
+  m_LocalScale: {x: 31, y: 28, z: 1}
   m_Children: []
   m_Father: {fileID: 265413427}
 --- !u!114 &1434660659

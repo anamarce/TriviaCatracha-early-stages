@@ -43,6 +43,7 @@ public class TriviaApi  {
 
 	public TriviaQuestion GetQuestion(string MatchId, string LangParseCode, string TopicParseKey)
 	{
+        var question = new TriviaQuestion();
 		// Asegurarse de 
 		// para un mismo MatchID, NO regresar aun random la misma pregunta, para ello supongo que
 		// debera llevar registro interno de que preguntas ha entregado por match para saber cual no repetir
@@ -52,7 +53,7 @@ public class TriviaApi  {
 		// Por ej :   LangparseCode = "EN" , ingles y el topic es anime, entonces el object en parse esta
 		// como :  ENAnime  y dentro de el estan todas las preguntas de Anime en Ingles.
 
-		return null;
+		return question;
 	}
 
 

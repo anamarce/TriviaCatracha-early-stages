@@ -23,3 +23,4 @@ on = Encendido
 off = Apagado
 matchlobby = Partida en Curso
 players = Jugadores
+matchstatus = Estatus Partida:
