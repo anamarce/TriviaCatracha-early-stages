@@ -214,7 +214,8 @@ public class SocialManager : MonoBehaviour {
 
 	public void ShowLeaderboardUI() {
 		if (userAuthenticated) {
-			Social.ShowLeaderboardUI();
+			//Social.ShowLeaderboardUI();
+			((PlayGamesPlatform) Social.Active).ShowLeaderboardUI("CgkIwdz54IMaEAIQAg");
 		}
 		else
 			SignIn();
