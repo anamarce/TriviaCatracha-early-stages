@@ -43,6 +43,10 @@ public class MatchData {
 
     }
 
+    public int GetScoreParticipantID(string participantid)
+    {
+        return 0;
+    }
     public MatchData(byte[] b) : this() {
         if (b != null) {
             ReadFromBytes(b);

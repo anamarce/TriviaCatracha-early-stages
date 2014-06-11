@@ -55,16 +55,7 @@ public class SocialManager : MonoBehaviour {
       
     }
 
-    public List<Participant> GetCurrentMatchParticipants()
-    {
-        if (mMatch != null)
-            return mMatch.Participants;
-        else
-        {
-            return null;
-        }
-
-    }
+   
     protected void LaunchMatch(TurnBasedMatch match) {
         Reset();
         mMatch = match;
@@ -246,5 +237,44 @@ public class SocialManager : MonoBehaviour {
     {
 
         PlayGamesPlatform.Instance.TurnBased.AcceptFromInbox(OnMatchStarted);
+    }
+
+    public List<Participant> GetCurrentMatchParticipants()
+    {
+        if (mMatch != null)
+            return mMatch.Participants;
+        else
+        {
+            return null;
+        }
+
+    }
+    public string GetCurrentMatchStatus()
+    {
+        if (mMatch != null)
+            return mMatch.Status.ToString();
+        else
+        {
+            return "";
+        }
+    }
+    public string GetCurrentMatchParticipantID()
+    {
+        if (mMatch != null)
+            return mMatch.SelfParticipantId;
+        else
+        {
+            return "";
+        }
+    }
+
+    public int  GetCurrentMatchScoreParticipantID(string participantId)
+    {
+        if (mMatchData != null)
+            return mMatchData.GetScoreParticipantID(participantId);
+        else
+        {
+            return 0;
+        }
     }
 }

@@ -24,3 +24,11 @@ off = Apagado
 matchlobby = Partida en Curso
 players = Jugadores
 matchstatus = Estatus Partida:
+
+Active = Activa
+Expired = Terminada
+Cancelled = Cancelada
+AutoMatching = Auto Seleccionando
+Complete = Completada
+Deleted = Borrada
+Unknown = Indefinida

@@ -534,7 +534,7 @@ MonoBehaviour:
   - 1
   - 2
   padding: {x: 4, y: 2}
-  textScale: 1.5
+  textScale: 2
   textColor: {r: 1, g: 1, b: 1, a: 1}
   backgroundColor: {r: .709205329, g: .786764741, b: .370242208, a: 1}
   highlightColor: {r: 1, g: 1, b: 1, a: 1}

@@ -21,7 +21,8 @@ namespace x16
             }
 
             if (Managers.Social.GetMatchLanguage() != "")
-                Managers.Social.CreateMatch(1, maxopponents);
+                Managers.Social.CreateQuickMatch(1,maxopponents);
+               
             else
                 Debug.Log("Match language Not set");
 

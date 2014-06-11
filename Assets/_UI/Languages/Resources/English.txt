@@ -24,3 +24,11 @@ off = Off
 matchlobby = Match Lobby
 players = Players
 matchstatus = Match Status:
+
+Active = Active
+Expired = Expired
+Cancelled = Cancelled
+AutoMatching = AutoMatching
+Complete = Complete
+Deleted = Deleted
+Unknown = Unknown

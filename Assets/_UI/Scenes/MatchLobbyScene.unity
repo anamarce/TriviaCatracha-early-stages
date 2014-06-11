@@ -97,8 +97,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18025313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 125, z: -1.00007999}
-  m_LocalScale: {x: 35, y: 30, z: 1}
+  m_LocalPosition: {x: -163, y: 85, z: -1.00007999}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &18025316
@@ -112,19 +112,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
+  mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 3
   mDepth: 1
-  mFont: {fileID: 11400000, guid: 84e87f7ffbe055544a13b33514c032e5, type: 2}
-  mText: '?'
-  mMaxLineWidth: 50
+  mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
+  mText: 
+  mMaxLineWidth: 150
   mEncoding: 1
   mMaxLineCount: 1
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 2
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -141,7 +141,7 @@ GameObject:
   - 4: {fileID: 100172815}
   - 114: {fileID: 100172817}
   m_Layer: 8
-  m_Name: LabelPlayerStatus_1
+  m_Name: LabelPlayerScore_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,8 +154,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100172814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 168, z: -1}
-  m_LocalScale: {x: 35, y: 30, z: 1}
+  m_LocalPosition: {x: 106, y: 52.6571083, z: -1}
+  m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &100172817
@@ -172,11 +172,68 @@ MonoBehaviour:
   mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
   mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
-  mPivot: 3
+  mPivot: 0
   mDepth: 1
   mFont: {fileID: 11400000, guid: 84e87f7ffbe055544a13b33514c032e5, type: 2}
-  mText: 12
-  mMaxLineWidth: 50
+  mText: 
+  mMaxLineWidth: 40
+  mEncoding: 1
+  mMaxLineCount: 1
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!1 &224244023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 224244024}
+  - 114: {fileID: 224244025}
+  m_Layer: 8
+  m_Name: LabelPlayerScore_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &224244024
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224244023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.00013, y: 118.024117, z: -1.00007999}
+  m_LocalScale: {x: 32.000042, y: 32.000042, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+--- !u!114 &224244025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 224244023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
+  mPivot: 0
+  mDepth: 1
+  mFont: {fileID: 11400000, guid: 84e87f7ffbe055544a13b33514c032e5, type: 2}
+  mText: 
+  mMaxLineWidth: 40
   mEncoding: 1
   mMaxLineCount: 1
   mPassword: 0
@@ -261,8 +318,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 261631121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 90, y: 78.4347153, z: -1.00007999}
-  m_LocalScale: {x: 34.9999199, y: 30, z: 1}
+  m_LocalPosition: {x: -159, y: 19, z: -1.00007999}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &261631124
@@ -276,19 +333,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
+  mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 3
   mDepth: 1
-  mFont: {fileID: 11400000, guid: 84e87f7ffbe055544a13b33514c032e5, type: 2}
-  mText: '...'
-  mMaxLineWidth: 50
+  mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
+  mText: 
+  mMaxLineWidth: 150
   mEncoding: 1
   mMaxLineCount: 1
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 2
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -359,7 +416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &425531488
 Transform:
   m_ObjectHideFlags: 0
@@ -417,8 +474,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 429617921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 131, z: 0}
-  m_LocalScale: {x: 360, y: 222, z: 1}
+  m_LocalPosition: {x: 2, y: 105, z: 0}
+  m_LocalScale: {x: 360, y: 274, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &429617923
@@ -434,7 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
   mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
-  mColor: {r: .875802338, g: .948529422, b: .557958484, a: 1}
+  mColor: {r: .299293399, g: .316176474, b: .225508213, a: 1}
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
@@ -537,8 +594,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 529674976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162, y: 125, z: -1}
-  m_LocalScale: {x: 24, y: 28.0000782, z: 1}
+  m_LocalPosition: {x: -162, y: 106.20562, z: -1}
+  m_LocalScale: {x: 20, y: 24, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &529674979
@@ -558,13 +615,70 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 1
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
-  mText: David Alejandro Vasquez
+  mText: 
   mMaxLineWidth: 230
   mEncoding: 1
   mMaxLineCount: 1
   mPassword: 0
   mShowLastChar: 0
   mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
+--- !u!1 &663729282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 663729283}
+  - 114: {fileID: 663729284}
+  m_Layer: 8
+  m_Name: LabelPlayerStatus_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663729283
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663729282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -165.000076, y: 158.999863, z: -1.00007999}
+  m_LocalScale: {x: 20.0001602, y: 20.0001602, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+--- !u!114 &663729284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663729282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
+  mPivot: 0
+  mDepth: 1
+  mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
+  mText: 
+  mMaxLineWidth: 150
+  mEncoding: 1
+  mMaxLineCount: 1
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -756,7 +870,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840242187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.591643035, y: -359.407898, z: 0}
+  m_LocalPosition: {x: -.602208078, y: -359.39798, z: 0}
   m_LocalScale: {x: 1.00007999, y: 1.00007999, z: 1.00007999}
   m_Children:
   - {fileID: 1323627078}
@@ -802,8 +916,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066956533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162, y: 77, z: -1}
-  m_LocalScale: {x: 24, y: 28.0000782, z: 1}
+  m_LocalPosition: {x: -162, y: 43.6486397, z: -1}
+  m_LocalScale: {x: 20, y: 24, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &1066956536
@@ -823,7 +937,7 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 1
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
-  mText: Sofia Nicolle Deras
+  mText: 
   mMaxLineWidth: 230
   mEncoding: 1
   mMaxLineCount: 1
@@ -863,6 +977,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d798c546daaa8564691a96e7624fb577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MatchStatusLabel: {fileID: 1840366574}
+  infoPlayers:
+  - PlayerNameLabel: {fileID: 1760234367}
+    PlayerStatusLabel: {fileID: 663729284}
+    PlayerScoreLabel: {fileID: 1155545375}
+    PlayerSprite: {fileID: 425531489}
+  - PlayerNameLabel: {fileID: 529674979}
+    PlayerStatusLabel: {fileID: 18025316}
+    PlayerScoreLabel: {fileID: 224244025}
+    PlayerSprite: {fileID: 1520419020}
+  - PlayerNameLabel: {fileID: 1066956536}
+    PlayerStatusLabel: {fileID: 261631124}
+    PlayerScoreLabel: {fileID: 100172817}
+    PlayerSprite: {fileID: 1520419020}
 --- !u!4 &1138046992
 Transform:
   m_ObjectHideFlags: 0
@@ -956,6 +1084,63 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!1 &1155545373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1155545374}
+  - 114: {fileID: 1155545375}
+  m_Layer: 8
+  m_Name: LabelPlayerScore_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1155545374
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155545373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 106.00013, y: 179.218567, z: -1.00007999}
+  m_LocalScale: {x: 32.000042, y: 32.000042, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+--- !u!114 &1155545375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1155545373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 441bce8d6bf1282439aff57f47e8185e, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
+  mPivot: 0
+  mDepth: 1
+  mFont: {fileID: 11400000, guid: 84e87f7ffbe055544a13b33514c032e5, type: 2}
+  mText: 
+  mMaxLineWidth: 40
+  mEncoding: 1
+  mMaxLineCount: 1
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 2
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &1227026651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,7 +1338,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1331489869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.591643035, y: 360.592102, z: 0}
+  m_LocalPosition: {x: -.602208078, y: 360.60202, z: 0}
   m_LocalScale: {x: .999921978, y: .999921978, z: .999921978}
   m_Children:
   - {fileID: 812581727}
@@ -1262,7 +1447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1520419019
 Transform:
   m_ObjectHideFlags: 0
@@ -1372,7 +1557,7 @@ Transform:
   m_GameObject: {fileID: 1760234364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -162, y: 170, z: -1}
-  m_LocalScale: {x: 24, y: 28, z: 1}
+  m_LocalScale: {x: 20, y: 24, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &1760234367
@@ -1392,7 +1577,7 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 1
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
-  mText: "Rogger V\xE1squez "
+  mText: 
   mMaxLineWidth: 230
   mEncoding: 1
   mMaxLineCount: 1
@@ -1446,7 +1631,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1824131556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.591643035, y: .592105269, z: 0}
+  m_LocalPosition: {x: -.602208078, y: .602006674, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2021607478}
@@ -1588,6 +1773,9 @@ Transform:
   - {fileID: 429617922}
   - {fileID: 1504261926}
   - {fileID: 434184293}
+  - {fileID: 1155545374}
+  - {fileID: 224244024}
+  - {fileID: 663729283}
   - {fileID: 1840366573}
   - {fileID: 1760234365}
   - {fileID: 100172815}
@@ -1730,7 +1918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2125569171
 Transform:
   m_ObjectHideFlags: 0
