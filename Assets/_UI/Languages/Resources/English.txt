@@ -24,6 +24,7 @@ off = Off
 matchlobby = Match Lobby
 players = Players
 matchstatus = Match Status:
+turnstatus = Turn Status
 
 Active = Active
 Expired = Expired
@@ -32,3 +33,8 @@ AutoMatching = AutoMatching
 Complete = Complete
 Deleted = Deleted
 Unknown = Unknown
+
+ myturn = Go ahead, it is your Turn!!
+ theirturn = Please wait, It is NOT your Turn :(
+ invitedtomatch = You have been invited to this Match :D
+ 

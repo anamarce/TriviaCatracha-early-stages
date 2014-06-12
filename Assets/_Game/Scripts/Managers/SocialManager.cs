@@ -258,6 +258,46 @@ public class SocialManager : MonoBehaviour {
             return "";
         }
     }
+
+    public TurnBasedMatch.MatchTurnStatus GetCurrentMatchTurnStatus()
+    {
+        if (mMatch != null)
+        {
+            return mMatch.TurnStatus;
+        }
+        else
+        {
+            return TurnBasedMatch.MatchTurnStatus.Unknown;
+        }
+    }
+    public string GetCurrentStringMatchTurnStatus()
+    {
+        string stringStatus = "";
+        if (mMatch != null)
+        {
+
+            switch (mMatch.TurnStatus)
+            {
+                    case TurnBasedMatch.MatchTurnStatus.MyTurn:
+                           stringStatus = Localization.Localize("myturn");
+
+                        break;
+                    case TurnBasedMatch.MatchTurnStatus.TheirTurn:
+                        stringStatus = Localization.Localize("theirturn");
+                        break;
+                    case TurnBasedMatch.MatchTurnStatus.Invited:
+                        stringStatus = Localization.Localize("invitedtomatch");
+                        break;
+                    case TurnBasedMatch.MatchTurnStatus.Complete:
+                    
+                        break;
+                    case TurnBasedMatch.MatchTurnStatus.Unknown:
+                    
+                        break;
+            }
+        }
+        return stringStatus;
+    }
     public string GetCurrentMatchParticipantID()
     {
         if (mMatch != null)

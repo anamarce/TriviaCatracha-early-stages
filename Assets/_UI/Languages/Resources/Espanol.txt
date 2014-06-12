@@ -23,8 +23,8 @@ on = Encendido
 off = Apagado
 matchlobby = Partida en Curso
 players = Jugadores
-matchstatus = Estatus Partida:
-
+matchstatus = Estado de la Partida:
+turnstatus = Estado del Turno
 Active = Activa
 Expired = Terminada
 Cancelled = Cancelada
@@ -32,3 +32,7 @@ AutoMatching = Auto Seleccionando
 Complete = Completada
 Deleted = Borrada
 Unknown = Indefinida
+
+myturn = Adelante, es tu Turno!!
+theirturn = Por favor espera, NO es tu Turno :(
+invitedtomatch = Has sido invitado a esta Partida :D
