@@ -23,7 +23,7 @@ on = Encendido
 off = Apagado
 matchlobby = Partida en Curso
 players = Jugadores
-matchstatus = Estado de la Partida:
+matchstatus = Estado Partida:
 turnstatus = Estado del Turno
 Active = Activa
 Expired = Terminada
@@ -36,3 +36,22 @@ Unknown = Indefinida
 myturn = Adelante, es tu Turno!!
 theirturn = Por favor espera, NO es tu Turno :(
 invitedtomatch = Has sido invitado a esta Partida :D
+
+ matchfinishedwon = Partida termino, GANASTE !!!
+ matchfinishedlost = Partida termino, PERDISTE !!!
+ matchcancelled = Esta partida fue cancelada !!
+ matchawaiting = Esta partida esta esperando jugadores...
+ matcherror = Esta partida no puede seguir debido a un error
+ matchnotyourturn = Por favor espera, todavia NO es tu turno :(
+ matchisyourturn = Adelante, es tu Turno :D !!!
+ 
+ participantNotInvitedYet = No Invitado
+ participantInvited = Invitado
+ participantJoined = Jugando
+ participantDeclined = Declinó
+ participantLeft = Se marchó
+ participantFinished = Terminó
+ participantUnresponsive = Sin responder
+ participantUnknown  = ?
+ 
+  playgame = Jugar >

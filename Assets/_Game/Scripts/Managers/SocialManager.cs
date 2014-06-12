@@ -59,7 +59,7 @@ public class SocialManager : MonoBehaviour {
     protected void LaunchMatch(TurnBasedMatch match) {
         Reset();
         mMatch = match;
-        //MakeActive();
+      
 
         if (mMatch == null) {
             throw new System.Exception("Can't be started without a match!");
@@ -76,7 +76,7 @@ public class SocialManager : MonoBehaviour {
         }
 
      
-      //  mMyMark = mMatchData.GetMyMark(match.SelfParticipantId);
+    
 
         bool canPlay = (mMatch.Status == TurnBasedMatch.MatchStatus.Active &&
                 mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
@@ -92,35 +92,49 @@ public class SocialManager : MonoBehaviour {
             });
         }
 
-        // set up the objects to show the match to the player
+        // Go to the Match lobby
         ShowMatch(canPlay);
     }
-    private string ExplainWhyICantPlay()
+
+    public bool CanIPlayCurrentMatch()
     {
-        switch (mMatch.Status)
+        bool canPlay = false;
+        if (mMatch != null)
         {
-            case TurnBasedMatch.MatchStatus.Active:
-                break;
-            case TurnBasedMatch.MatchStatus.Complete:
-                
-                return mMatchData.GeekIdWon == mMatch.SelfParticipantId ? "Match finished. YOU WIN!" :
-                        "Match finished. YOU LOST!";
-                break;
-            case TurnBasedMatch.MatchStatus.Cancelled:
-            case TurnBasedMatch.MatchStatus.Expired:
-                return "This match was cancelled.";
-            case TurnBasedMatch.MatchStatus.AutoMatching:
-                return "This match is awaiting players.";
-            default:
-                return "This match can't continue due to an error.";
+            canPlay = (mMatch.Status == TurnBasedMatch.MatchStatus.Active &&
+                            mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
         }
-
-        if (mMatch.TurnStatus != TurnBasedMatch.MatchTurnStatus.MyTurn)
+        return canPlay;
+    }
+    public string ExplainWhyICantPlay()
+    {
+        if (mMatch != null)
         {
-            return "It's not your turn yet!";
-        }
+            switch (mMatch.Status)
+            {
+                case TurnBasedMatch.MatchStatus.Active:
+                    break;
+                case TurnBasedMatch.MatchStatus.Complete:
 
-        return "Error";
+                    return mMatchData.GeekIdWon == mMatch.SelfParticipantId
+                        ? "matchfinishedwon"
+                        : "matchfinishedlost";
+                    break;
+                case TurnBasedMatch.MatchStatus.Cancelled:
+                case TurnBasedMatch.MatchStatus.Expired:
+                    return "matchcancelled";
+                case TurnBasedMatch.MatchStatus.AutoMatching:
+                    return "matchawaiting";
+                default:
+                    return "matcherror";
+            }
+
+            if (mMatch.TurnStatus != TurnBasedMatch.MatchTurnStatus.MyTurn)
+            {
+                return "matchnotyourturn";
+            }
+        }
+        return "";
     }
     protected void ShowMatch(bool canPlay)
     {
@@ -131,9 +145,7 @@ public class SocialManager : MonoBehaviour {
         else
         {
             mFinalMessage = ExplainWhyICantPlay();
-            Debug.Log(mFinalMessage);
-            Debug.Log("Not Yet id: " + mMatch.SelfParticipantId + " Status:" + mMatch.Status.ToString());
-     
+       
         }
         Application.LoadLevel("MatchLobbyScene");
 
@@ -289,7 +301,8 @@ public class SocialManager : MonoBehaviour {
                         stringStatus = Localization.Localize("invitedtomatch");
                         break;
                     case TurnBasedMatch.MatchTurnStatus.Complete:
-                    
+                           string completestatus = GetCurrentCompleteStatusMessage();
+                           stringStatus = Localization.Localize(completestatus);
                         break;
                     case TurnBasedMatch.MatchTurnStatus.Unknown:
                     
@@ -298,6 +311,16 @@ public class SocialManager : MonoBehaviour {
         }
         return stringStatus;
     }
+
+    private string GetCurrentCompleteStatusMessage()
+    {
+        if (mMatch != null)
+        {
+            
+        }
+        return "";
+    }
+
     public string GetCurrentMatchParticipantID()
     {
         if (mMatch != null)

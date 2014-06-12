@@ -18,6 +18,8 @@ public class MatchLobbyScript : MonoBehaviour {
 
 	// Use this for initialization
     public UILabel MatchStatusLabel;
+    public UILabel TurnStatusLabel;
+    public UIButton PlayGameButton;
     public InfoPlayers[] infoPlayers;
 
     public List<Participant> participants=null;
@@ -33,12 +35,50 @@ public class MatchLobbyScript : MonoBehaviour {
 
     void RenderInfo()
     {
+        if (PlayGameButton != null)
+            PlayGameButton.isEnabled = false;
         if (MatchStatusLabel != null)
             MatchStatusLabel.text = Localization.Localize(Managers.Social.GetCurrentMatchStatus());
 
         RenderParticipantsInfo();
+        RenderTurnStatus();
+
     }
 
+    private void RenderTurnStatus()
+    {
+        if (Managers.Social.CanIPlayCurrentMatch())
+        {
+            //TODO, Habilitar boton de Play
+            if (TurnStatusLabel != null)
+            {
+                TurnStatusLabel.text = Localization.Localize("matchisyourturn");
+                if (PlayGameButton != null)
+                {
+                    PlayGameButton.isEnabled = true;
+                }
+            }
+
+        }
+        else
+        {
+            if (PlayGameButton != null)
+            {
+                PlayGameButton.isEnabled = false;
+            }
+            if (TurnStatusLabel != null)
+            {
+                string status = Managers.Social.ExplainWhyICantPlay();
+                if (status != "")
+                    TurnStatusLabel.text = Localization.Localize(status);
+                else
+                {
+                    TurnStatusLabel.text = "";
+                }
+            }
+
+        }
+    }
     private void RenderParticipantsInfo()
     {
         if (infoPlayers != null && infoPlayers.Length > 0)
@@ -59,7 +99,8 @@ public class MatchLobbyScript : MonoBehaviour {
                 }
                 if (infoPlayers[i].PlayerStatusLabel != null)
                 {
-                    infoPlayers[i].PlayerStatusLabel.text = participant.Status.ToString();
+                    string partstatus = "participant" +  participant.Status.ToString();
+                    infoPlayers[i].PlayerStatusLabel.text = Localization.Localize(partstatus);
                 }
                 if (infoPlayers[i].PlayerScoreLabel != null)
                 {

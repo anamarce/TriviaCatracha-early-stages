@@ -38,3 +38,22 @@ Unknown = Unknown
  theirturn = Please wait, It is NOT your Turn :(
  invitedtomatch = You have been invited to this Match :D
  
+ matchfinishedwon = Match finished, YOU WON !!!
+ matchfinishedlost = Match finished, YOU LOST !!!
+ matchcancelled = This match was cancelled!!
+ matchawaiting = This match is awaiting players...
+ matcherror = This match can't continue due to an error.
+ matchnotyourturn = Please wait, It's not your turn yet :(
+ matchisyourturn = Go ahead, It's YOUR TURN :D !!!
+ 
+ participantNotInvitedYet = Not Invited
+ participantInvited = Invited
+ participantJoined = Playing
+ participantDeclined = Declined
+ participantLeft = Left
+ participantFinished = Finished
+ participantUnresponsive = Unrensponsive
+ participantUnknown  = Unknown
+ 
+ playgame = Play >
+ 
