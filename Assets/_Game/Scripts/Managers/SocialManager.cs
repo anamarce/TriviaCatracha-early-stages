@@ -68,7 +68,41 @@ public class SocialManager : MonoBehaviour {
             // Note that mMatch.Data might be null (when we are starting a new match).
             // MatchData.MatchData() correctly deals with that and initializes a
             // brand-new match in that case.
-            mMatchData = new MatchData(mMatch.Data);
+            
+            // TODO si mMatch.Data es nulo, hay que inicialzarla
+            if (mMatch.Data == null)
+            {
+                if (CanIPlayCurrentMatch())
+                {
+                    mMatchData =new MatchData();
+                    mMatchData.SetInitialMatchData(mMatch,matchLanguage,10);
+                    PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                        (mMatch.MatchId, mMatchData.ToBytes(),
+                                    mMatch.SelfParticipantId, 
+                                    (bool success) =>
+                                       {
+                                           mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
+                                       }
+                        );
+                    Debug.Log(mFinalMessage);
+
+                   
+                }
+                else
+                {
+                    mMatchData = new MatchData(mMatch.Data);   
+                    Debug.Log("x1" + mMatchData.ToString());
+
+                }
+
+            }
+            else
+            {
+                mMatchData = new MatchData(mMatch.Data);
+                Debug.Log("x2" + mMatchData.ToString());
+
+            }
+            
         } catch (MatchData.UnsupportedMatchFormatException ex) {
            
             Debug.LogWarning("Failed to parse match data: " + ex.Message);
