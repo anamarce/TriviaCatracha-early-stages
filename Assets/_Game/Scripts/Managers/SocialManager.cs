@@ -74,6 +74,7 @@ public class SocialManager : MonoBehaviour {
             {
                 if (CanIPlayCurrentMatch())
                 {
+                    Debug.Log("LaunchMatch con Data Null");
                     mMatchData =new MatchData();
                     mMatchData.SetInitialMatchData(mMatch,matchLanguage,10);
                     PlayGamesPlatform.Instance.TurnBased.TakeTurn
@@ -101,7 +102,7 @@ public class SocialManager : MonoBehaviour {
                 mMatchData = new MatchData(mMatch.Data);
                 Debug.Log("x2" + mMatchData.ToString());
 
-            }
+           }
             
         } catch (MatchData.UnsupportedMatchFormatException ex) {
            
@@ -186,10 +187,12 @@ public class SocialManager : MonoBehaviour {
     }
 
 	protected void OnGotInvitation(Invitation invitation, bool shouldAutoAccept) {
-		if (invitation.InvitationType != Invitation.InvType.TurnBased) {
+        Debug.Log("Got invitation " + shouldAutoAccept.ToString());
+        if (invitation.InvitationType != Invitation.InvType.TurnBased) {
 		     return;
 		}
 		
+       
 		if (shouldAutoAccept) {
 			PlayGamesPlatform.Instance.TurnBased.AcceptInvitation(invitation.InvitationId, OnMatchStarted);
 		} 
@@ -372,6 +375,27 @@ public class SocialManager : MonoBehaviour {
         else
         {
             return 0;
+        }
+    }
+
+    public void TriggerNextTurn()
+    {
+        if (mMatch != null)
+        {
+            int nextOne = (mMatchData.IndexCurrentPlayer + 1)%mMatchData.numberplayers;
+            mMatchData.IndexCurrentPlayer = nextOne;
+            mMatchData.CurrentPlayer = mMatchData.geeks[nextOne].id;
+            mMatchData.geeks[nextOne].correctAnswers++;
+            PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                (mMatch.MatchId, mMatchData.ToBytes(),
+                     mMatchData.CurrentPlayer,
+                    (bool success) =>
+                    {
+                        mFinalMessage = success ? "--xxxxDone for now!" : "ERROR sending turn.";
+                    }
+                );
+            Debug.Log(mFinalMessage);
+            
         }
     }
 }

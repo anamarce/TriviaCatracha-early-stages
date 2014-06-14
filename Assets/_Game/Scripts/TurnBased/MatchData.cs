@@ -36,6 +36,7 @@ public class MatchData
     public string language = "";
     public string GeekIdWon = "";
     public string CurrentPlayer = "";
+    public int IndexCurrentPlayer = 0;
 
     public List<Geek> geeks = new List<Geek>();
 
@@ -147,12 +148,13 @@ public class MatchData
         this.language = matchLanguage;
         this.GeekIdWon = "-1";
         this.CurrentPlayer = mMatch.SelfParticipantId;
+        this.IndexCurrentPlayer = 0;
         foreach (Participant participant in mMatch.Participants)
         {
             Geek temp = new Geek(participant.ParticipantId, 0);
             geeks.Add(temp);
         }
-
+        
     }
 
     public override string ToString()
