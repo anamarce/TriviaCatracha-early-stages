@@ -220,6 +220,7 @@ GameObject:
   - 114: {fileID: 502293337}
   - 114: {fileID: 502293334}
   - 114: {fileID: 502293335}
+  - 114: {fileID: 502293341}
   - 114: {fileID: 502293333}
   m_Layer: 0
   m_Name: ManagersGameObject
@@ -328,6 +329,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mFinalMessage: 
+--- !u!114 &502293341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 502293332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4065d2e4b0a85484e9f941d0fe178a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TopicsParseKey:
+  - Anime
+  - Comics
+  - ComputerScience
+  - ComputerSystems
+  - Movies
+  - Technology
+  - TvSeries
+  - VideoGames
+  - Books
+  LangParseCode:
+  - EN
+  - ES
 --- !u!1 &766972597
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,17 +29,17 @@ public class TriviaQuestion
 }
 
 // Lo hace singleton
-public class TriviaApi  {
-	public static  string[] TopicsParseKey = {"Anime","Comics","ComputerScience","ComputerSystems","Movies",
-	                                          "Technology","TvSeries","VideoGames", "InformationTechnology"};
+public class TriviaApi : MonoBehaviour {
+	public   string[] TopicsParseKey = {"Anime","Comics","ComputerScience","ComputerSystems","Movies",
+	                                          "Technology","TvSeries","VideoGames", "Books"};
 
-	public static string[] LangParseCode = {"EN", "ES"};
+	public  string[] LangParseCode = {"EN", "ES"};
 
-	public TriviaApi()
-	{
-		// No necesita inicializar Parse asi como Kii, ya esta en la Xtudio16StartScene
-		// un gameobject llamado parseInitializer que ya tiene  los keys necesarios para esta app
-	}
+
+    public int CurrentTopicIndexSelected = -1;
+    public string CurrentTopicKey = "";
+
+
 
 	public TriviaQuestion GetQuestion(string MatchId, string LangParseCode, string TopicParseKey)
 	{
@@ -57,4 +57,13 @@ public class TriviaApi  {
 	}
 
 
+    public string GetRandomTopic()
+    {
+        return "";
+    }
+
+    public string GetTopicName(int currentTopicIndex)
+    {
+        return TopicsParseKey[currentTopicIndex];
+    }
 }

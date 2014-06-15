@@ -43,11 +43,16 @@ using System.Collections;
             get { Validate(); return platformManager; }
         }
 
-  
+        private static TriviaApi triviaManager;
+        public static TriviaApi Trivia
+        {
+            get { Validate(); return triviaManager; }
+        }
         static void Validate()
         {
             if(gameManager==null || audioManager ==null  || effectsManager==null
-		   || dataManager == null || platformManager == null || socialManager == null  )
+		   || dataManager == null || platformManager == null || socialManager == null  
+                || triviaManager ==null)
             {
                 Application.LoadLevel("Xtudio16StartScene");
 		    
@@ -66,6 +71,7 @@ using System.Collections;
             dataManager = GetComponent<DataManager>();
             effectsManager = GetComponent<EffectsManager>();
             platformManager = GetComponent<PlatformManager>();
+            triviaManager = GetComponent<TriviaApi>();
 	  
             DontDestroyOnLoad(this);
 	

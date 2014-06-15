@@ -58,3 +58,15 @@ Unknown = Unknown
  playgame = Play >
  
  matchtopicselect = Topic Selection
+ 
+Anime= Anime
+Comics = Comics 
+ComputerScience= Computer Science
+ComputerSystems = Computer Systems
+Movies = Movies 
+Technology = Technology 
+TvSeries= TV Series
+VideoGames = Video Games 
+Books= Books
+
+											  

@@ -56,4 +56,14 @@ invitedtomatch = Has sido invitado a esta Partida :D
  
   playgame = Jugar >
   
- matchtopicselect = Selección de Tema
+ matchtopicselect = Seleccion de Tema
+ 
+Anime= Anime
+Comics = Historietas 
+ComputerScience= Ciencias Computacion
+ComputerSystems = Sistemas de Computacion
+Movies = Peliculas
+Technology = Tecnologia en General 
+TvSeries= Series de Television
+VideoGames = Video Juegos
+Books= Libros

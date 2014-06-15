@@ -268,8 +268,8 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 11
   mAtlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
-  mSpriteName: Dark
-  mFillCenter: 1
+  mSpriteName: Button
+  mFillCenter: 0
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -723,8 +723,8 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 11
   mAtlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
-  mSpriteName: Dark
-  mFillCenter: 1
+  mSpriteName: Button
+  mFillCenter: 0
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   font: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
   textLabel: {fileID: 853447394}
-  backgroundSprite: Light
+  backgroundSprite: Highlight
   highlightSprite: Light
   position: 0
   items:
@@ -1079,9 +1079,9 @@ MonoBehaviour:
   - Off
   padding: {x: 4, y: 2}
   textScale: 1.10000002
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: .694117665, g: .792156875, b: .223529413, a: 1}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  textColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   isAnimated: 1
   isLocalized: 0
   eventReceiver: {fileID: 548764625}
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   font: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
   textLabel: {fileID: 979203635}
-  backgroundSprite: Light
+  backgroundSprite: Highlight
   highlightSprite: Light
   position: 0
   items:
@@ -1387,9 +1387,9 @@ MonoBehaviour:
   - Espanol
   padding: {x: 4, y: 2}
   textScale: 1.10000002
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: .709205329, g: .786764741, b: .370242208, a: 1}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  textColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   isAnimated: 1
   isLocalized: 0
   eventReceiver: {fileID: 1443166760}

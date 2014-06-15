@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 292021528e7d4e545bc02d2c60da292e, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: .694117665, g: .792156875, b: .223529413, a: 1}
   mPivot: 0
@@ -188,8 +188,8 @@ MonoBehaviour:
   mPivot: 3
   mDepth: 11
   mAtlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
-  mSpriteName: Dark
-  mFillCenter: 1
+  mSpriteName: Light
+  mFillCenter: 0
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -438,8 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
-  mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
+  mMat: {fileID: 0}
+  mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 4
   mDepth: 7
@@ -476,7 +476,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 431748796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.8506775, y: 110.104897, z: 0}
+  m_LocalPosition: {x: 72.8506775, y: 234.333664, z: 0}
   m_LocalScale: {x: .43652454, y: 1.33624876, z: 1.59552002}
   m_Children:
   - {fileID: 1428915610}
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 65182370}
-  hover: {r: .600000024, g: 1, b: .200000003, a: 1}
+  hover: {r: 1, g: 1, b: 1, a: 1}
   pressed: {r: .5, g: .5, b: .5, a: 1}
   duration: .200000003
 --- !u!114 &431748800
@@ -527,7 +527,7 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   font: {fileID: 11400000, guid: ac44b8a25154a9d40a172ab5851e0986, type: 2}
   textLabel: {fileID: 1945524837}
-  backgroundSprite: Light
+  backgroundSprite: Highlight
   highlightSprite: Light
   position: 0
   items:
@@ -535,9 +535,9 @@ MonoBehaviour:
   - 2
   padding: {x: 4, y: 2}
   textScale: 2
-  textColor: {r: 1, g: 1, b: 1, a: 1}
-  backgroundColor: {r: .709205329, g: .786764741, b: .370242208, a: 1}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  textColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   isAnimated: 1
   isLocalized: 0
   eventReceiver: {fileID: 0}
@@ -593,8 +593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
-  mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
+  mMat: {fileID: 0}
+  mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
@@ -850,8 +850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
-  mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
+  mMat: {fileID: 0}
+  mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 292021528e7d4e545bc02d2c60da292e, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: .694117665, g: .792156875, b: .223529413, a: 1}
   mPivot: 0
@@ -1218,7 +1218,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921002127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.12843704, y: -141.390457, z: -1.00044}
+  m_LocalPosition: {x: -1.12843704, y: 1.55771744, z: -1.00044}
   m_LocalScale: {x: .77759999, y: .762120008, z: 1.92708004}
   m_Children:
   - {fileID: 605299414}
@@ -1335,7 +1335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 951996776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62, y: 110.251389, z: -1}
+  m_LocalPosition: {x: -52, y: 234, z: -1}
   m_LocalScale: {x: 22, y: 27, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
@@ -1395,7 +1395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &957397362
 Transform:
   m_ObjectHideFlags: 0
@@ -1717,8 +1717,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1369534803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.00000048, y: 6.94000006, z: -1}
-  m_LocalScale: {x: 22, y: 36, z: 1}
+  m_LocalPosition: {x: 2, y: 7, z: -1}
+  m_LocalScale: {x: 25, y: 36, z: 1}
   m_Children: []
   m_Father: {fileID: 921002128}
 --- !u!114 &1369534805
@@ -1936,8 +1936,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1702716684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 6.9421258, z: -1}
-  m_LocalScale: {x: 22, y: 36, z: 1}
+  m_LocalPosition: {x: 3, y: 7, z: -1}
+  m_LocalScale: {x: 25, y: 36, z: 1}
   m_Children: []
   m_Father: {fileID: 2080494742}
 --- !u!114 &1702716686
@@ -2204,8 +2204,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2024757917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.00000048, y: -86.6447678, z: -1.00007999}
-  m_LocalScale: {x: 34, y: 38, z: 1}
+  m_LocalPosition: {x: 2, y: 61, z: -1.00007999}
+  m_LocalScale: {x: 25, y: 31, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
 --- !u!114 &2024757919
@@ -2374,7 +2374,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080494741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.12839317, y: -41.7072792, z: -1.00051999}
+  m_LocalPosition: {x: -1.12839317, y: 113.153259, z: -1.00051999}
   m_LocalScale: {x: .777649522, y: .762120008, z: 1.92708004}
   m_Children:
   - {fileID: 872285085}
@@ -2505,8 +2505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 573038a9327e84bccbdad404e42e9b6b, type: 2}
-  mTex: {fileID: 2800000, guid: f965dabfc58bb4d529f7227428177e38, type: 3}
+  mMat: {fileID: 0}
+  mTex: {fileID: 0}
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 4
   mDepth: 7
