@@ -66,6 +66,7 @@ public class MatchData
         }
         else
         {
+            
             Debug.Log("Game has started, matchDataNull");
         }
     }
