@@ -56,7 +56,7 @@ Unknown = Unknown
  participantUnknown  = Unknown
  
  playgame = Play >
- 
+ playingmatch = Playing Match
  matchtopicselect = Topic Selection
  
 Anime= Anime

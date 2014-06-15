@@ -1,3 +1,4 @@
+using Holoville.HOTween;
 using UnityEngine;
 using System.Collections;
 
@@ -10,7 +11,10 @@ using System.Collections;
         {
             return Play(clip, emitter, 1f, 1f);
         }
-
+        public AudioSource Play(AudioClip clip, Vector3 emitter, float duration,bool loop )
+        {
+            return Play(clip, emitter, 1f, 1f,duration,loop);
+        }
         public AudioSource Play(AudioClip clip, Transform emitter, float volume)
         {
             return Play(clip, emitter, volume, 1f);
@@ -21,7 +25,7 @@ using System.Collections;
         /// and attaching it to the given transform (so it moves with the transform). Destroys it after it finished playing.
         /// </summary>
     
-        public AudioSource Play(AudioClip clip, Transform emitter, float volume, float pitch)
+        public AudioSource Play(AudioClip clip, Transform emitter, float volume, float pitch,bool loop=false)
         {
 		
 		
@@ -35,6 +39,7 @@ using System.Collections;
                 //Create the source
                 AudioSource source = go.AddComponent<AudioSource>();
                 source.clip = clip;
+                source.loop = loop;
                 source.volume = volume;
                 source.pitch = pitch;
                 source.Play ();
@@ -121,7 +126,7 @@ using System.Collections;
             }
             return null;
         }
-        public AudioSource Play(AudioClip clip, Vector3 point, float volume, float pitch,float duration)
+        public AudioSource Play(AudioClip clip, Vector3 point, float volume, float pitch,float duration,bool loop=false)
         {
 		
 		
@@ -136,6 +141,7 @@ using System.Collections;
 			
                 source.clip = clip;
                 source.volume = volume;
+                source.loop = loop;
                 source.pitch = pitch;
                 source.Play();
 			

@@ -57,10 +57,7 @@ public class TriviaApi : MonoBehaviour {
 	}
 
 
-    public string GetRandomTopic()
-    {
-        return "";
-    }
+  
 
     public string GetTopicName(int currentTopicIndex)
     {

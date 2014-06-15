@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 40748639}
+  - 114: {fileID: 40748640}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -100,6 +101,20 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 423687532}
+--- !u!114 &40748640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40748638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bf49ecd250d8a4195810ababd082ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
+  SceneName: MatchPlayScene
 --- !u!1 &79798273
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b40583df544b34419da29d1db5d4d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugConsole: 1
+  debugConsole: 0
   ancho: 400
   alto: 700
   posx: 10

@@ -55,6 +55,7 @@ invitedtomatch = Has sido invitado a esta Partida :D
  participantUnknown  = ?
  
   playgame = Jugar >
+  playingmatch = Jugando la Partida
   
  matchtopicselect = Seleccion de Tema
  
