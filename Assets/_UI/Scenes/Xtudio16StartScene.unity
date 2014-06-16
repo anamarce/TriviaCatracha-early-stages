@@ -220,8 +220,8 @@ GameObject:
   - 114: {fileID: 502293337}
   - 114: {fileID: 502293334}
   - 114: {fileID: 502293335}
-  - 114: {fileID: 502293341}
   - 114: {fileID: 502293333}
+  - 114: {fileID: 502293341}
   m_Layer: 0
   m_Name: ManagersGameObject
   m_TagString: Untagged
@@ -353,6 +353,8 @@ MonoBehaviour:
   LangParseCode:
   - EN
   - ES
+  CurrentTopicIndexSelected: -1
+  CurrentTopicKey: 
 --- !u!1 &766972597
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +681,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964194903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.591643035, y: .592105269, z: 0}
+  m_LocalPosition: {x: -.636295319, y: .636042416, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 129945161}

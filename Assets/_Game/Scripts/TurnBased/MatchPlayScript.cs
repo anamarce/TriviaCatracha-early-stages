@@ -18,6 +18,8 @@ public class MatchPlayScript : MonoBehaviour {
     public UILabel LabelTopic;
     public UILabel LabelQuestion;
     public UILabel LabelAnswer;
+    public UIButton ButtonContinue;
+    public UIButton ButtonFailed;
     public ButtonOptionScript [] OptionButtons;
 
     public float TimeToAnswer = 25F;
@@ -26,6 +28,7 @@ public class MatchPlayScript : MonoBehaviour {
     private int timeLeft;
     private PlAYSTATUS CurrentStatus = PlAYSTATUS.NOTANSWER;
     private AudioSource audiosource=null;
+	private int CurrentIndexSelected= -1;
 
 	void Start ()
 	{
@@ -33,8 +36,16 @@ public class MatchPlayScript : MonoBehaviour {
         Messenger.Cleanup();
         Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
         Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
+        if (ButtonContinue!=null)
+           NGUITools.SetActive(ButtonContinue.gameObject,false);
+        if (ButtonFailed != null)
+            NGUITools.SetActive(ButtonFailed.gameObject, false);
+
 	    endTime = Time.time + TimeToAnswer;
         timeLeft = (int)TimeToAnswer;
+     
+        
+        
         ShowInitialInfo();
 
 	    if (tickSound != null)
@@ -50,25 +61,62 @@ public class MatchPlayScript : MonoBehaviour {
     }
     void CorrectOptionHandler(int index)
     {
+		CurrentStatus = PlAYSTATUS.CORRECT;
         DisableOptions();
+		CurrentIndexSelected = index;
         if (LabelAnswer != null)
         {
-            LabelAnswer.color = Color.blue;
+            Invoke("ChangeColor", 0.21F);
+            Debug.Log("Correct Answer");
+            LabelAnswer.color = Color.black;
             LabelAnswer.text = Localization.Localize("correctanswer");
-           CurrentStatus = PlAYSTATUS.CORRECT;
+    		
         }
-    }
-    void WrongOptionHandler(int index)
-    {
-        DisableOptions();
-        if (LabelAnswer != null)
-        {
-            LabelAnswer.color = Color.red;
-            LabelAnswer.text = Localization.Localize("wronganswer");
-            CurrentStatus = PlAYSTATUS.WRONG;
-        }
+        if (ButtonContinue != null)
+            NGUITools.SetActive(ButtonContinue.gameObject, true);
+
+        TurnOffTimerSound();
     }
 
+    void WrongOptionHandler(int index)
+    {
+		CurrentStatus = PlAYSTATUS.WRONG;
+        DisableOptions();
+		CurrentIndexSelected = index;
+        if (LabelAnswer != null)
+        {
+            Invoke("ChangeColor", 0.21F);
+            LabelAnswer.color = Color.red;
+            LabelAnswer.text = Localization.Localize("wronganswer");
+	     }
+        TurnOffTimerSound();
+        Managers.Social.TriggerNextTurn();
+
+        if (ButtonFailed != null)
+            NGUITools.SetActive(ButtonFailed.gameObject, true);
+       
+      
+
+    }
+	void ChangeColor ()
+	{
+      
+		Color C = CurrentStatus==PlAYSTATUS.CORRECT ? Color.green : Color.red ;
+
+		OptionButtons[CurrentIndexSelected].ButtonOption.defaultColor = C;
+		OptionButtons[CurrentIndexSelected].SpriteOption.color = C;
+	    OptionButtons[CurrentIndexSelected].LabelOption.color = Color.black;
+	}
+
+    void TurnOffTimerSound()
+    {
+        if (audiosource != null)
+        {
+            audiosource.Stop();
+            Destroy(audiosource.gameObject);
+            audiosource = null;
+        }
+    }
     void TimeOutHandler()
     {
         CurrentStatus= PlAYSTATUS.TIMEOUT;
@@ -79,6 +127,13 @@ public class MatchPlayScript : MonoBehaviour {
             LabelAnswer.text = Localization.Localize("timeout");
 
         }
+        TurnOffTimerSound();
+        Managers.Social.TriggerNextTurn();
+
+        if (ButtonFailed != null)
+            NGUITools.SetActive(ButtonFailed.gameObject, true);
+       
+
     }
     void ShowInitialInfo()
     {
@@ -94,7 +149,8 @@ public class MatchPlayScript : MonoBehaviour {
                 OptionButtons[i].LabelOption.text = q.options[i];
                 OptionButtons[i].IndexAnswer = q.indexAnswer;
                 OptionButtons[i].IndexOption = i;
-            
+                OptionButtons[i].EnableOption = true;
+
             }
         }
         if (LabelTopic != null)
@@ -134,15 +190,8 @@ public class MatchPlayScript : MonoBehaviour {
 	            RefreshGameTime();
 	        else
 	        {
-	           
-	          
-	            if (audiosource != null)
-	            {
-	                audiosource.Stop();
-	                Destroy(audiosource.gameObject);
-	                audiosource = null;
-	            }
-                TimeOutHandler();
+
+               TimeOutHandler();
 	        }
 	    }
 	}

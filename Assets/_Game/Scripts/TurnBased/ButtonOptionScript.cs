@@ -23,20 +23,21 @@ public class ButtonOptionScript : Action
 
     public override void ActionPerformed()
     {
-        if (!EnableOption) return;
+        if (EnableOption==false) return;
 
+        Debug.Log("Paso el enable");
         if (IndexAnswer != -1 && IndexOption != -1)
         {
           
 
             if (IndexAnswer == IndexOption)
             {
-                SpriteOption.color = Color.green;
+               
                 Messenger.Broadcast<int>("CorrectOptionPressed",IndexOption);
             }
             else
             {
-                SpriteOption.color = Color.red;
+               
                 Messenger.Broadcast<int>("WrongOptionPressed", IndexOption);
             }
            
