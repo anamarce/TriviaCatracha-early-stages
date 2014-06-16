@@ -68,3 +68,7 @@ Technology = Tecnologia en General
 TvSeries= Series de Television
 VideoGames = Video Juegos
 Books= Libros
+
+correctanswer = Correcto!!!
+wronganswer = Incorrecto :(
+timeout = El tiempo ha terminado :(

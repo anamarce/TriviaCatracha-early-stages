@@ -82,6 +82,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 40748639}
+  - 114: {fileID: 40748640}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -100,6 +101,24 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 423687532}
+--- !u!114 &40748640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40748638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb74f382490eb94b8b1aa8bb84d47f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
+  ButtonOption: {fileID: 423687537}
+  IndexAnswer: -1
+  IndexOption: -1
+  LabelOption: {fileID: 673766127}
+  SpriteOption: {fileID: 1872783343}
 --- !u!1 &96434571
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +634,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 599552624}
+  - 114: {fileID: 599552625}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -633,6 +653,24 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 1470663063}
+--- !u!114 &599552625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599552623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb74f382490eb94b8b1aa8bb84d47f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
+  ButtonOption: {fileID: 1470663068}
+  IndexAnswer: -1
+  IndexOption: -1
+  LabelOption: {fileID: 1247671714}
+  SpriteOption: {fileID: 1765171094}
 --- !u!1 &673766125
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,11 +1016,12 @@ MonoBehaviour:
   LabelTime: {fileID: 1778738990}
   LabelTopic: {fileID: 434184295}
   LabelQuestion: {fileID: 1994546957}
+  LabelAnswer: {fileID: 1644376463}
   OptionButtons:
-  - {fileID: 423687537}
-  - {fileID: 1742914167}
-  - {fileID: 1470663068}
-  - {fileID: 460785667}
+  - {fileID: 40748640}
+  - {fileID: 1980598075}
+  - {fileID: 599552625}
+  - {fileID: 1379713813}
   TimeToAnswer: 25
   tickSound: {fileID: 8300000, guid: 1c15cf673f38656468ca87170eef97ae, type: 3}
 --- !u!4 &1138046992
@@ -1364,6 +1403,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1379713812}
+  - 114: {fileID: 1379713813}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -1382,6 +1422,24 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 460785662}
+--- !u!114 &1379713813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1379713811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb74f382490eb94b8b1aa8bb84d47f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
+  ButtonOption: {fileID: 460785667}
+  IndexAnswer: -1
+  IndexOption: -1
+  LabelOption: {fileID: 2110568128}
+  SpriteOption: {fileID: 134273876}
 --- !u!1 &1470663062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1561,63 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 330, y: 56.9000015, z: 0}
   m_Center: {x: 0, y: 1.33514404e-05, z: -1}
+--- !u!1 &1644376461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1644376462}
+  - 114: {fileID: 1644376463}
+  m_Layer: 8
+  m_Name: LabelAnswer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1644376462
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644376461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -243, z: -1}
+  m_LocalScale: {x: 28.0000782, y: 28.0000782, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+--- !u!114 &1644376463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644376461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .0291954987, g: .0463547967, b: .220588207, a: 1}
+  mPivot: 4
+  mDepth: 1
+  mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
+  mText: 
+  mMaxLineWidth: 0
+  mEncoding: 1
+  mMaxLineCount: 1
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &1646816157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +2102,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1980598074}
+  - 114: {fileID: 1980598075}
   m_Layer: 8
   m_Name: Actions
   m_TagString: Untagged
@@ -2005,6 +2121,24 @@ Transform:
   m_LocalScale: {x: 179.034958, y: 360.028076, z: 360.028076}
   m_Children: []
   m_Father: {fileID: 1742914162}
+--- !u!114 &1980598075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980598073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb74f382490eb94b8b1aa8bb84d47f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
+  ButtonOption: {fileID: 1742914167}
+  IndexAnswer: -1
+  IndexOption: -1
+  LabelOption: {fileID: 96434573}
+  SpriteOption: {fileID: 2099474388}
 --- !u!1 &1994546955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2228,7 @@ Transform:
   - {fileID: 460785662}
   - {fileID: 434184293}
   - {fileID: 1994546956}
+  - {fileID: 1644376462}
   - {fileID: 1748410765}
   m_Father: {fileID: 1824131558}
 --- !u!114 &2021607479

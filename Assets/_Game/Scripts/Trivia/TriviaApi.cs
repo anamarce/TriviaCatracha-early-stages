@@ -26,6 +26,12 @@ public class TriviaQuestion
         options[3] = "Who cares";
          
     }
+
+    public void Shuffle()
+    {
+        //Metodo para Shuffle de las opciones y actualizar correctamente el index
+        return;
+    }
 }
 
 // Lo hace singleton

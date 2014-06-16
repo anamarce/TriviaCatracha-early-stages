@@ -69,4 +69,7 @@ TvSeries= TV Series
 VideoGames = Video Games 
 Books= Books
 
+correctanswer = Correct!!!
+wronganswer = Wrong :(
+timeout = Time expired :(
 											  
