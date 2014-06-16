@@ -68,6 +68,10 @@ public class TopicSelectScript : MonoBehaviour
                     SpinButton.isEnabled = false;
                     Managers.Trivia.CurrentTopicIndexSelected = CurrentTopicIndex;
                     Managers.Trivia.CurrentTopicKey = topickey;
+                    string languagecode = Managers.Game.preferences.GetLanguagePrefix();
+                    Managers.Trivia.GetAndCachedQuestion(Managers.Social.GetCurrentMatchID(),
+                                                         CurrentTopicIndex,languagecode);
+
                     SpinStarted = false;
                 }
 

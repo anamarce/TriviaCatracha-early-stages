@@ -373,4 +373,13 @@ public class SocialManager : MonoBehaviour {
             
         }
     }
+
+    public string GetCurrentMatchID()
+    {
+
+        if (mMatch != null)
+            return mMatch.MatchId;
+
+        return "";
+    }
 }

@@ -55,4 +55,13 @@ public class Preferences
         PlayerPrefs.Save();
     }
 
+    public string GetLanguagePrefix()
+    {
+        if (CurrentLanguage == Globals.Constants.Languages[0])
+            return "EN";
+        else
+        
+            return "ES";
+        
+    }
 }
