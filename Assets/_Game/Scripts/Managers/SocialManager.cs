@@ -28,11 +28,14 @@ public class SocialManager : MonoBehaviour {
 	}
 	protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch) {
 		if (shouldAutoLaunch) {
+            Debug.Log("True AutoLaunch");
 			OnMatchStarted(true, match);
 		} 
 		else 
 		{
-			mIncomingMatch = match;
+            Debug.Log("False autolaunch");
+            OnMatchStarted(true, match);
+			//mIncomingMatch = match;
 		}
 	}
 

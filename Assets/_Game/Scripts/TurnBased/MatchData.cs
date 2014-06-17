@@ -30,13 +30,14 @@ public class Geek {
 public class MatchData
 {
     private const int Header = 201461; // Para numero de version
+    public int IndexCurrentPlayer = 0;
     public int numberplayers = 0;
     public int status = 0;
     public int topanswers = 10;
     public string language = "";
     public string GeekIdWon = "";
     public string CurrentPlayer = "";
-    public int IndexCurrentPlayer = 0;
+   
 
     public List<Geek> geeks = new List<Geek>();
 
@@ -81,6 +82,7 @@ public class MatchData
         MemoryStream memStream = new MemoryStream();
         BinaryWriter w = new BinaryWriter(memStream);
         w.Write(Header);
+        w.Write(this.IndexCurrentPlayer);
         w.Write(geeks.Count);
         w.Write(this.status);
         w.Write(this.topanswers);
@@ -110,7 +112,7 @@ public class MatchData
             throw new UnsupportedMatchFormatException("Match data header " + header +
                                                       " not recognized.");
         }
-
+        this.IndexCurrentPlayer = r.ReadInt32();
         this.numberplayers = r.ReadInt32();
         this.status = r.ReadInt32();
         this.topanswers = r.ReadInt32();
@@ -160,12 +162,7 @@ public class MatchData
 
     public override string ToString()
     {
-        /*          public int numberplayers = 0;
-    public int status = 0;
-    public int topanswers = 10;
-    public string language = "";
-    public string GeekIdWon = "";
-    public string CurrentPlayer = "" ; */
+      
         string theGeeks = "";
         foreach (Geek geek in geeks)
         {
