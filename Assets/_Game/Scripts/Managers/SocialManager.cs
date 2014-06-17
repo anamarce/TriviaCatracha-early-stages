@@ -34,8 +34,8 @@ public class SocialManager : MonoBehaviour {
 		else 
 		{
             Debug.Log("False autolaunch");
-            OnMatchStarted(true, match);
-			//mIncomingMatch = match;
+           // OnMatchStarted(true, match);
+			mIncomingMatch = match;
 		}
 	}
 
@@ -364,7 +364,7 @@ public class SocialManager : MonoBehaviour {
             int nextOne = (mMatchData.IndexCurrentPlayer + 1)%mMatchData.numberplayers;
             mMatchData.IndexCurrentPlayer = nextOne;
             mMatchData.CurrentPlayer = mMatchData.geeks[nextOne].id;
-            mMatchData.geeks[nextOne].correctAnswers++;
+           
             Debug.Log("PlayerNext Turn:" + mMatchData.CurrentPlayer);
             PlayGamesPlatform.Instance.TurnBased.TakeTurn
                 (mMatch.MatchId, mMatchData.ToBytes(),
@@ -386,5 +386,19 @@ public class SocialManager : MonoBehaviour {
             return mMatch.MatchId;
 
         return "";
+    }
+
+    public void IncrementCorrectAnswers()
+    {
+
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                mMatchData.AddScoreParticipantID(mMatch.SelfParticipantId,1);
+
+            }
+
+        }
     }
 }

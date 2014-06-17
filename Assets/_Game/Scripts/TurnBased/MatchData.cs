@@ -58,6 +58,18 @@ public class MatchData
         return 0;
     }
 
+    public void AddScoreParticipantID(string participantid, int answers)
+    {
+        foreach (Geek geek in geeks)
+        {
+            if (geek.id == participantid)
+            {
+                geek.correctAnswers = geek.correctAnswers + answers;
+                break;
+            }
+        }
+    }
+
     public MatchData(byte[] b) : this()
     {
         if (b != null)

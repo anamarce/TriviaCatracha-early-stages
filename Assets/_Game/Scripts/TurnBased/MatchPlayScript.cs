@@ -72,6 +72,8 @@ public class MatchPlayScript : MonoBehaviour {
             LabelAnswer.text = Localization.Localize("correctanswer");
     		
         }
+
+        Managers.Social.IncrementCorrectAnswers();
         if (ButtonContinue != null)
             NGUITools.SetActive(ButtonContinue.gameObject, true);
 
