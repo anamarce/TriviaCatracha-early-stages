@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi.Multiplayer;
+using x16;
 
 public class SocialManager : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class SocialManager : MonoBehaviour {
     public  TurnBasedMatch mMatch = null;
     public MatchData mMatchData = null;
     public  string mFinalMessage = null;
+    private int CurrentConsecutiveAnswers = 0;
 	
     void Start () {
 		GooglePlayGames.PlayGamesPlatform.Activate();
@@ -26,6 +28,14 @@ public class SocialManager : MonoBehaviour {
 		PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
 		PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
 	}
+    void OnApplicationFocus(bool focusStatus)
+    {
+        Debug.Log("AppFocus: " + focusStatus.ToString());
+    }
+    void OnApplicationPause(bool pauseStatus)
+    {
+        Debug.Log("AppPause: " + pauseStatus.ToString());
+    }
 	protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch) {
 		if (shouldAutoLaunch) {
             Debug.Log("True AutoLaunch");
@@ -76,7 +86,7 @@ public class SocialManager : MonoBehaviour {
             if (mMatch.Data == null)
             {
                 Debug.Log("MAtch Data es null, Set initial Data");
-                mMatchData.SetInitialMatchData(mMatch, matchLanguage, 20);
+                mMatchData.SetInitialMatchData(mMatch, matchLanguage, Globals.Constants.MaxAnswers);
             }
             Debug.Log("x2" + mMatchData.ToString());
 
@@ -346,6 +356,13 @@ public class SocialManager : MonoBehaviour {
         }
     }
 
+    public int GetCurrentMatchScore()
+    {
+        if (mMatch != null)
+            return GetCurrentMatchScoreParticipantID(mMatch.SelfParticipantId);
+        else
+            return 0;
+    }
     public int  GetCurrentMatchScoreParticipantID(string participantId)
     {
         if (mMatchData != null)
@@ -400,5 +417,74 @@ public class SocialManager : MonoBehaviour {
             }
 
         }
+    }
+
+    public bool CheckWinner()
+    {
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                int currentScore = mMatchData.GetScoreParticipantID(mMatch.SelfParticipantId);
+                if (currentScore == mMatchData.topanswers)
+                    return true;
+                else
+                    return false;
+
+            }
+        }
+        return false;
+    }
+
+    public void FinishMatch()
+    {
+        // define the match's outcome
+        MatchOutcome outcome = new MatchOutcome();
+        outcome.SetParticipantResult(mMatch.SelfParticipantId, MatchOutcome.ParticipantResult.Win);
+        mMatchData.GeekIdWon = mMatch.SelfParticipantId;
+        foreach (Geek geek in mMatchData.geeks)
+        {
+            if (geek.id != mMatch.SelfParticipantId)
+            {
+                outcome.SetParticipantResult(geek.id,MatchOutcome.ParticipantResult.Loss);
+            }
+        }
+
+
+        PlayGamesPlatform.Instance.TurnBased.Finish(mMatch.MatchId, mMatchData.ToBytes(),
+                   outcome, (bool success) =>
+                  {
+                      if (success)
+                          mFinalMessage = "xx YOU WON!!" ;
+                      else
+                      {
+                          mFinalMessage = "Error winning";
+                      }
+                  });
+        Debug.Log(mFinalMessage);
+    }
+
+    public int GetCurrentTotalAnswers()
+    {
+        if (mMatchData != null)
+            return mMatchData.topanswers;
+
+        return 0;
+    }
+
+    public void ResetCurrentConsecutiveAnswers()
+    {
+       
+        CurrentConsecutiveAnswers = 0;
+    }
+
+    public int GetCurrentConsecutiveAnswers()
+    {
+        return CurrentConsecutiveAnswers;
+    }
+
+    public void IncrementCurrentConsecutiveAnswers(int cant)
+    {
+        CurrentConsecutiveAnswers += cant;
     }
 }

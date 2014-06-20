@@ -19,6 +19,7 @@ public class MatchLobbyScript : MonoBehaviour {
 	// Use this for initialization
     public UILabel MatchStatusLabel;
     public UILabel TurnStatusLabel;
+    public UILabel ScoreAnswersToWin;
     public UIButton PlayGameButton;
     public InfoPlayers[] infoPlayers;
 
@@ -86,6 +87,11 @@ public class MatchLobbyScript : MonoBehaviour {
             int i = 0;
             string MyParticipantID = Managers.Social.GetCurrentMatchParticipantID();
             participants = Managers.Social.GetCurrentMatchParticipants();
+            int TotalAnswers = Managers.Social.GetCurrentTotalAnswers();
+            if (ScoreAnswersToWin != null)
+            {
+                ScoreAnswersToWin.text = TotalAnswers.ToString();
+            }
             foreach (Participant participant in participants)
             {
                 if (infoPlayers[i].PlayerNameLabel != null)

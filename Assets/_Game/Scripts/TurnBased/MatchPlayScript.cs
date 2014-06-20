@@ -20,6 +20,7 @@ public class MatchPlayScript : MonoBehaviour {
     public UILabel LabelAnswer;
     public UIButton ButtonContinue;
     public UIButton ButtonFailed;
+    public UIButton ButtonWon;
     public ButtonOptionScript [] OptionButtons;
 
     public float TimeToAnswer = 25F;
@@ -40,7 +41,8 @@ public class MatchPlayScript : MonoBehaviour {
            NGUITools.SetActive(ButtonContinue.gameObject,false);
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, false);
-
+        if (ButtonWon != null)
+            NGUITools.SetActive(ButtonWon.gameObject, false);
 	    endTime = Time.time + TimeToAnswer;
         timeLeft = (int)TimeToAnswer;
      
@@ -74,10 +76,39 @@ public class MatchPlayScript : MonoBehaviour {
         }
 
         Managers.Social.IncrementCorrectAnswers();
-        if (ButtonContinue != null)
-            NGUITools.SetActive(ButtonContinue.gameObject, true);
+        Managers.Social.IncrementCurrentConsecutiveAnswers(1);
+
 
         TurnOffTimerSound();
+        bool IsWinner = Managers.Social.CheckWinner();
+        if (IsWinner)
+        {
+            Managers.Social.FinishMatch();
+
+            LabelAnswer.color = Color.black;
+            LabelAnswer.text = Localization.Localize("youwon");
+            if (ButtonWon != null)
+                NGUITools.SetActive(ButtonWon.gameObject, true);
+        }
+        else
+        {
+            if (Managers.Social.GetCurrentConsecutiveAnswers() == Globals.Constants.IntervalAnswers)
+            {
+                Managers.Social.TriggerNextTurn();
+                if (ButtonFailed != null)
+                    NGUITools.SetActive(ButtonFailed.gameObject, true);
+       
+                LabelAnswer.color = Color.black;
+                LabelAnswer.text = Localization.Localize("givechancetootherplayer");
+            }
+            else
+            {
+                if (ButtonContinue != null)
+                    NGUITools.SetActive(ButtonContinue.gameObject, true);
+
+            }
+        }
+
     }
 
     void WrongOptionHandler(int index)
@@ -122,7 +153,7 @@ public class MatchPlayScript : MonoBehaviour {
     void TimeOutHandler()
     {
         CurrentStatus= PlAYSTATUS.TIMEOUT;
-
+        DisableOptions();
         if (LabelAnswer != null)
         {
             LabelAnswer.color = Color.red;

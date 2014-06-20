@@ -33,7 +33,7 @@ public class MatchData
     public int IndexCurrentPlayer = 0;
     public int numberplayers = 0;
     public int status = 0;
-    public int topanswers = 10;
+    public int topanswers = 5;
     public string language = "";
     public string GeekIdWon = "";
     public string CurrentPlayer = "";

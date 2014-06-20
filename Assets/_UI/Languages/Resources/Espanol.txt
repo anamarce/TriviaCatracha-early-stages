@@ -72,3 +72,6 @@ Books= Libros
 correctanswer = Correcto!!!
 wronganswer = Incorrecto :(
 timeout = El tiempo ha terminado :(
+youwon = Ganaste!!!	
+correctanwerstowin = Respuestas correctas para ganar :	
+givechancetootherplayer = 5 respuestas correctas consecutivas!!, ceder el turno a otro jugador :)	

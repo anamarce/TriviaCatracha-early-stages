@@ -6,7 +6,7 @@ public class TopicSelectScript : MonoBehaviour
 
     public UILabel TopicNameLabel;
     public UISprite TopicSprite;
-
+    public UILabel CurrentScore;
     public UIButton SpinButton;
     public UIButton PlayButton;
 
@@ -29,7 +29,14 @@ public class TopicSelectScript : MonoBehaviour
 	    Random.seed = (int)Time.time;
 	    SpinButton.isEnabled = true;
 	    PlayButton.isEnabled = false;
-	 
+
+	    if (CurrentScore != null)
+	    {
+	        string temp = string.Format("{0}/{1}",
+	            Managers.Social.GetCurrentMatchScore(),
+	            Managers.Social.mMatchData.topanswers);
+	        CurrentScore.text = temp;
+	    }
 
         Messenger.AddListener("SpinButtonClicked",SpinHandler);
         
