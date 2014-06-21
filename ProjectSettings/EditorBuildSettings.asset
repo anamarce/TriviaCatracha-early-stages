@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/_UI/Scenes/MatchTopicSelect.unity
   - enabled: 1
     path: Assets/_UI/Scenes/MatchPlayScene.unity
+  - enabled: 1
+    path: Assets/_UI/Scenes/MatchQuestionLoading.unity

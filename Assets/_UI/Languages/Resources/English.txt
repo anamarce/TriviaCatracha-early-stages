@@ -74,4 +74,8 @@ wronganswer = Wrong :(
 timeout = Time expired :(
 youwon = You Won!!!			
 correctanwerstowin = Correct answers to win :	
-givechancetootherplayer = 5 consecutive correct answers!!, Give chance to other player :)						  
+givechancetootherplayer = 5 consecutive correct answers!!, Give chance to other player :)	
+retrievingquestion = Retrieving Question..	
+loadingmessage = Loading ...	
+errorloadingquestion= "Connection Error ..";
+			  

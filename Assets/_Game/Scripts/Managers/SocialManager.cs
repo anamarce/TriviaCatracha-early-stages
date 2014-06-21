@@ -50,7 +50,7 @@ public class SocialManager : MonoBehaviour {
 	}
 
 	protected void OnMatchStarted(bool success, TurnBasedMatch match) 
-    {
+    { 
 	   if (!success) {
 
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";

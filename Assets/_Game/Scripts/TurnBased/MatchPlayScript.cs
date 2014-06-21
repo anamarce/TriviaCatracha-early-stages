@@ -172,6 +172,7 @@ public class MatchPlayScript : MonoBehaviour {
     {
         if (LabelQuestion != null)
         {
+            Debug.Log(Managers.Trivia.lastDebugMessage);
             TriviaQuestion q = Managers.Trivia.GetCachedQuestion();
             q.Shuffle();
 

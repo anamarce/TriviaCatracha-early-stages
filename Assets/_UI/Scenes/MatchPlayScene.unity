@@ -206,7 +206,7 @@ MonoBehaviour:
   mDepth: 3
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
   mText: 
-  mMaxLineWidth: 380
+  mMaxLineWidth: 330
   mEncoding: 1
   mMaxLineCount: 2
   mPassword: 0
@@ -857,7 +857,7 @@ MonoBehaviour:
   mDepth: 3
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
   mText: 
-  mMaxLineWidth: 380
+  mMaxLineWidth: 330
   mEncoding: 1
   mMaxLineCount: 2
   mPassword: 0
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   mDepth: 3
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
   mText: 
-  mMaxLineWidth: 380
+  mMaxLineWidth: 330
   mEncoding: 1
   mMaxLineCount: 2
   mPassword: 0
@@ -2989,7 +2989,7 @@ MonoBehaviour:
   mDepth: 3
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
   mText: 
-  mMaxLineWidth: 380
+  mMaxLineWidth: 330
   mEncoding: 1
   mMaxLineCount: 2
   mPassword: 0

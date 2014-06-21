@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 //Agregar el namespace de parse
@@ -29,7 +30,14 @@ public class TriviaQuestion
 
     public void Shuffle()
     {
-        //Metodo para Shuffle de las opciones y actualizar correctamente el index
+        int newindex = Random.Range(0, 4);
+        if (newindex==indexAnswer)
+            newindex = (newindex +1) % 4;
+        string temp = options[indexAnswer];
+        options[indexAnswer] = options[newindex];
+        options[newindex] = temp;
+        indexAnswer = newindex;
+        
         return;
     }
 }
@@ -43,9 +51,11 @@ public class TriviaApi : MonoBehaviour {
 
 
     public int CurrentTopicIndexSelected = -1;
+    public string CurrentMatchID = "";
     public string CurrentTopicKey = "";
 
     private TriviaQuestion CachedQuestion=null;
+    public string lastDebugMessage=""; 
 
 	public TriviaQuestion GetCachedQuestion()
 	{
@@ -61,7 +71,10 @@ public class TriviaApi : MonoBehaviour {
 
 	}
 
-
+    public void SetCachedQuestion(TriviaQuestion q)
+    {
+        CachedQuestion = q;
+    }
   
 
     public string GetTopicName(int currentTopicIndex)
@@ -69,12 +82,6 @@ public class TriviaApi : MonoBehaviour {
         return TopicsParseKey[currentTopicIndex];
     }
 
-    public void GetAndCachedQuestion(string matchID, int currentTopicIndex,string LanguageCode)
-    {
-        CachedQuestion = new TriviaQuestion();
-        // Get it from PARSE
-
-
-    }
+   
     
 }

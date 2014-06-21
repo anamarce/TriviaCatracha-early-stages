@@ -9,6 +9,7 @@ namespace x16
     public enum RuntimePlatform { PC, IOS, ANDROID, WP8 }
     public enum CameraType { FIXED, FOLLOWUP }
 
+
  
 
     public static class Globals
@@ -67,7 +68,7 @@ namespace x16
             public static readonly string[] Languages = {"English","Espanol"};
 
 
-            public static int MaxAnswers = 15;
+            public static int MaxAnswers = 20;
             public static int IntervalAnswers = 5;
         }
         public class GameEvents
