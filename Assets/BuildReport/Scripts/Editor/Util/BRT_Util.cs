@@ -102,8 +102,7 @@ public static class Util
 			case BuildTarget.PS3:
 				return BuildPlatform.PS3;
 
-			case BuildTarget.Wii:
-				return BuildPlatform.Wii;
+			
 
 
 			case BuildTarget.FlashPlayer:

@@ -14,8 +14,7 @@ using System.Collections;
                 Application.platform == UnityEngine.RuntimePlatform.WindowsEditor ||
                 Application.platform == UnityEngine.RuntimePlatform.WindowsPlayer ||
                 Application.platform == UnityEngine.RuntimePlatform.WindowsWebPlayer ||
-                Application.platform == UnityEngine.RuntimePlatform.PS3 ||
-                Application.platform == UnityEngine.RuntimePlatform.WiiPlayer
+                Application.platform == UnityEngine.RuntimePlatform.PS3 
 
                 )
             {
