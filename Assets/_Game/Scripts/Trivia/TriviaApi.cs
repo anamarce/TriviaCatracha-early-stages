@@ -1,9 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 //Agregar el namespace de parse
 using Parse;
+using Random = UnityEngine.Random;
+
 // PAra queries en parse https://parse.com/docs/unity_guide#queries
 
 public class TriviaQuestion
@@ -42,20 +45,77 @@ public class TriviaQuestion
     }
 }
 
-// Lo hace singleton
-public class TriviaApi : MonoBehaviour {
-	public   string[] TopicsParseKey = {"Anime","Comics","ComputerScience","ComputerSystems","Movies",
-	                                          "Technology","TvSeries","VideoGames", "Books"};
+
+public class TriviaApi : MonoBehaviour
+{
+    public Dictionary<string, int> TopicDictionary = new Dictionary<string, int>();
+    public bool TopicsLoaded = false;
+
+    public Dictionary<string, List<TriviaQuestion>> QuestionDictionary;
+
+    [HideInInspector]
+    public   string[] TopicsParseKey = {"Anime","Books", "Comics","ComputerSystems","Movies",
+	                                      "Sounds","Technology","TvSeries","VideoGames"};
+    
+    
+
+    [HideInInspector]
 
 	public  string[] LangParseCode = {"EN", "ES"};
 
-
+    [HideInInspector]
     public int CurrentTopicIndexSelected = -1;
+    [HideInInspector]
     public string CurrentMatchID = "";
+    [HideInInspector]
     public string CurrentTopicKey = "";
 
     private TriviaQuestion CachedQuestion=null;
-    public string lastDebugMessage=""; 
+    [HideInInspector]
+    public string lastDebugMessage="";
+
+    void Start()
+    {
+      
+
+
+    }
+
+    public void  LoadTopicsStats()
+    {
+      
+        try
+        {
+
+            TopicDictionary.Clear();
+            TopicsLoaded = false;
+            
+
+           
+            ParseQuery<ParseObject> query = ParseObject.GetQuery("Topics").WhereNotEqualTo("Name","");
+          
+            
+            query.FindAsync().ContinueWith(t =>
+            {
+                IEnumerable<ParseObject> results = t.Result;
+                foreach (ParseObject parseObject in results)
+                {
+                    string name = parseObject.Get<string>("Name");
+                    int count = parseObject.Get<int>("Count");
+                    TopicDictionary.Add(name,count);
+
+                }
+                TopicsLoaded = true;
+             
+            });
+        }
+        catch (Exception ex)
+        {
+            Debug.Log(ex.StackTrace);
+            TopicsLoaded = false;
+        }
+       
+    }
 
 	public TriviaQuestion GetCachedQuestion()
 	{
@@ -82,6 +142,24 @@ public class TriviaApi : MonoBehaviour {
         return TopicsParseKey[currentTopicIndex];
     }
 
-   
-    
+
+    public int GetCountQuestion(string parseObjectId)
+    {
+      
+        if (Managers.Trivia.TopicsLoaded)
+        {   
+           
+            if(Managers.Trivia.TopicDictionary.ContainsKey(parseObjectId))
+                return Managers.Trivia.TopicDictionary[parseObjectId];
+            else
+            {
+                return 0;
+            }
+        }
+        else
+        {
+            return 0;
+
+        }
+    }
 }

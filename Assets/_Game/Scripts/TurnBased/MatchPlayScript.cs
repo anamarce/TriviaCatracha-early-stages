@@ -103,6 +103,7 @@ public class MatchPlayScript : MonoBehaviour {
             }
             else
             {
+                Managers.Social.TriggerMyTurnAgain();
                 if (ButtonContinue != null)
                     NGUITools.SetActive(ButtonContinue.gameObject, true);
 

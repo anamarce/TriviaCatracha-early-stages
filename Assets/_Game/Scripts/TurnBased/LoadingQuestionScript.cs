@@ -38,71 +38,50 @@ public class LoadingQuestionScript : MonoBehaviour {
         try
         {
             CachedQuestion = new TriviaQuestion();
+            Managers.Trivia.SetCachedQuestion(CachedQuestion);
+
             string ParseObjectID = LanguageCode + Managers.Trivia.GetTopicName(currentTopicIndex);
             int CountQuestions = 0;
+            CountQuestions = Managers.Trivia.GetCountQuestion(ParseObjectID);
 
+            Debug.Log("Count questions =" +CountQuestions.ToString());
 
-            //TODO: Considerar hacer loading de cuantas preguntas hay en cada topic
-            // al inicio de la misma para no estar calculandolos aca nuevamente
-            // Revisar tambien lo del timeout, en el update podria ser.
-            ParseQuery<ParseObject> query = ParseObject.GetQuery(ParseObjectID)
-                .WhereGreaterThan("IdPregunta", -1);
-
-
-            if (query == null)
+            if (CountQuestions == 0)
             {
-                qstatus = QUESTIONSTATUS.LOADEDFAIL;
+                qstatus = QUESTIONSTATUS.LOADEDSUCCESFULL;
                 return;
             }
-
-            query.CountAsync().ContinueWith
-                (t =>
+            
+            int idwhichQuestion = Random.Range(0, CountQuestions);
+            var query = ParseObject.GetQuery(ParseObjectID)
+                        .WhereEqualTo("IdPregunta", idwhichQuestion);
+                    
+            query.FirstAsync().ContinueWith(t =>
+            {
+                if (t.IsCompleted)
                 {
+                        ParseObject obj = t.Result;
 
-                    CountQuestions = t.Result;
-                    if (CountQuestions == 0)
-                    {
+                        CachedQuestion.IdQuestion = obj.Get<int>("IdPregunta");
+                        CachedQuestion.ObjectId = obj.ObjectId;
+                        CachedQuestion.Question = obj.Get<string>("Pregunta");
+                        CachedQuestion.indexAnswer = obj.Get<int>("indexanswer");
+                        IList<object> opciones = obj.Get<List<object>>("opciones");
+
+                        for (int i = 0; i < opciones.Count; i++)
+                        {
+                            CachedQuestion.options[i] = opciones[i].ToString();
+                        }
                         qstatus = QUESTIONSTATUS.LOADEDSUCCESFULL;
                         Managers.Trivia.SetCachedQuestion(CachedQuestion);
                         return;
-
-                    }
-                    int idwhichQuestion = Random.Range(0, CountQuestions);
-                    var query2 = ParseObject.GetQuery(ParseObjectID)
-                        .WhereEqualTo("IdPregunta", idwhichQuestion);
-                    query2.FirstAsync().ContinueWith(t2 =>
-                    {
-
-                        if (t2.IsCompleted)
-                        {
-                            ParseObject obj = t2.Result;
-
-                            CachedQuestion.IdQuestion = obj.Get<int>("IdPregunta");
-                            CachedQuestion.ObjectId = obj.ObjectId;
-                            CachedQuestion.Question = obj.Get<string>("Pregunta");
-                            CachedQuestion.indexAnswer = obj.Get<int>("indexanswer");
-                            IList<object> opciones = obj.Get<List<object>>("opciones");
-
-                            for (int i = 0; i < opciones.Count; i++)
-                            {
-                                CachedQuestion.options[i] = opciones[i].ToString();
-                            }
-                            qstatus = QUESTIONSTATUS.LOADEDSUCCESFULL;
-                            Managers.Trivia.SetCachedQuestion(CachedQuestion);
-                            return;
-                        }
-                        if (t2.IsCanceled || t2.IsFaulted)
+                }
+                if (t.IsCanceled || t.IsFaulted)
                             qstatus = QUESTIONSTATUS.LOADEDFAIL;
 
-                        return;
-                        
+                 
 
-                    });
-
-
-                }
-                );
-
+             });
 
         }
         catch (Exception ex)

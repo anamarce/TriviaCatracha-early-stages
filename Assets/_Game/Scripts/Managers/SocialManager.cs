@@ -51,6 +51,7 @@ public class SocialManager : MonoBehaviour {
 
 	protected void OnMatchStarted(bool success, TurnBasedMatch match) 
     { 
+        Debug.Log("OnMatchStarted Call");
 	   if (!success) {
 
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";
@@ -486,5 +487,23 @@ public class SocialManager : MonoBehaviour {
     public void IncrementCurrentConsecutiveAnswers(int cant)
     {
         CurrentConsecutiveAnswers += cant;
+    }
+
+    public void TriggerMyTurnAgain()
+    {
+        if (mMatch != null)
+        {
+            Debug.Log("TMy Turn:" + mMatchData.IndexCurrentPlayer);
+            PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                (mMatch.MatchId, mMatchData.ToBytes(),
+                    mMatch.SelfParticipantId,
+                    (bool success) =>
+                    {
+                        mFinalMessage = success ? "Again!" : "ERROR sending turn.";
+                    }
+                );
+            Debug.Log(mFinalMessage);
+
+        }
     }
 }

@@ -54,11 +54,16 @@ namespace x16
         }
 		#endregion
 
+        public class GoogleCredentials
+        {
+            public string TopGeekLeaderBoard = "CgkIwdz54IMaEAIQAg";
+
+        }
 
         public class Tags
         {
             public static string Player = "Player";
-      }
+        }
 
         public class Constants
         {
@@ -70,6 +75,7 @@ namespace x16
 
             public static int MaxAnswers = 20;
             public static int IntervalAnswers = 5;
+
         }
         public class GameEvents
         {
