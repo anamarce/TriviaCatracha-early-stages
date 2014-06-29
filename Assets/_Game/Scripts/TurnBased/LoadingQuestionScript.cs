@@ -10,7 +10,8 @@ public enum QUESTIONSTATUS
 {
     LOADING,
     LOADEDSUCCESFULL,
-    LOADEDFAIL
+    LOADEDFAIL,
+    LOADEDTIMEOUT
 
 };
 public class LoadingQuestionScript : MonoBehaviour {
@@ -19,9 +20,18 @@ public class LoadingQuestionScript : MonoBehaviour {
     public UILabel labelError;
     public UIButton ButtonGoBack;
 
+    public float TimeToTimeOut = 25F;
+    
+    private float endTime;
+    private int timeLeft;
+
     private TriviaQuestion CachedQuestion;
     private QUESTIONSTATUS qstatus;
 	void Start () {
+
+        endTime = Time.time + TimeToTimeOut;
+        timeLeft = (int)TimeToTimeOut;
+
         CachedQuestion = new TriviaQuestion();
 	    qstatus = QUESTIONSTATUS.LOADING;
         if (ButtonGoBack != null)
@@ -90,13 +100,23 @@ public class LoadingQuestionScript : MonoBehaviour {
             Debug.Log("Exception " + ex.Message);
         }
     }
+
+    void RefreshGameTime()
+    {
+        timeLeft = (int)(endTime - Time.time);
+        if (timeLeft <= 0)
+        {
+          timeLeft = 0;
+        }
+      
+    }
 	// Update is called once per frame
 	void Update () {
 	    if (qstatus == QUESTIONSTATUS.LOADEDSUCCESFULL)
 	    {
 	        Application.LoadLevel("MatchPlayScene");
 	    }
-	    if (qstatus == QUESTIONSTATUS.LOADEDFAIL)
+        if (qstatus == QUESTIONSTATUS.LOADEDFAIL || qstatus == QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {
 	        if (labelError != null)
 	        {
@@ -107,5 +127,20 @@ public class LoadingQuestionScript : MonoBehaviour {
                 NGUITools.SetActive(ButtonGoBack.gameObject, true);
 	        }
 	    }
+	    if (qstatus == QUESTIONSTATUS.LOADING)
+	    {
+            if (timeLeft > 0)
+                RefreshGameTime();
+            else
+            {
+                qstatus = QUESTIONSTATUS.LOADEDTIMEOUT;
+
+
+            }
+
+
+	    }
+
+
 	}
 }
