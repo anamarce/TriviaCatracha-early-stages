@@ -61,7 +61,6 @@ Unknown = Unknown
  
 Anime= Anime
 Comics = Comics 
-ComputerScience= Computer Science
 ComputerSystems = Computer Systems
 Movies = Movies 
 Technology = Technology 

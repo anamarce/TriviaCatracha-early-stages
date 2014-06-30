@@ -53,13 +53,13 @@ public class TriviaApi : MonoBehaviour
 
     public Dictionary<string, List<TriviaQuestion>> QuestionDictionary;
 
-    [HideInInspector]
+   // [HideInInspector]
     public   string[] TopicsParseKey = {"Anime","Books", "Comics","ComputerSystems","Movies",
-	                                      "Sounds","Technology","TvSeries","VideoGames"};
+	                                      "Technology","TvSeries","VideoGames"};
     
     
 
-    [HideInInspector]
+  //  [HideInInspector]
 
 	public  string[] LangParseCode = {"EN", "ES"};
 

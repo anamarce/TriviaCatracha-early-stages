@@ -54,7 +54,7 @@ public class LoadingQuestionScript : MonoBehaviour {
             int CountQuestions = 0;
             CountQuestions = Managers.Trivia.GetCountQuestion(ParseObjectID);
 
-            Debug.Log("Count questions =" +CountQuestions.ToString());
+        
 
             if (CountQuestions == 0)
             {

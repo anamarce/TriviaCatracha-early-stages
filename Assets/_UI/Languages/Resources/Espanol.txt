@@ -61,7 +61,6 @@ invitedtomatch = Has sido invitado a esta Partida :D
  
 Anime= Anime
 Comics = Historietas 
-ComputerScience= Ciencias Computacion
 ComputerSystems = Sistemas de Computacion
 Movies = Peliculas
 Technology = Tecnologia en General 
