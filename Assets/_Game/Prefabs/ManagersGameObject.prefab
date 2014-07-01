@@ -131,14 +131,13 @@ MonoBehaviour:
   TopicsLoaded: 0
   TopicsParseKey:
   - Anime
+  - Books
   - Comics
-  - ComputerScience
   - ComputerSystems
   - Movies
   - Technology
   - TvSeries
   - VideoGames
-  - Books
   LangParseCode:
   - EN
   - ES

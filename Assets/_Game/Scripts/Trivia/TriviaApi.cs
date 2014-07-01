@@ -54,8 +54,9 @@ public class TriviaApi : MonoBehaviour
     public Dictionary<string, List<TriviaQuestion>> QuestionDictionary;
 
    // [HideInInspector]
-    public   string[] TopicsParseKey = {"Anime","Books", "Comics","ComputerSystems","Movies",
-	                                      "Technology","TvSeries","VideoGames"};
+    public string[] TopicsParseKey;
+ //   = {"Anime","Books", "Comics","ComputerSystems","Movies",
+	//                                      "Technology","TvSeries","VideoGames"};
     
     
 
