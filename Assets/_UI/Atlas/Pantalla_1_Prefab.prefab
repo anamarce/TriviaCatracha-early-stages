@@ -1,0 +1,382 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Pantalla_1_Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 6767ee2333e55c24ea4e1c30174b7527, type: 2}
+  sprites:
+  - name: Barra-cafe
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 2
+      width: 286
+      height: 73
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 2
+      width: 286
+      height: 73
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: barra-derecha
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 219
+      width: 240
+      height: 64
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 219
+      width: 240
+      height: 64
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Barra-izquierda
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 285
+      width: 240
+      height: 64
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 285
+      width: 240
+      height: 64
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: barra-numero-principal
+    outer:
+      serializedVersion: 2
+      x: 421
+      y: 253
+      width: 76
+      height: 68
+    inner:
+      serializedVersion: 2
+      x: 421
+      y: 253
+      width: 76
+      height: 68
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: barra-numeros-secundarios-1 y 2
+    outer:
+      serializedVersion: 2
+      x: 398
+      y: 377
+      width: 62
+      height: 55
+    inner:
+      serializedVersion: 2
+      x: 398
+      y: 377
+      width: 62
+      height: 55
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: barras-derecha
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 148
+      width: 285
+      height: 69
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 148
+      width: 285
+      height: 69
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: barras-izquierda
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 77
+      width: 285
+      height: 69
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 77
+      width: 285
+      height: 69
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton-amarillo
+    outer:
+      serializedVersion: 2
+      x: 266
+      y: 311
+      width: 130
+      height: 130
+    inner:
+      serializedVersion: 2
+      x: 266
+      y: 311
+      width: 130
+      height: 130
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton-azul
+    outer:
+      serializedVersion: 2
+      x: 134
+      y: 351
+      width: 130
+      height: 130
+    inner:
+      serializedVersion: 2
+      x: 134
+      y: 351
+      width: 130
+      height: 130
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton-rojo
+    outer:
+      serializedVersion: 2
+      x: 2
+      y: 351
+      width: 130
+      height: 130
+    inner:
+      serializedVersion: 2
+      x: 2
+      y: 351
+      width: 130
+      height: 130
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: boton-verde
+    outer:
+      serializedVersion: 2
+      x: 289
+      y: 179
+      width: 130
+      height: 130
+    inner:
+      serializedVersion: 2
+      x: 289
+      y: 179
+      width: 130
+      height: 130
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Boton-verde
+    outer:
+      serializedVersion: 2
+      x: 290
+      y: 2
+      width: 175
+      height: 175
+    inner:
+      serializedVersion: 2
+      x: 290
+      y: 2
+      width: 175
+      height: 175
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icono-ajustes
+    outer:
+      serializedVersion: 2
+      x: 421
+      y: 179
+      width: 84
+      height: 72
+    inner:
+      serializedVersion: 2
+      x: 421
+      y: 179
+      width: 84
+      height: 72
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icono-back
+    outer:
+      serializedVersion: 2
+      x: 329
+      y: 443
+      width: 76
+      height: 55
+    inner:
+      serializedVersion: 2
+      x: 329
+      y: 443
+      width: 76
+      height: 55
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icono-Info
+    outer:
+      serializedVersion: 2
+      x: 467
+      y: 2
+      width: 29
+      height: 70
+    inner:
+      serializedVersion: 2
+      x: 467
+      y: 2
+      width: 29
+      height: 70
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icono-logout-abierto
+    outer:
+      serializedVersion: 2
+      x: 266
+      y: 443
+      width: 61
+      height: 59
+    inner:
+      serializedVersion: 2
+      x: 266
+      y: 443
+      width: 61
+      height: 59
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: Icono-logout-cerrado
+    outer:
+      serializedVersion: 2
+      x: 407
+      y: 434
+      width: 51
+      height: 53
+    inner:
+      serializedVersion: 2
+      x: 407
+      y: 434
+      width: 51
+      height: 53
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: icono-salir
+    outer:
+      serializedVersion: 2
+      x: 407
+      y: 323
+      width: 63
+      height: 52
+    inner:
+      serializedVersion: 2
+      x: 407
+      y: 323
+      width: 63
+      height: 52
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

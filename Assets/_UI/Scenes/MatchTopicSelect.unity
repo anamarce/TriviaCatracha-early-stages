@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b40583df544b34419da29d1db5d4d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugConsole: 1
+  debugConsole: 0
   ancho: 400
   alto: 700
   posx: 10

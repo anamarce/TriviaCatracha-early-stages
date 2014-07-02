@@ -1,28 +1,12 @@
 {"frames": {
 
-"GeekLogo1.png":
+"Imagotipo-Trivia-Geek.png":
 {
-	"frame": {"x":2,"y":762,"w":256,"h":256},
+	"frame": {"x":2,"y":246,"w":209,"h":512},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
-	"sourceSize": {"w":256,"h":256}
-},
-"GeekLogo2.png":
-{
-	"frame": {"x":2,"y":504,"w":256,"h":256},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
-	"sourceSize": {"w":256,"h":256}
-},
-"GeekLogo3.png":
-{
-	"frame": {"x":2,"y":246,"w":256,"h":256},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":256,"h":256},
-	"sourceSize": {"w":256,"h":256}
+	"spriteSourceSize": {"x":0,"y":0,"w":209,"h":512},
+	"sourceSize": {"w":209,"h":512}
 },
 "XtudioLogo.png":
 {
@@ -39,6 +23,6 @@
 	"format": "RGBA8888",
 	"size": {"w":512,"h":1024},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:826c10a6757ef67b3d539ba403d67e07$"
+	"smartupdate": "$TexturePacker:SmartUpdate:c303e544668974df04a91930c5c837c2$"
 }
 }

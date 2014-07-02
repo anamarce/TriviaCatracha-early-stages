@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UiRenderSignInOut : MonoBehaviour {
+public class UiRenderSignInOut : MonoBehaviour
+{
 
-	public UILabel label;
+    public UISprite ButtonSprite;
 	// Use this for initialization
 	void Start () {
 		UpdateLabel();
@@ -11,12 +12,12 @@ public class UiRenderSignInOut : MonoBehaviour {
 
 	void UpdateLabel()
 	{
-		if(label==null) return;
+        if (ButtonSprite == null) return;
 		
 		if (Managers.Social.IsAuthenticated())
-			label.text = Localization.Localize("signout");
+            ButtonSprite.spriteName = "Icono-logout-cerrado";
 		else
-			label.text = Localization.Localize("signin");
+            ButtonSprite.spriteName = "Icono-logout-abierto";
 	}
 
 	// Update is called once per frame

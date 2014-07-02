@@ -148,8 +148,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807789359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 42, z: 0}
-  m_LocalScale: {x: 357, y: 341, z: 1}
+  m_LocalPosition: {x: -.5, y: -3, z: 0}
+  m_LocalScale: {x: 209, y: 512, z: 1}
   m_Children: []
   m_Father: {fileID: 129945161}
   m_RootOrder: 2
@@ -170,7 +170,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 0
   mAtlas: {fileID: 11400000, guid: d743711c7a8ce534c83b7f6f9d8e68a7, type: 2}
-  mSpriteName: GeekLogo3
+  mSpriteName: Imagotipo-Trivia-Geek
   mFillCenter: 1
   mType: 0
   mFillDirection: 4
@@ -257,8 +257,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1431865750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 3, z: 0}
-  m_LocalScale: {x: 543, y: 778, z: 1}
+  m_LocalPosition: {x: -9, y: -51, z: 0}
+  m_LocalScale: {x: 488, y: 931, z: 1}
   m_Children: []
   m_Father: {fileID: 129945161}
   m_RootOrder: 1
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mMat: {fileID: 0}
-  mTex: {fileID: 0}
+  mTex: {fileID: 2800000, guid: d9a674e91f82fc148a57e7df435c9fed, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
     width: 1
     height: 1
   mShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  mTexture: {fileID: 2800000, guid: d9a27efcd9420c84c9f2babce81fd77e, type: 3}
+  mTexture: {fileID: 2800000, guid: d9a674e91f82fc148a57e7df435c9fed, type: 3}
 --- !u!1 &1797503852
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964194903}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.592105269, y: .592105269, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 129945161}
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb35830b3bf6bd24bb9740a8d6b816cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DelayTime: 1
+  DelayTime: 2
   SceneName: MainScene
 --- !u!4 &1967236017
 Transform:
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b40583df544b34419da29d1db5d4d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugConsole: 1
+  debugConsole: 0
   ancho: 200
   alto: 500
   posx: 10

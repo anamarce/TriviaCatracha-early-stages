@@ -112,7 +112,7 @@ public class LoadingQuestionScript : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-	    if (qstatus == QUESTIONSTATUS.LOADEDSUCCESFULL)
+	    if (qstatus == QUESTIONSTATUS.LOADEDSUCCESFULL && qstatus!=QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {
 	        Application.LoadLevel("MatchPlayScene");
 	    }
