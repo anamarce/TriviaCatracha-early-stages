@@ -138,6 +138,15 @@ MonoBehaviour:
   - Technology
   - TvSeries
   - VideoGames
+  TopicsSprites:
+  - tarjeta-anime
+  - tarjeta-libros
+  - tarjeta-comic
+  - taarjeta-comp-sys
+  - tarjeta-movie
+  - tarjeta-tecnologia
+  - tarjeta-tvseries
+  - tarjeta-videojuego
   LangParseCode:
   - EN
   - ES

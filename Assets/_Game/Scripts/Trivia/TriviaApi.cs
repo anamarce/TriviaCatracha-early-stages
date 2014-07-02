@@ -57,9 +57,9 @@ public class TriviaApi : MonoBehaviour
     public string[] TopicsParseKey;
  //   = {"Anime","Books", "Comics","ComputerSystems","Movies",
 	//                                      "Technology","TvSeries","VideoGames"};
-    
-    
 
+
+    public string[] TopicsSprites;
   //  [HideInInspector]
 
 	public  string[] LangParseCode = {"EN", "ES"};
@@ -162,5 +162,10 @@ public class TriviaApi : MonoBehaviour
             return 0;
 
         }
+    }
+
+    public string GetSpritName(int currentTopicIndex)
+    {
+        return  TopicsSprites[currentTopicIndex];
     }
 }

@@ -76,4 +76,6 @@ correctanwerstowin = Meta para ganar:
 givechancetootherplayer = 5 respuestas correctas consecutivas!!, ceder el turno a otro jugador :)	
 retrievingquestion = Cargando pregunta..	
 loadingmessage = Cargando ...	
-errorloadingquestion= "Error de Conexion .. trate de nuevo";
+errorloadingquestion= Error de Conexion .. trate de nuevo
+answerquestion = Obtenga Pregunta >
+spintopic = Revuelva Temas

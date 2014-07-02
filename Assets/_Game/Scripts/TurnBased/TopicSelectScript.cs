@@ -69,7 +69,7 @@ public class TopicSelectScript : MonoBehaviour
                 Debug.Log("Topic:" + TopicNameLabel.text);
                 CountTopicTimes = CountTopicTimes +1;
 
-                // TopicSprite.spriteName = Managers.Trivia.GetSpritName(CurrentTopicIndex);
+                TopicSprite.spriteName = Managers.Trivia.GetSpritName(CurrentTopicIndex);
                 if (CountTopicTimes == HowManyTimes)
                 {
                     PlayButton.isEnabled = true;
