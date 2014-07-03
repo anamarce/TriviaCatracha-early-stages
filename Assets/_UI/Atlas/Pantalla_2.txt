@@ -2,11 +2,11 @@
 
 "Barra.png":
 {
-	"frame": {"x":788,"y":1264,"w":212,"h":45},
+	"frame": {"x":606,"y":82,"w":270,"h":57},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":45},
-	"sourceSize": {"w":212,"h":45}
+	"spriteSourceSize": {"x":0,"y":0,"w":270,"h":57},
+	"sourceSize": {"w":270,"h":57}
 },
 "Boton-continuar.png":
 {
@@ -26,7 +26,7 @@
 },
 "Carga-60.png":
 {
-	"frame": {"x":788,"y":806,"w":212,"h":456},
+	"frame": {"x":788,"y":865,"w":212,"h":456},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":456},
@@ -42,7 +42,7 @@
 },
 "Icono-retry.png":
 {
-	"frame": {"x":868,"y":82,"w":140,"h":135},
+	"frame": {"x":878,"y":82,"w":140,"h":135},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":1,"y":0,"w":140,"h":135},
@@ -74,7 +74,7 @@
 },
 "icono-rojo.png":
 {
-	"frame": {"x":788,"y":1311,"w":183,"h":183},
+	"frame": {"x":788,"y":1323,"w":183,"h":183},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":183,"h":183},
@@ -82,7 +82,7 @@
 },
 "icono-verde-160x160.png":
 {
-	"frame": {"x":788,"y":1496,"w":160,"h":160},
+	"frame": {"x":788,"y":1508,"w":160,"h":160},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":160,"h":160},
@@ -90,7 +90,7 @@
 },
 "taarjeta-comp-sys.png":
 {
-	"frame": {"x":526,"y":1168,"w":260,"h":360},
+	"frame": {"x":526,"y":1227,"w":260,"h":360},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":360},
@@ -98,7 +98,7 @@
 },
 "tarjeta-anime.png":
 {
-	"frame": {"x":2,"y":1658,"w":260,"h":358},
+	"frame": {"x":2,"y":1670,"w":260,"h":358},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":358},
@@ -122,7 +122,7 @@
 },
 "tarjeta-movie.png":
 {
-	"frame": {"x":526,"y":806,"w":260,"h":360},
+	"frame": {"x":526,"y":865,"w":260,"h":360},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":360},
@@ -146,7 +146,7 @@
 },
 "tarjeta-tvseries.png":
 {
-	"frame": {"x":606,"y":444,"w":260,"h":360},
+	"frame": {"x":606,"y":503,"w":260,"h":360},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":360},
@@ -154,7 +154,7 @@
 },
 "tarjeta-videojuego.png":
 {
-	"frame": {"x":606,"y":82,"w":260,"h":360},
+	"frame": {"x":606,"y":141,"w":260,"h":360},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":260,"h":360},
@@ -167,6 +167,6 @@
 	"format": "RGBA8888",
 	"size": {"w":1024,"h":2048},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:dc7b613ffceaab1be2e85e4d5426d479$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ff06388b6c4ceda098277403865f8e52$"
 }
 }

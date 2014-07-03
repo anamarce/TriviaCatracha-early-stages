@@ -44,16 +44,16 @@ MonoBehaviour:
   - name: Barra
     outer:
       serializedVersion: 2
-      x: 788
-      y: 1264
-      width: 212
-      height: 45
+      x: 606
+      y: 82
+      width: 270
+      height: 57
     inner:
       serializedVersion: 2
-      x: 788
-      y: 1264
-      width: 212
-      height: 45
+      x: 606
+      y: 82
+      width: 270
+      height: 57
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -153,13 +153,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 788
-      y: 806
+      y: 865
       width: 212
       height: 456
     inner:
       serializedVersion: 2
       x: 788
-      y: 806
+      y: 865
       width: 212
       height: 456
     rotated: 0
@@ -188,13 +188,13 @@ MonoBehaviour:
   - name: Icono-retry
     outer:
       serializedVersion: 2
-      x: 868
+      x: 878
       y: 82
       width: 140
       height: 135
     inner:
       serializedVersion: 2
-      x: 868
+      x: 878
       y: 82
       width: 140
       height: 135
@@ -207,13 +207,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 788
-      y: 1311
+      y: 1323
       width: 183
       height: 183
     inner:
       serializedVersion: 2
       x: 788
-      y: 1311
+      y: 1323
       width: 183
       height: 183
     rotated: 0
@@ -225,13 +225,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 788
-      y: 1496
+      y: 1508
       width: 160
       height: 160
     inner:
       serializedVersion: 2
       x: 788
-      y: 1496
+      y: 1508
       width: 160
       height: 160
     rotated: 0
@@ -243,13 +243,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 526
-      y: 1168
+      y: 1227
       width: 260
       height: 360
     inner:
       serializedVersion: 2
       x: 526
-      y: 1168
+      y: 1227
       width: 260
       height: 360
     rotated: 0
@@ -261,13 +261,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 2
-      y: 1658
+      y: 1670
       width: 260
       height: 358
     inner:
       serializedVersion: 2
       x: 2
-      y: 1658
+      y: 1670
       width: 260
       height: 358
     rotated: 0
@@ -315,13 +315,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 526
-      y: 806
+      y: 865
       width: 260
       height: 360
     inner:
       serializedVersion: 2
       x: 526
-      y: 806
+      y: 865
       width: 260
       height: 360
     rotated: 0
@@ -369,13 +369,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 606
-      y: 444
+      y: 503
       width: 260
       height: 360
     inner:
       serializedVersion: 2
       x: 606
-      y: 444
+      y: 503
       width: 260
       height: 360
     rotated: 0
@@ -387,13 +387,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 606
-      y: 82
+      y: 141
       width: 260
       height: 360
     inner:
       serializedVersion: 2
       x: 606
-      y: 82
+      y: 141
       width: 260
       height: 360
     rotated: 0
