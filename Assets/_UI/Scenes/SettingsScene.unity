@@ -121,7 +121,7 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: cdbf6d3e7f6d174498e52ce825ab44f9, type: 2}
   mSpriteName: Icono-back
   mFillCenter: 1
-  mType: 1
+  mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
@@ -346,7 +346,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812581726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -172.113281, y: -39.0735168, z: -1.00016773}
+  m_LocalPosition: {x: -164.192383, y: -46.9620361, z: -1.00001168}
   m_LocalScale: {x: .261845887, y: .76235944, z: 1.92723012}
   m_Children:
   - {fileID: 249504187}

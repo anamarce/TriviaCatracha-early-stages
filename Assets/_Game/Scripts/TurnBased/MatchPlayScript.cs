@@ -68,9 +68,10 @@ public class MatchPlayScript : MonoBehaviour {
 		CurrentIndexSelected = index;
         if (LabelAnswer != null)
         {
-            Invoke("ChangeColor", 0.21F);
+           // Invoke("ChangeColor", 0.1F);
+            OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-verde";
             Debug.Log("Correct Answer");
-            LabelAnswer.color = Color.black;
+            LabelAnswer.color = Color.green;
             LabelAnswer.text = Localization.Localize("correctanswer");
     		
         }
@@ -85,7 +86,7 @@ public class MatchPlayScript : MonoBehaviour {
         {
             Managers.Social.FinishMatch();
 
-            LabelAnswer.color = Color.black;
+            LabelAnswer.color = Color.white;
             LabelAnswer.text = Localization.Localize("youwon");
             if (ButtonWon != null)
                 NGUITools.SetActive(ButtonWon.gameObject, true);
@@ -98,7 +99,7 @@ public class MatchPlayScript : MonoBehaviour {
                 if (ButtonFailed != null)
                     NGUITools.SetActive(ButtonFailed.gameObject, true);
        
-                LabelAnswer.color = Color.black;
+                 LabelAnswer.color = Color.white;
                 LabelAnswer.text = Localization.Localize("givechancetootherplayer");
             }
             else
@@ -119,7 +120,8 @@ public class MatchPlayScript : MonoBehaviour {
 		CurrentIndexSelected = index;
         if (LabelAnswer != null)
         {
-            Invoke("ChangeColor", 0.21F);
+           // Invoke("ChangeColor", 0.1F);
+            OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-rojo";
             LabelAnswer.color = Color.red;
             LabelAnswer.text = Localization.Localize("wronganswer");
 	     }
@@ -134,12 +136,19 @@ public class MatchPlayScript : MonoBehaviour {
     }
 	void ChangeColor ()
 	{
-      
-		Color C = CurrentStatus==PlAYSTATUS.CORRECT ? Color.green : Color.red ;
 
-		OptionButtons[CurrentIndexSelected].ButtonOption.defaultColor = C;
-		OptionButtons[CurrentIndexSelected].SpriteOption.color = C;
-	    OptionButtons[CurrentIndexSelected].LabelOption.color = Color.black;
+	    if (CurrentStatus == PlAYSTATUS.CORRECT)
+	    {
+	        OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-verde";
+	    }
+	    else
+	    {
+            OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-rojo";
+	    }
+
+		//OptionButtons[CurrentIndexSelected].ButtonOption.defaultColor = C;
+		//OptionButtons[CurrentIndexSelected].SpriteOption.color = C;
+	    //OptionButtons[CurrentIndexSelected].LabelOption.color = Color.black;
 	}
 
     void TurnOffTimerSound()
