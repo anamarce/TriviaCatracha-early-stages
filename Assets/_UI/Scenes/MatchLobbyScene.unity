@@ -688,7 +688,7 @@ MonoBehaviour:
   mColor: {r: .694117665, g: .792156875, b: .223529413, a: 1}
   mPivot: 4
   mDepth: 2
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: IconTick
   mFillCenter: 1
   mType: 0
@@ -2196,7 +2196,7 @@ MonoBehaviour:
   mColor: {r: .977941155, g: .0143815009, b: .0143815009, a: 1}
   mPivot: 4
   mDepth: 2
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: IconCross
   mFillCenter: 1
   mType: 0
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   mColor: {r: .694117665, g: .792156875, b: .223529413, a: 1}
   mPivot: 4
   mDepth: 2
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: IconTick
   mFillCenter: 1
   mType: 0

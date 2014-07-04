@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d33c6354b54fb847b16b36e1391868d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 6767ee2333e55c24ea4e1c30174b7527, type: 2}
-  mTex: {fileID: 2800000, guid: 5f7ec958b42e62141b7a81ca7eff626a, type: 3}
+  mMat: {fileID: 0}
+  mTex: {fileID: 0}
   mColor: {r: .33088237, g: .294387996, b: .294387996, a: 1}
   mPivot: 3
   mDepth: 11
@@ -304,6 +304,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   language: EN
   langCheckBox: {fileID: 145971387}
+--- !u!1 &221847752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 221847753}
+  - 114: {fileID: 221847755}
+  - 114: {fileID: 221847754}
+  m_Layer: 8
+  m_Name: LabelMatchInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221847753
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221847752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.00000048, y: 209.475418, z: -2.92752051}
+  m_LocalScale: {x: 20, y: 24, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+  m_RootOrder: 10
+--- !u!114 &221847754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221847752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa69d5b40401f77469779cf7f6fc94a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: matchinfomessage
+--- !u!114 &221847755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221847752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mPivot: 4
+  mDepth: 3
+  mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
+  mText: Select your opponent from your friend's list
+  mMaxLineWidth: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &249504186
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +519,7 @@ MonoBehaviour:
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 4
   mDepth: 7
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: IconCross
   mFillCenter: 1
   mType: 0
@@ -473,7 +544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &431748797
 Transform:
   m_ObjectHideFlags: 0
@@ -605,7 +676,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: FrameRockPlainGreyscale80
   mFillCenter: 1
   mType: 0
@@ -771,6 +842,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   language: ES
   langCheckBox: {fileID: 614575654}
+--- !u!1 &703605335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 703605336}
+  - 114: {fileID: 703605338}
+  - 114: {fileID: 703605337}
+  m_Layer: 8
+  m_Name: LabelMatchQuickInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &703605336
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703605335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.99995756, y: 4.64614153, z: -2.92752051}
+  m_LocalScale: {x: 20.0001602, y: 24.0001202, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2021607478}
+  m_RootOrder: 11
+--- !u!114 &703605337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703605335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa69d5b40401f77469779cf7f6fc94a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: quickmatchinfomessage
+--- !u!114 &703605338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 703605335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
+  mTex: {fileID: 0}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mPivot: 4
+  mDepth: 3
+  mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
+  mText: The game will select a random opponent
+  mMaxLineWidth: 0
+  mEncoding: 1
+  mMaxLineCount: 0
+  mPassword: 0
+  mShowLastChar: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mShrinkToFit: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!1 &730257364
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +957,7 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: FrameRockPlainGreyscale80
   mFillCenter: 1
   mType: 0
@@ -1183,7 +1325,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 921002127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 117.639297, y: -74.3605499, z: -1.00044}
+  m_LocalPosition: {x: 117.639297, y: 144.124039, z: -1.00044}
   m_LocalScale: {x: 2.2924211, y: 1.03499997, z: 1.92708004}
   m_Children:
   - {fileID: 605299414}
@@ -1292,7 +1434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &951996777
 Transform:
   m_ObjectHideFlags: 0
@@ -1328,7 +1470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
@@ -1482,7 +1624,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1209784158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41, y: 81, z: 0}
+  m_LocalPosition: {x: 41, y: -61.0150261, z: 0}
   m_LocalScale: {x: 227, y: 48, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
@@ -1740,7 +1882,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1369534803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85, y: -70.9645844, z: -2.92752051}
+  m_LocalPosition: {x: -85, y: 143.423416, z: -2.92752051}
   m_LocalScale: {x: 22, y: 27, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
@@ -1828,7 +1970,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 0
   Enabled: 1
-  numberList: {fileID: 431748800}
 --- !u!1 &1428915609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,7 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -1920,7 +2061,7 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 1
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -1954,7 +2095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1638301640
 Transform:
   m_ObjectHideFlags: 0
@@ -2014,7 +2155,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1702716684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 81, z: -2.92759991}
+  m_LocalPosition: {x: 5, y: -61.0150261, z: -2.92759991}
   m_LocalScale: {x: 22, y: 27, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
@@ -2102,7 +2243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Delay: 0
   Enabled: 1
-  numberList: {fileID: 431748800}
 --- !u!1 &1824131556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,7 +2330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: d650d98b3c4028a4a8b7225c1a6482f8, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
@@ -2232,7 +2372,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946657235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49.0000038, y: -72.6194458, z: 0}
+  m_LocalPosition: {x: -49.0000038, y: 141.768539, z: 0}
   m_LocalScale: {x: 227, y: 48, z: 1}
   m_Children: []
   m_Father: {fileID: 2021607478}
@@ -2296,6 +2436,8 @@ Transform:
   - {fileID: 1209784159}
   - {fileID: 1369534804}
   - {fileID: 1946657236}
+  - {fileID: 221847753}
+  - {fileID: 703605336}
   m_Father: {fileID: 1824131558}
   m_RootOrder: 0
 --- !u!114 &2021607479
@@ -2446,7 +2588,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2080494741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -126.471474, y: 80.7774963, z: -1.00051999}
+  m_LocalPosition: {x: -126.471474, y: -62.6029282, z: -1.00051999}
   m_LocalScale: {x: 2.2924211, y: 1.03499997, z: 1.92708004}
   m_Children:
   - {fileID: 872285085}
@@ -2583,7 +2725,7 @@ MonoBehaviour:
   mColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   mPivot: 4
   mDepth: 7
-  mAtlas: {fileID: 11400000, guid: 72470f127361643db85359c44b63a160, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: IconCross
   mFillCenter: 1
   mType: 0

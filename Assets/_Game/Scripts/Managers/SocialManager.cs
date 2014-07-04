@@ -30,28 +30,27 @@ public class SocialManager : MonoBehaviour {
 	}
     void OnApplicationFocus(bool focusStatus)
     {
-        Debug.Log("AppFocus: " + focusStatus.ToString());
+       
     }
     void OnApplicationPause(bool pauseStatus)
     {
-        Debug.Log("AppPause: " + pauseStatus.ToString());
+       
     }
 	protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch) {
 		if (shouldAutoLaunch) {
-            Debug.Log("True AutoLaunch");
+            
 			OnMatchStarted(true, match);
 		} 
 		else 
 		{
-            Debug.Log("False autolaunch");
-           // OnMatchStarted(true, match);
+       
 			mIncomingMatch = match;
 		}
 	}
 
 	protected void OnMatchStarted(bool success, TurnBasedMatch match) 
     { 
-        Debug.Log("OnMatchStarted Call");
+        
 	   if (!success) {
 
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";
@@ -86,12 +85,10 @@ public class SocialManager : MonoBehaviour {
             mMatchData = new MatchData(mMatch.Data);
             if (mMatch.Data == null)
             {
-                Debug.Log("MAtch Data es null, Set initial Data");
+                
                 mMatchData.SetInitialMatchData(mMatch, matchLanguage, Globals.Constants.MaxAnswers);
             }
-            Debug.Log("x2" + mMatchData.ToString());
-
-           
+          
             
         } catch (MatchData.UnsupportedMatchFormatException ex) {
            
@@ -164,7 +161,7 @@ public class SocialManager : MonoBehaviour {
     {
         if (canPlay)
         {
-            Debug.Log("Su turno : id: " + mMatch.SelfParticipantId + " Status:" +mMatch.Status.ToString());
+            mFinalMessage= "Su turno : id: " + mMatch.SelfParticipantId + " Status:" +mMatch.Status.ToString();
         }
         else
         {
@@ -493,7 +490,7 @@ public class SocialManager : MonoBehaviour {
     {
         if (mMatch != null)
         {
-            Debug.Log("TMy Turn:" + mMatchData.IndexCurrentPlayer);
+           
             PlayGamesPlatform.Instance.TurnBased.TakeTurn
                 (mMatch.MatchId, mMatchData.ToBytes(),
                     mMatch.SelfParticipantId,

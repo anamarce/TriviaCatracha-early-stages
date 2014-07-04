@@ -79,3 +79,6 @@ loadingmessage = Loading ...
 errorloadingquestion= Connection Error ..try again
 answerquestion = Get question >
 spintopic = Spin Topics
+
+matchinfomessage = Select your opponent from your friend's list
+quickmatchinfomessage = The Game will select a random opponent

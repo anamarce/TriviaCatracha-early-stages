@@ -7,18 +7,18 @@ namespace x16
     public class ActionCreateQuickMatch : Action
     {
 
-        public UIPopupList numberList;
+      //  public UIPopupList numberList;
 
         public override void ActionPerformed()
         {
             if (!Managers.Social.IsAuthenticated()) return;
 
             int maxopponents = 1;
-            if (numberList != null)
-            {
+            //if (numberList != null)
+            //{
                
-                maxopponents = System.Convert.ToInt32(numberList.selection);
-            }
+            //    maxopponents = System.Convert.ToInt32(numberList.selection);
+            //}
 
             if (Managers.Social.GetMatchLanguage() != "")
                 Managers.Social.CreateQuickMatch(1,maxopponents);

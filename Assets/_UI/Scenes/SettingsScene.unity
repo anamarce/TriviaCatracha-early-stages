@@ -833,7 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -843,7 +843,7 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 2
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -985,7 +985,7 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   font: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
   textLabel: {fileID: 853447394}
-  backgroundSprite: Highlight
+  backgroundSprite: Dark
   highlightSprite: Light
   position: 0
   items:
@@ -993,8 +993,8 @@ MonoBehaviour:
   - Off
   padding: {x: 4, y: 2}
   textScale: 1.10000002
-  textColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: .198529422, g: .141598195, b: .141598195, a: 1}
   highlightColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   isAnimated: 1
   isLocalized: 0
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 1
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
@@ -1297,16 +1297,16 @@ MonoBehaviour:
   atlas: {fileID: 11400000, guid: 2f2473f73b9ca724f9080d6d76009ea2, type: 2}
   font: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
   textLabel: {fileID: 979203635}
-  backgroundSprite: Highlight
+  backgroundSprite: Dark
   highlightSprite: Light
   position: 0
   items:
   - English
-  - Espanol
+  - "Espa\xF1ol"
   padding: {x: 4, y: 2}
   textScale: 1.10000002
-  textColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
-  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  backgroundColor: {r: .198529422, g: .141598195, b: .141598195, a: 1}
   highlightColor: {r: .968627453, g: .745098054, b: 0, a: 1}
   isAnimated: 1
   isLocalized: 0
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   mMaxLineCount: 0
   mPassword: 0
   mShowLastChar: 0
-  mEffectStyle: 2
+  mEffectStyle: 0
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}

@@ -78,4 +78,7 @@ retrievingquestion = Cargando pregunta..
 loadingmessage = Cargando ...	
 errorloadingquestion= Error de Conexion .. trate de nuevo
 answerquestion = Obtenga Pregunta >
-spintopic = Revuelva Temas
+spintopic = Revolver Temas
+
+matchinfomessage = Seleccione su oponente de su lista de amigos
+quickmatchinfomessage = El juego seleccionará un oponente al azar
