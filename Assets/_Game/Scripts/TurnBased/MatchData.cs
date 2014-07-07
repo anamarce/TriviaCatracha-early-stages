@@ -37,6 +37,8 @@ public class MatchData
     public string language = "";
     public string GeekIdWon = "";
     public string CurrentPlayer = "";
+    public string CurrentMatchID = "";
+    public bool IsQuickMatch = false;
    
 
     public List<Geek> geeks = new List<Geek>();
@@ -75,6 +77,7 @@ public class MatchData
         if (b != null)
         {
             ReadFromBytes(b);
+        
             ComputeWinner();
         }
         else
@@ -84,6 +87,7 @@ public class MatchData
         }
     }
 
+    
     private void ComputeWinner()
     {
 
@@ -101,6 +105,8 @@ public class MatchData
         w.Write(this.language);
         w.Write(this.GeekIdWon);
         w.Write(this.CurrentPlayer);
+        w.Write(this.CurrentMatchID);
+        w.Write(this.IsQuickMatch);
 
         foreach (Geek g in geeks)
         {
@@ -131,6 +137,9 @@ public class MatchData
         this.language = r.ReadString();
         this.GeekIdWon = r.ReadString();
         this.CurrentPlayer = r.ReadString();
+        this.CurrentMatchID = r.ReadString();
+        this.IsQuickMatch = r.ReadBoolean();
+
 
         for (int i = 0; i < this.numberplayers; i++)
         {
@@ -157,16 +166,32 @@ public class MatchData
     {
         geeks.Clear();
 
-        this.numberplayers = mMatch.Participants.Count;
+        this.numberplayers = 2;//mMatch.Participants.Count;
         this.status = 0;
         this.topanswers = totalanswers;
         this.language = matchLanguage;
         this.GeekIdWon = "-1";
         this.CurrentPlayer = mMatch.SelfParticipantId;
         this.IndexCurrentPlayer = 0;
+        this.CurrentMatchID = mMatch.MatchId;
+        Debug.Log("Aut Slots" + mMatch.AvailableAutomatchSlots);
+        if (mMatch.AvailableAutomatchSlots > 0)
+        {
+            
+            this.IsQuickMatch = true;
+        }
+        else
+        {
+            this.IsQuickMatch = false;
+        }
         foreach (Participant participant in mMatch.Participants)
         {
             Geek temp = new Geek(participant.ParticipantId, 0);
+            geeks.Add(temp);
+        }
+        if (IsQuickMatch) // Falta agregar uno vacio
+        {
+            Geek temp = new Geek("", 0);
             geeks.Add(temp);
         }
         

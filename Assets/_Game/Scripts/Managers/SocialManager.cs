@@ -19,6 +19,7 @@ public class SocialManager : MonoBehaviour {
     public  TurnBasedMatch mMatch = null;
     public MatchData mMatchData = null;
     public  string mFinalMessage = null;
+    
     private int CurrentConsecutiveAnswers = 0;
 	
     void Start () {
@@ -72,7 +73,7 @@ public class SocialManager : MonoBehaviour {
     protected void LaunchMatch(TurnBasedMatch match) {
         Reset();
         mMatch = match;
-      
+        
 
         if (mMatch == null) {
             throw new System.Exception("Can't be started without a match!");
@@ -87,6 +88,17 @@ public class SocialManager : MonoBehaviour {
             {
                 
                 mMatchData.SetInitialMatchData(mMatch, matchLanguage, Globals.Constants.MaxAnswers);
+            }
+            else
+            {
+                if (mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn)
+                {
+                    if (mMatchData.geeks[mMatchData.IndexCurrentPlayer].id == "")
+                    {
+                        mMatchData.geeks[mMatchData.IndexCurrentPlayer].id = mMatch.SelfParticipantId;
+                        mMatchData.CurrentPlayer = mMatch.SelfParticipantId;
+                    }
+                }
             }
           
             
@@ -375,21 +387,42 @@ public class SocialManager : MonoBehaviour {
     {
         if (mMatch != null)
         {
-            Debug.Log("TriggerNextTurn:" + mMatchData.IndexCurrentPlayer);
-            int nextOne = (mMatchData.IndexCurrentPlayer + 1)%mMatchData.numberplayers;
-            mMatchData.IndexCurrentPlayer = nextOne;
-            mMatchData.CurrentPlayer = mMatchData.geeks[nextOne].id;
-           
-            Debug.Log("PlayerNext Turn:" + mMatchData.CurrentPlayer);
-            PlayGamesPlatform.Instance.TurnBased.TakeTurn
-                (mMatch.MatchId, mMatchData.ToBytes(),
-                     mMatchData.CurrentPlayer,
-                    (bool success) =>
-                    {
-                        mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
-                    }
-                );
-            Debug.Log(mFinalMessage);
+            if (mMatch.AvailableAutomatchSlots == 0)
+            {
+                int nextOne = (mMatchData.IndexCurrentPlayer + 1)%mMatchData.numberplayers;
+                mMatchData.IndexCurrentPlayer = nextOne;
+                mMatchData.CurrentPlayer = mMatchData.geeks[nextOne].id;
+
+
+                PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                    (mMatch.MatchId, mMatchData.ToBytes(),
+                        mMatchData.CurrentPlayer,
+                        (bool success) =>
+                        {
+                            mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
+                        }
+                    );
+                Debug.Log(mFinalMessage);
+            }
+            else // is a quick match
+            {
+                    
+                    mMatchData.IndexCurrentPlayer = 1;
+                    mMatchData.CurrentPlayer = "";
+                      PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                    (mMatch.MatchId, mMatchData.ToBytes(),null
+                         ,
+                        (bool success) =>
+                        {
+                            mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
+                        }
+                    );
+                Debug.Log(mFinalMessage);
+               
+                    
+            }
+
+                
             
         }
     }

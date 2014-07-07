@@ -50,13 +50,8 @@ public class MatchLobbyScript : MonoBehaviour {
     {
         if (Managers.Social.CanIPlayCurrentMatch())
         {
-            //Chequear si ya se ocuparon todos los slots, sino esperaar
-            if (Managers.Social.mMatch.AvailableAutomatchSlots > 0)
-                return;   // Tiene que esperar hasta que se asignen players
-
-            Debug.Log("Slots:" +Managers.Social.mMatch.AvailableAutomatchSlots);
-            Debug.Log("CurrentScore" + Managers.Social.GetCurrentMatchScore());
-            Debug.Log("Participants count" + Managers.Social.mMatch.Participants.Count);
+           
+        
             if (TurnStatusLabel != null)
             {
                 TurnStatusLabel.text = Localization.Localize("matchisyourturn");
