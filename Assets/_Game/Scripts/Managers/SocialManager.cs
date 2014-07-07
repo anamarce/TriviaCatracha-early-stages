@@ -25,9 +25,11 @@ public class SocialManager : MonoBehaviour {
     void Start () {
 		GooglePlayGames.PlayGamesPlatform.Activate();
 		//TODO para deploy quitar la linea
-		PlayGamesPlatform.DebugLogEnabled = true;
-		PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
-		PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
+        // try login in silent mode
+        this.SignIn(true);
+
+		PlayGamesPlatform.DebugLogEnabled = false;
+		
 	}
     void OnApplicationFocus(bool focusStatus)
     {
@@ -37,6 +39,14 @@ public class SocialManager : MonoBehaviour {
     {
        
     }
+
+    public void RegisterDelegates()
+    {
+        
+        PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
+        PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
+    }
+
 	protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch) {
 		if (shouldAutoLaunch) {
             
@@ -223,7 +233,7 @@ public class SocialManager : MonoBehaviour {
 
 		
 	}
-	public void SignIn()
+	public void SignIn(bool silent=false)
 	{
 		if (!Social.localUser.authenticated) 
 		{
@@ -233,7 +243,7 @@ public class SocialManager : MonoBehaviour {
 					{
 					userAuthenticated = true;
 				}
-				,false);
+				,silent);
 		}
 
 	}
