@@ -8,7 +8,7 @@ public class LoadSocialManager : MonoBehaviour {
      
 		Managers.Social.SignIn(false);
         Managers.Trivia.LoadTopicsStats();
-        Managers.Social.RegisterDelegates();
+      //  Managers.Social.RegisterDelegates();
 	}
 	
 
