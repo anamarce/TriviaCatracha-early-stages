@@ -1471,9 +1471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b40583df544b34419da29d1db5d4d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugConsole: 0
+  debugConsole: 1
   ancho: 300
-  alto: 600
+  alto: 800
   posx: 10
   posy: 200
 --- !u!114 &1144429699

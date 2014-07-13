@@ -4,14 +4,13 @@ using System.Collections;
 namespace x16
 {
 
-    public class ActionShowMatches : Action
+	public class ActionNewMatch : Action
     {
 
+        public string SceneName;
 		public UILabel lblMessage;
-
         public override void ActionPerformed()
         {
-			
 			if (!Managers.Social.IsAuthenticated()) 
 			{
 				if (lblMessage!=null)
@@ -21,9 +20,8 @@ namespace x16
 				}
 				return;
 			}
-            
-            Managers.Social.ShowAndAcceptMatchInvitations();
-            
+            Application.LoadLevel(SceneName);
+
         }
 		public void  Dissapear()
 		{
@@ -32,7 +30,6 @@ namespace x16
 				lblMessage.text = "";
 			}
 		}
-
 
 
     }

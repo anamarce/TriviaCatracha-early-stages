@@ -82,3 +82,4 @@ spintopic = Revolver Temas
 
 matchinfomessage = Seleccione su oponente de su lista de amigos
 quickmatchinfomessage = El juego seleccionará un oponente al azar
+siginfirst = Autenticarse primero!

@@ -21,14 +21,21 @@ public class SocialManager : MonoBehaviour {
     public  string mFinalMessage = null;
     
     private int CurrentConsecutiveAnswers = 0;
-	
+	private bool FirstTimeRegisterDelegates;
+
     void Start () {
-		GooglePlayGames.PlayGamesPlatform.Activate();
-		
-        // try login in silent mode
-        this.SignIn(true);
-      //  Managers.Social.RegisterDelegates();
+		FirstTimeRegisterDelegates = true;
+		PlayGamesPlatform.Activate();
+		Debug.Log("SocialManager:Start:After Activating");
+
 		PlayGamesPlatform.DebugLogEnabled = false;
+       
+        // try login in silent mode
+        
+		this.SignIn(true);
+		Debug.Log("SocialManager:Start:After calling silent signin");
+
+		
 		
 	}
 
@@ -40,8 +47,54 @@ public class SocialManager : MonoBehaviour {
             ShowIncomingMatchUi();
           
         }
-        return;
+      
     }
+	public void SignIn(bool silent=false)
+	{
+		
+		((PlayGamesPlatform)Social.Active).Authenticate
+			(
+				(bool success) => 
+				{
+				    if(success)
+				    {
+						userAuthenticated = true;
+					    if (FirstTimeRegisterDelegates)
+					    {
+							Debug.Log("SocialManager:Sigin:Succesful , before registering delegates");
+							PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
+							PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
+							Debug.Log("SocialManager:Sigin:Succesful , after registering delegates");
+						    FirstTimeRegisterDelegates = false;
+					    }
+						Managers.Trivia.LoadTopicsStats();
+						Debug.Log("SocialManager:Sigin:Succesful , After Loading Topics Call");
+
+						Application.LoadLevel("MainScene");
+					 }
+			       else
+				    {
+					   userAuthenticated = false;
+					   Debug.Log("SocialManager:Sigin:Failded ....");
+				    }
+			   }
+			,silent);
+		
+		
+	}
+	public bool IsAuthenticated()
+	{
+		return Social.localUser.authenticated;
+	}
+	public void SignOut()
+	{
+		if (Social.localUser.authenticated) 
+		{
+			((PlayGamesPlatform) Social.Active).SignOut();
+			userAuthenticated = false;
+		}
+	}
+
     void ShowIncomingMatchUi()
     {
         TurnBasedMatch match = mIncomingMatch;
@@ -51,23 +104,21 @@ public class SocialManager : MonoBehaviour {
     }
     void OnApplicationFocus(bool focusStatus)
     {
-       
+       // Debug.Log("App Foucs, delegates ");
+       // RegisterDelegates();
     }
     void OnApplicationPause(bool pauseStatus)
     {
        
     }
 
-    public void RegisterDelegates()
-    {
-        
-        PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
-        PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
-    }
+    
 
 	protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch) {
+
+        Debug.Log("OnGotMatch a secas");
 		if (shouldAutoLaunch) {
-            
+            Debug.Log("OnGotMatch IF");
 			OnMatchStarted(true, match);
 		} 
 		else 
@@ -77,9 +128,9 @@ public class SocialManager : MonoBehaviour {
 		}
 	}
 
-	protected void OnMatchStarted(bool success, TurnBasedMatch match) 
+	public void OnMatchStarted(bool success, TurnBasedMatch match) 
     { 
-        
+       Debug.Log("OnMatchStarted ...");
 	   if (!success) {
 
 			mErrorMessage = "There was a problem setting up the match.\nPlease try again.";
@@ -252,50 +303,20 @@ public class SocialManager : MonoBehaviour {
 
 		
 	}
-	public void SignIn(bool silent=false)
-	{
-		if (!Social.localUser.authenticated) 
-		{
-			((PlayGamesPlatform)Social.Active).Authenticate
-				(
-					(bool success) => 
-					{
-					userAuthenticated = true;
-                    this.RegisterDelegates();
-
-				}
-				,silent);
-		}
-
-	}
-	public bool IsAuthenticated()
-	{
-		return Social.localUser.authenticated;
-	}
-	public void SignOut()
-	{
-		if (Social.localUser.authenticated) 
-		{
-			((PlayGamesPlatform) Social.Active).SignOut();
-			userAuthenticated = false;
-		}
-	}
 
 	public void ShowLeaderboardUI() {
 		if (userAuthenticated) {
 			//Social.ShowLeaderboardUI();
 			((PlayGamesPlatform) Social.Active).ShowLeaderboardUI("CgkIwdz54IMaEAIQAg");
 		}
-		else
-			SignIn();
+	
 	}
 
 	public void ShowAchievementsUI() {
 		if (userAuthenticated) {
 			Social.ShowAchievementsUI();
 		}
-		else
-			SignIn();
+		
 	}
 
     public void CreateQuickMatch(int MinOpponents, int MaxOpponents)

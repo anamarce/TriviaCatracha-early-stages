@@ -543,6 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugConsole: 0
   ancho: 200
-  alto: 500
+  alto: 800
   posx: 10
   posy: 70

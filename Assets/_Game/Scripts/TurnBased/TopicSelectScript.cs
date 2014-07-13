@@ -66,7 +66,7 @@ public class TopicSelectScript : MonoBehaviour
 
                 string topickey = Managers.Trivia.GetTopicName(CurrentTopicIndex);
                 TopicNameLabel.text = Localization.Localize(topickey);
-                Debug.Log("Topic:" + TopicNameLabel.text);
+                //Debug.Log("Topic:" + TopicNameLabel.text);
                 CountTopicTimes = CountTopicTimes +1;
 
                 TopicSprite.spriteName = Managers.Trivia.GetSpritName(CurrentTopicIndex);

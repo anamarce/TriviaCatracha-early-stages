@@ -82,3 +82,4 @@ spintopic = Spin Topics
 
 matchinfomessage = Select your opponent from your friend's list
 quickmatchinfomessage = The Game will select a random opponent
+siginfirst = Sign-In first!
