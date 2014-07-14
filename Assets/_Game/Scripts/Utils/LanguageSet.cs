@@ -11,7 +11,7 @@ public class LanguageSet : MonoBehaviour {
 		{
 			Debug.Log( Managers.Game.preferences.CurrentLanguage);
 			popuplist.selection = Managers.Game.preferences.CurrentLanguage;
-			//popuplist.textLabel.text = Managers.Game.preferences.CurrentLanguage;
+			
 		}
 	
 	}
@@ -28,8 +28,5 @@ public class LanguageSet : MonoBehaviour {
             soundSetList.RefreshOptions();
     }
 
-    void Update()
-    {
-        print("UN update dentro");
-    }
+   
 }

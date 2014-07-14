@@ -14,11 +14,7 @@ namespace x16
             if (!Managers.Social.IsAuthenticated()) return;
 
             int maxopponents = 1;
-            //if (numberList != null)
-            //{
-               
-            //    maxopponents = System.Convert.ToInt32(numberList.selection);
-            //}
+          
 
             if (Managers.Social.GetMatchLanguage() != "")
                 Managers.Social.CreateQuickMatch(1,maxopponents);

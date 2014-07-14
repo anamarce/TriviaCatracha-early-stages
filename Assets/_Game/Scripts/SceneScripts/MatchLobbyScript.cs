@@ -14,7 +14,7 @@ public class InfoPlayers
 
 }
 
-public class MatchLobbyScript : MonoBehaviour {
+public class MatchLobbyScript : PanelScript {
 
 	// Use this for initialization
     public UILabel MatchStatusLabel;
@@ -25,7 +25,7 @@ public class MatchLobbyScript : MonoBehaviour {
 
     public List<Participant> participants=null;
 
-	void Start ()
+	void OnEnable ()
 	{
 	    if (!Managers.Social.IsAuthenticated()) return;
 
@@ -120,8 +120,5 @@ public class MatchLobbyScript : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-	void Update () {
-	
-	}
+   
 }

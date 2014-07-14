@@ -20,7 +20,8 @@ namespace x16
 				}
 				return;
 			}
-            Application.LoadLevel(SceneName);
+           
+            Managers.SceneManager.LoadLevel(SceneName);
 
         }
 		public void  Dissapear()

@@ -261,7 +261,8 @@ public class SocialManager : MonoBehaviour {
             mFinalMessage = ExplainWhyICantPlay();
        
         }
-        Application.LoadLevel("MatchLobbyScene");
+        //Application.LoadLevel("MatchLobbyScene");
+        Managers.SceneManager.LoadLevel("MatchLobby");
 
     }
 

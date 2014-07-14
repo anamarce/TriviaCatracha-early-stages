@@ -5,20 +5,21 @@ public class PanelManager : MonoBehaviour {
 
 	// Use this for initialization
     public Camera CameraObject;
+    public string SceneToStart;
 	public PanelScript [] Panels;
-    public int CurrentIndexScene = 0;
+    private int CurrentIndexScene = 0;
   
 	void Start ()
 	{
 	    CurrentIndexScene = 0;
         // Disable all panels Except the first panel
 		DisableAllPanels();
-
+      //  LoadLevel(SceneToStart);
 	}
 
     void DisableAllPanels()
     {
-        for (int i = 1; i < Panels.Length; i++)
+        for (int i = 0; i < Panels.Length; i++)
         {
             if (Panels[i] != null)
             {
