@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TopicSelectScript : MonoBehaviour
+public class TopicSelectScript : PanelScript
 {
 
     public UILabel TopicNameLabel;
@@ -23,24 +23,26 @@ public class TopicSelectScript : MonoBehaviour
 
     private int CurrentTopicIndex = -1;
 	// Use this for initialization
-	void Start ()
-	{
+	
+
+    void OnEnable()
+    {
         Messenger.Cleanup();
-	    Random.seed = (int)Time.time;
-	    SpinButton.isEnabled = true;
-	    PlayButton.isEnabled = false;
+        SpinStarted = false;
+        Random.seed = (int)Time.time;
+        SpinButton.isEnabled = true;
+        PlayButton.isEnabled = false;
 
-	    if (CurrentScore != null)
-	    {
-	        string temp = string.Format("{0}/{1}",
-	            Managers.Social.GetCurrentMatchScore(),
-	            Managers.Social.mMatchData.topanswers);
-	        CurrentScore.text = temp;
-	    }
+        if (CurrentScore != null)
+        {
+            string temp = string.Format("{0}/{1}",
+                Managers.Social.GetCurrentMatchScore(),
+                Managers.Social.mMatchData.topanswers);
+            CurrentScore.text = temp;
+        }
 
-        Messenger.AddListener("SpinButtonClicked",SpinHandler);
-        
-	}
+        Messenger.AddListener("SpinButtonClicked", SpinHandler);
+    }
 
     void SpinHandler()
     {

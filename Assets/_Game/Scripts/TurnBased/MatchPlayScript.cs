@@ -11,7 +11,7 @@ public enum PlAYSTATUS
 };
 
     
-public class MatchPlayScript : MonoBehaviour {
+public class MatchPlayScript : PanelScript {
 
 	// Use this for initialization
     public UILabel LabelTime;
@@ -34,26 +34,33 @@ public class MatchPlayScript : MonoBehaviour {
 	void Start ()
 	{
 
+      
+	}
+
+    void OnEnable()
+    {
+        CurrentStatus = PlAYSTATUS.NOTANSWER;
+
         Messenger.Cleanup();
         Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
         Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
-        if (ButtonContinue!=null)
-           NGUITools.SetActive(ButtonContinue.gameObject,false);
+        if (ButtonContinue != null)
+            NGUITools.SetActive(ButtonContinue.gameObject, false);
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, false);
         if (ButtonWon != null)
             NGUITools.SetActive(ButtonWon.gameObject, false);
-	    endTime = Time.time + TimeToAnswer;
+        endTime = Time.time + TimeToAnswer;
         timeLeft = (int)TimeToAnswer;
-     
-        
-        
+
+
+
         ShowInitialInfo();
 
-	    if (tickSound != null)
-	        audiosource = Managers.Audio.Play(tickSound, transform.position,TimeToAnswer,true);
-	}
+        if (tickSound != null)
+            audiosource = Managers.Audio.Play(tickSound, transform.position, TimeToAnswer, true);
 
+    }
     void DisableOptions()
     {
         for (int i = 0; i < OptionButtons.Length; i++)
@@ -146,9 +153,7 @@ public class MatchPlayScript : MonoBehaviour {
             OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-rojo";
 	    }
 
-		//OptionButtons[CurrentIndexSelected].ButtonOption.defaultColor = C;
-		//OptionButtons[CurrentIndexSelected].SpriteOption.color = C;
-	    //OptionButtons[CurrentIndexSelected].LabelOption.color = Color.black;
+	
 	}
 
     void TurnOffTimerSound()

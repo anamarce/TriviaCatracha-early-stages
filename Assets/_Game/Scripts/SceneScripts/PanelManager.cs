@@ -19,7 +19,7 @@ public class PanelManager : MonoBehaviour {
 
     void DisableAllPanels()
     {
-        for (int i = 0; i < Panels.Length; i++)
+        for (int i = 1; i < Panels.Length; i++)
         {
             if (Panels[i] != null)
             {

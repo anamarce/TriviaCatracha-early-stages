@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraObject: {fileID: 0}
+  SceneToStart: Xtudio16
   Panels:
   - {fileID: 0}
   - {fileID: 0}
@@ -177,7 +178,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  CurrentIndexScene: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

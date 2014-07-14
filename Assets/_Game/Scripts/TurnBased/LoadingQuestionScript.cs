@@ -14,7 +14,7 @@ public enum QUESTIONSTATUS
     LOADEDTIMEOUT
 
 };
-public class LoadingQuestionScript : MonoBehaviour {
+public class LoadingQuestionScript : PanelScript {
 
 	// Use this for initialization
     public UILabel labelError;
@@ -29,20 +29,26 @@ public class LoadingQuestionScript : MonoBehaviour {
     private QUESTIONSTATUS qstatus;
 	void Start () {
 
+      
+	}
+
+    void OnEnable()
+    {
+
         endTime = Time.time + TimeToTimeOut;
         timeLeft = (int)TimeToTimeOut;
 
         CachedQuestion = new TriviaQuestion();
-	    qstatus = QUESTIONSTATUS.LOADING;
+        qstatus = QUESTIONSTATUS.LOADING;
         if (ButtonGoBack != null)
         {
             NGUITools.SetActive(ButtonGoBack.gameObject, false);
         }
-         string languagecode = Managers.Game.preferences.GetLanguagePrefix();
+        string languagecode = Managers.Game.preferences.GetLanguagePrefix();
         GetAndCachedQuestion(Managers.Social.GetCurrentMatchID(),
                              Managers.Trivia.CurrentTopicIndexSelected,
                              languagecode);
-	}
+    }
     public void GetAndCachedQuestion(string matchID, int currentTopicIndex, string LanguageCode)
     {
         try
@@ -114,7 +120,8 @@ public class LoadingQuestionScript : MonoBehaviour {
 	void Update () {
 	    if (qstatus == QUESTIONSTATUS.LOADEDSUCCESFULL && qstatus!=QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {
-	        Application.LoadLevel("MatchPlayScene");
+	        // Application.LoadLevel("MatchPlayScene");
+            Managers.SceneManager.LoadLevel("MatchPlayScene");
 	    }
         if (qstatus == QUESTIONSTATUS.LOADEDFAIL || qstatus == QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {
