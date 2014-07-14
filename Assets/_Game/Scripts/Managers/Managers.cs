@@ -48,6 +48,11 @@ using System.Collections;
         {
             get { Validate(); return triviaManager; }
         }
+	   private static PanelManager panelManager;
+	   public static PanelManager SceneManager
+ 	   {
+		get { Validate(); return panelManager; }
+	   }
         static void Validate()
         {
             if(gameManager==null || audioManager ==null  || effectsManager==null
@@ -72,6 +77,7 @@ using System.Collections;
             effectsManager = GetComponent<EffectsManager>();
             platformManager = GetComponent<PlatformManager>();
             triviaManager = GetComponent<TriviaApi>();
+		    panelManager = GetComponent<PanelManager>();
 	  
             DontDestroyOnLoad(this);
 	
