@@ -70,7 +70,9 @@ public class SocialManager : MonoBehaviour {
 						Managers.Trivia.LoadTopicsStats();
 						Debug.Log("SocialManager:Sigin:Succesful , After Loading Topics Call");
 
-						Application.LoadLevel("MainScene");
+				        Managers.SceneManager.LoadLevel("MainScene");
+
+						
 					 }
 			       else
 				    {

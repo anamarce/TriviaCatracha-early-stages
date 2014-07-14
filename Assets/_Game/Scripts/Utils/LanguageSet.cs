@@ -27,4 +27,9 @@ public class LanguageSet : MonoBehaviour {
 	    if (soundSetList!=null)
             soundSetList.RefreshOptions();
     }
+
+    void Update()
+    {
+        print("UN update dentro");
+    }
 }
