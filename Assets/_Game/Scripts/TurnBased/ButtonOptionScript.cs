@@ -44,10 +44,7 @@ public class ButtonOptionScript : Action
         }
     }
 
-    // Update is called once per frame
-	void Update () {
-	
-	}
+  
  }
 
 }

@@ -33,34 +33,56 @@ public class MatchPlayScript : PanelScript {
 
 	void Start ()
 	{
-
+		TimeToAnswer=25F;
       
 	}
 
     void OnEnable()
     {
+		Messenger.Cleanup();
+		Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
+		Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
+
         CurrentStatus = PlAYSTATUS.NOTANSWER;
+		CurrentIndexSelected= -1;
+		endTime = Time.time + TimeToAnswer;
+		timeLeft = (int)TimeToAnswer;
 
-        Messenger.Cleanup();
-        Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
-        Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
-        if (ButtonContinue != null)
-            NGUITools.SetActive(ButtonContinue.gameObject, false);
-        if (ButtonFailed != null)
-            NGUITools.SetActive(ButtonFailed.gameObject, false);
-        if (ButtonWon != null)
-            NGUITools.SetActive(ButtonWon.gameObject, false);
-        endTime = Time.time + TimeToAnswer;
-        timeLeft = (int)TimeToAnswer;
-
-
-
+		CleanUI();
+    
         ShowInitialInfo();
 
         if (tickSound != null)
             audiosource = Managers.Audio.Play(tickSound, transform.position, TimeToAnswer, true);
 
     }
+	void CleanUI()
+	{
+		if (LabelTopic != null)
+		{
+			LabelTopic.text = "";
+		}
+		
+		if (LabelTime != null)
+		{
+			LabelTime.text = "00";
+			LabelTime.color = Color.red;
+		}
+		if ( LabelAnswer!=null)
+			LabelAnswer.text ="";
+
+		for(int i = 0 ; i<OptionButtons.Length;i++)
+		{
+			OptionButtons[i].SpriteOption.spriteName = "boton-azul";
+
+		}
+		if (ButtonContinue != null)
+			NGUITools.SetActive(ButtonContinue.gameObject, false);
+		if (ButtonFailed != null)
+			NGUITools.SetActive(ButtonFailed.gameObject, false);
+		if (ButtonWon != null)
+			NGUITools.SetActive(ButtonWon.gameObject, false);
+	}
     void DisableOptions()
     {
         for (int i = 0; i < OptionButtons.Length; i++)
@@ -77,7 +99,7 @@ public class MatchPlayScript : PanelScript {
         {
            // Invoke("ChangeColor", 0.1F);
             OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-verde";
-            Debug.Log("Correct Answer");
+           
             LabelAnswer.color = Color.green;
             LabelAnswer.text = Localization.Localize("correctanswer");
     		
@@ -224,8 +246,7 @@ public class MatchPlayScript : PanelScript {
             timeLeft = 0;
 
         }
-        if (LabelTime != null)
-            LabelTime.text = timeLeft.ToString();
+     
 
 
     }
@@ -236,7 +257,14 @@ public class MatchPlayScript : PanelScript {
 	    if (CurrentStatus == PlAYSTATUS.NOTANSWER)
 	    {
 	        if (timeLeft > 0)
-	            RefreshGameTime();
+			{
+				RefreshGameTime();
+				if (LabelTime != null)
+				{
+					LabelTime.text = timeLeft.ToString();
+					Debug.Log("LabelTime" + LabelTime.text);
+				}
+			}
 	        else
 	        {
 

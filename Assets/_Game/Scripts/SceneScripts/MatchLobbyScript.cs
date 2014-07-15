@@ -27,13 +27,36 @@ public class MatchLobbyScript : PanelScript {
 
 	void OnEnable ()
 	{
-	    if (!Managers.Social.IsAuthenticated()) return;
+		CleanUI();
+		if (!Managers.Social.IsAuthenticated()) return;
 
         RenderInfo();
 
 	   
 	}
 
+	void CleanUI()
+	{
+		if( MatchStatusLabel!=null)
+			MatchStatusLabel.text ="";
+
+		if (TurnStatusLabel!=null)
+			TurnStatusLabel.text="";
+
+
+		if (ScoreAnswersToWin!=null)
+			ScoreAnswersToWin.text="";
+
+		if (PlayGameButton != null)
+			PlayGameButton.isEnabled = false;
+
+		for(int i=0; i<infoPlayers.Length;i++)
+		{
+			infoPlayers[i].PlayerNameLabel.text="";
+			infoPlayers[i].PlayerScoreLabel.text="";
+			infoPlayers[i].PlayerStatusLabel.text="";
+		}
+	}
     void RenderInfo()
     {
         if (PlayGameButton != null)
