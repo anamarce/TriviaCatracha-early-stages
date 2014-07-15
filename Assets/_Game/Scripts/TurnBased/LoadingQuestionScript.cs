@@ -45,10 +45,19 @@ public class LoadingQuestionScript : PanelScript {
             NGUITools.SetActive(ButtonGoBack.gameObject, false);
         }
         string languagecode = Managers.Game.preferences.GetLanguagePrefix();
-        GetAndCachedQuestion(Managers.Social.GetCurrentMatchID(),
+
+		if (!Managers.Trivia.TopicsLoaded)
+		{
+			qstatus = QUESTIONSTATUS.LOADEDFAIL;
+		}
+		else
+		{
+		
+           GetAndCachedQuestion(Managers.Social.GetCurrentMatchID(),
                              Managers.Trivia.CurrentTopicIndexSelected,
                              languagecode);
-    }
+		}
+	}
     public void GetAndCachedQuestion(string matchID, int currentTopicIndex, string LanguageCode)
     {
         try
@@ -56,11 +65,13 @@ public class LoadingQuestionScript : PanelScript {
             CachedQuestion = new TriviaQuestion();
             Managers.Trivia.SetCachedQuestion(CachedQuestion);
 
+
             string ParseObjectID = LanguageCode + Managers.Trivia.GetTopicName(currentTopicIndex);
             int CountQuestions = 0;
+
             CountQuestions = Managers.Trivia.GetCountQuestion(ParseObjectID);
 
-        
+
 
             if (CountQuestions == 0)
             {
@@ -71,7 +82,10 @@ public class LoadingQuestionScript : PanelScript {
             int idwhichQuestion = Random.Range(0, CountQuestions);
             var query = ParseObject.GetQuery(ParseObjectID)
                         .WhereEqualTo("IdPregunta", idwhichQuestion);
-                    
+            
+		
+
+
             query.FirstAsync().ContinueWith(t =>
             {
                 if (t.IsCompleted)
@@ -118,10 +132,11 @@ public class LoadingQuestionScript : PanelScript {
     }
 	// Update is called once per frame
 	void Update () {
+		 
 	    if (qstatus == QUESTIONSTATUS.LOADEDSUCCESFULL && qstatus!=QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {
 	        // Application.LoadLevel("MatchPlayScene");
-            Managers.SceneManager.LoadLevel("MatchPlayScene");
+            Managers.SceneManager.LoadLevel("MatchPlay");
 	    }
         if (qstatus == QUESTIONSTATUS.LOADEDFAIL || qstatus == QUESTIONSTATUS.LOADEDTIMEOUT)
 	    {

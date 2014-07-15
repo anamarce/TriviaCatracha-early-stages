@@ -77,14 +77,14 @@ public class TriviaApi : MonoBehaviour
 
     void Start()
     {
-      
+		LoadTopicsStats();
 
 
     }
 
     public void  LoadTopicsStats()
     {
-      
+		Debug.Log("Loading Topics from Parse");
         try
         {
 
@@ -107,12 +107,12 @@ public class TriviaApi : MonoBehaviour
 
                 }
                 TopicsLoaded = true;
-             
+				Debug.Log("Topics Loaded");
             });
         }
         catch (Exception ex)
         {
-            Debug.Log(ex.StackTrace);
+            Debug.Log("Mmm" + ex.StackTrace);
             TopicsLoaded = false;
         }
        
@@ -149,7 +149,7 @@ public class TriviaApi : MonoBehaviour
       
         if (Managers.Trivia.TopicsLoaded)
         {   
-           
+			Debug.Log("Loaded Topics");
             if(Managers.Trivia.TopicDictionary.ContainsKey(parseObjectId))
                 return Managers.Trivia.TopicDictionary[parseObjectId];
             else

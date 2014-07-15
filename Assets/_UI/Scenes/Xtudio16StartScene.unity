@@ -2083,7 +2083,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 312254081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1bf49ecd250d8a4195810ababd082ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f4032391aa649e4abe426efb9ffc94d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 0
@@ -3418,7 +3418,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 524376794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 0, y: 10, z: -1}
   m_LocalScale: {x: 154, y: 84, z: 1}
   m_Children: []
   m_Father: {fileID: 1480895627}
@@ -3438,7 +3438,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 2
+  mDepth: 5
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: boton-verde-respuesta-correcta
   mFillCenter: 1
@@ -4466,7 +4466,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 4
+  mDepth: 6
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: barra-respuestas
   mFillCenter: 1
@@ -4849,7 +4849,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746955460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 14.4735718, z: 0}
+  m_LocalPosition: {x: 0, y: 14.4735718, z: -1}
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 170744473}
@@ -6230,7 +6230,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 970012718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.5262299, z: 0}
+  m_LocalPosition: {x: 0, y: 10.5262299, z: -1}
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 890172857}
@@ -6281,7 +6281,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 984993398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 154, y: 84, z: 1}
   m_Children: []
   m_Father: {fileID: 321778672}
@@ -6301,7 +6301,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 2
+  mDepth: 6
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: boton-verde-respuesta-correcta
   mFillCenter: 1
@@ -6474,7 +6474,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052139193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -259.717926, z: -1.00007999}
+  m_LocalPosition: {x: 3, y: -259.717926, z: -1}
   m_LocalScale: {x: 358, y: 56, z: 1}
   m_Children: []
   m_Father: {fileID: 1364747418}
@@ -6494,7 +6494,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 4
+  mDepth: 7
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: Barra
   mFillCenter: 1
@@ -6634,7 +6634,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066240367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.89470673, z: 0}
+  m_LocalPosition: {x: 0, y: 7.89470673, z: -1}
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 559700380}
@@ -7119,7 +7119,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159662057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 60, y: 60, z: 1}
   m_Children: []
   m_Father: {fileID: 1681592429}
@@ -7995,7 +7995,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 4
+  mDepth: 8
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: barra-respuestas
   mFillCenter: 1
@@ -8117,7 +8117,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mDepth: 4
+  mDepth: 7
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: barra-respuestas
   mFillCenter: 1
@@ -10828,7 +10828,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1708324519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: -0, z: -1}
   m_LocalScale: {x: 154, y: 84, z: 1}
   m_Children: []
   m_Father: {fileID: 1772158655}
@@ -10848,7 +10848,7 @@ MonoBehaviour:
   mTex: {fileID: 2800000, guid: 815c63002f324594babfc8abb56f112f, type: 3}
   mColor: {r: .977941155, g: .0143815009, b: .0143815009, a: 1}
   mPivot: 4
-  mDepth: 2
+  mDepth: 5
   mAtlas: {fileID: 11400000, guid: a8a228de6a5fa97438079d12d81425ee, type: 2}
   mSpriteName: Boton-rojo-respuesta
   mFillCenter: 1
