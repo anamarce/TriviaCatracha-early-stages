@@ -17,7 +17,7 @@ namespace x16
           
 
             if (Managers.Social.GetMatchLanguage() != "")
-                Managers.Social.CreateQuickMatch(1,maxopponents);
+                Messenger.Broadcast("ActionCreateQuickMatch");
                
             else
                 Debug.Log("Match language Not set");

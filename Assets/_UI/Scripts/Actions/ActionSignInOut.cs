@@ -11,10 +11,8 @@ namespace x16
 
         public override void ActionPerformed()
         {
-			if (Managers.Social.IsAuthenticated())
-				Managers.Social.SignOut();
-			else
-				Managers.Social.SignIn();
+            Messenger.Broadcast("ActionSigInOut");
+           
         }
     }
 }

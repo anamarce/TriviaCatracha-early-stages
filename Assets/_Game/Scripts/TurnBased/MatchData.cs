@@ -1,50 +1,32 @@
 ﻿
 
-using GooglePlayGames.BasicApi.Multiplayer;
+
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+
 using System.IO;
 
 
-public class Geek {
-	public string id;
-	public string name;
-	public int correctAnswers;
 
-    public Geek()
-    {
-        this.id = "";
-        this.correctAnswers = 0;
-    }
-	public Geek(string id, int answers) {
-
-		this.id=id;
-		this.correctAnswers = answers;
-	}
-	public override string ToString () {
-		return "[Geek: '" + id + "' " +  name +" , Answers=" + correctAnswers + "]";
-	}
-};
 
 public class MatchData
 {
-    private const int Header = 201461; // Para numero de version
-    public int IndexCurrentPlayer = 0;
-    public int numberplayers = 0;
-    public int status = 0;
-    public int topanswers = 5;
-    public string language = "";
-    public string GeekIdWon = "";
+    private const int Header = 201402; // Para numero de version
+
     public string CurrentPlayer = "";
-    public string CurrentMatchID = "";
-    public bool IsQuickMatch = false;
-   
+    public string Player1 = "";
+    public string Player2 = "";
 
-    public List<Geek> geeks = new List<Geek>();
+    private int Player1Answers = 0;
+    private int Player2Answers = 0;
+
+    private bool Player1Wins = false;
+    private bool Player2Wins = false;
 
 
+    public int topanswers = 5;
+    public string PlayerWon = "";
 
+    
     public MatchData()
     {
 
@@ -52,25 +34,30 @@ public class MatchData
 
     public int GetScoreParticipantID(string participantid)
     {
-        foreach (Geek geek in geeks)
+        if (participantid == Player1)
         {
-            if (geek.id == participantid)
-                return geek.correctAnswers;
+            return Player1Answers;
         }
-        return 0;
+        else
+        {
+            return Player2Answers;
+        }
+        
     }
+
 
     public void AddScoreParticipantID(string participantid, int answers)
     {
-        foreach (Geek geek in geeks)
+        if (participantid == Player1)
         {
-            if (geek.id == participantid)
-            {
-                geek.correctAnswers = geek.correctAnswers + answers;
-                break;
-            }
+            Player1Answers+=answers;
+        }
+        else
+        {
+            Player2Answers+=answers;
         }
     }
+
 
     public MatchData(byte[] b) : this()
     {
@@ -78,7 +65,7 @@ public class MatchData
         {
             ReadFromBytes(b);
         
-            ComputeWinner();
+          
         }
         else
         {
@@ -87,33 +74,21 @@ public class MatchData
         }
     }
 
-    
-    private void ComputeWinner()
-    {
-
-    }
-
+   
     public byte[] ToBytes()
     {
         MemoryStream memStream = new MemoryStream();
         BinaryWriter w = new BinaryWriter(memStream);
         w.Write(Header);
-        w.Write(this.IndexCurrentPlayer);
-        w.Write(geeks.Count);
-        w.Write(this.status);
-        w.Write(this.topanswers);
-        w.Write(this.language);
-        w.Write(this.GeekIdWon);
         w.Write(this.CurrentPlayer);
-        w.Write(this.CurrentMatchID);
-        w.Write(this.IsQuickMatch);
-
-        foreach (Geek g in geeks)
-        {
-            w.Write(g.id);
-            w.Write(g.correctAnswers);
-
-        }
+        w.Write(this.Player1);
+        w.Write(this.Player2);
+        w.Write(this.Player1Answers);
+        w.Write(this.Player2Answers);
+        w.Write(this.topanswers);
+        w.Write(this.PlayerWon);
+        
+        
         w.Close();
         byte[] buf = memStream.GetBuffer();
         memStream.Close();
@@ -130,26 +105,14 @@ public class MatchData
             throw new UnsupportedMatchFormatException("Match data header " + header +
                                                       " not recognized.");
         }
-        this.IndexCurrentPlayer = r.ReadInt32();
-        this.numberplayers = r.ReadInt32();
-        this.status = r.ReadInt32();
-        this.topanswers = r.ReadInt32();
-        this.language = r.ReadString();
-        this.GeekIdWon = r.ReadString();
         this.CurrentPlayer = r.ReadString();
-        this.CurrentMatchID = r.ReadString();
-        this.IsQuickMatch = r.ReadBoolean();
+        this.Player1 = r.ReadString();
+        this.Player2 = r.ReadString();
+        this.Player1Answers = r.ReadInt32();
+        this.Player2Answers = r.ReadInt32();
+        this.topanswers = r.ReadInt32();
+        this.PlayerWon = r.ReadString();
 
-
-        for (int i = 0; i < this.numberplayers; i++)
-        {
-            string id = r.ReadString();
-            int answers = r.ReadInt32();
-            Geek temp = new Geek(id, answers);
-            geeks.Add(temp);
-
-        }
-        ComputeWinner();
 
 
     }
@@ -162,52 +125,15 @@ public class MatchData
         }
     }
 
-    public void SetInitialMatchData(TurnBasedMatch mMatch, string matchLanguage, int totalanswers)
-    {
-        geeks.Clear();
-
-        this.numberplayers = 2;//mMatch.Participants.Count;
-        this.status = 0;
-        this.topanswers = totalanswers;
-        this.language = matchLanguage;
-        this.GeekIdWon = "-1";
-        this.CurrentPlayer = mMatch.SelfParticipantId;
-        this.IndexCurrentPlayer = 0;
-        this.CurrentMatchID = mMatch.MatchId;
-        Debug.Log("Aut Slots" + mMatch.AvailableAutomatchSlots);
-        if (mMatch.AvailableAutomatchSlots > 0)
-        {
-            
-            this.IsQuickMatch = true;
-        }
-        else
-        {
-            this.IsQuickMatch = false;
-        }
-        foreach (Participant participant in mMatch.Participants)
-        {
-            Geek temp = new Geek(participant.ParticipantId, 0);
-            geeks.Add(temp);
-        }
-        if (IsQuickMatch) // Falta agregar uno vacio
-        {
-            Geek temp = new Geek("", 0);
-            geeks.Add(temp);
-        }
-        
-    }
+   
 
     public override string ToString()
     {
       
-        string theGeeks = "";
-        foreach (Geek geek in geeks)
-        {
-            theGeeks = theGeeks + "[" + geek.id + "-"+ geek.correctAnswers.ToString() + "]";
-        }
-        return string.Format(@"Players={0},Status={1},TopAnswers={2},language={3},
-                              GeekidWon={4},CurrentPlayer={5},Geeks={6}", numberplayers, status,
-            topanswers, language, GeekIdWon, CurrentPlayer,theGeeks);
+      
+        return string.Format(@"Player1={0},AnswersPlayer1={1},Player2={2},AnswersPlayer2={3},
+                              CurrentPlayer={4}",Player1,Player1Answers,Player2,Player2Answers,
+                                                CurrentPlayer);
 
     }
 }

@@ -17,6 +17,8 @@ public class InfoPlayers
 public class MatchLobbyScript : PanelScript {
 
 	// Use this for initialization
+    public PlayScript PlayGame;
+
     public UILabel MatchStatusLabel;
     public UILabel TurnStatusLabel;
     public UILabel ScoreAnswersToWin;
@@ -27,9 +29,13 @@ public class MatchLobbyScript : PanelScript {
 
 	void OnEnable ()
 	{
+        Debug.Log("MatchLobbyScript antes de CleanUI");
 		CleanUI();
-		if (!Managers.Social.IsAuthenticated()) return;
+		
+        Debug.Log("MatchLobbyScript despues de CleanUI");
 
+	  
+        
         RenderInfo();
 
 	   
@@ -59,12 +65,17 @@ public class MatchLobbyScript : PanelScript {
 	}
     void RenderInfo()
     {
+       
+        Debug.Log("En Renderinfo iniciando...");
         if (PlayGameButton != null)
             PlayGameButton.isEnabled = false;
         if (MatchStatusLabel != null)
             MatchStatusLabel.text = Localization.Localize(Managers.Social.GetCurrentMatchStatus());
 
+        Debug.Log("Antes de PArtcipants info...");
         RenderParticipantsInfo();
+        Debug.Log("Antes de RenderTurnStatus info...");
+
         RenderTurnStatus();
 
     }
@@ -109,6 +120,8 @@ public class MatchLobbyScript : PanelScript {
         if (infoPlayers != null && infoPlayers.Length > 0)
         {
             int i = 0;
+            Debug.Log("Iniciando PArtcipants info...");
+        
             string MyParticipantID = Managers.Social.GetCurrentMatchParticipantID();
             participants = Managers.Social.GetCurrentMatchParticipants();
             int TotalAnswers = Managers.Social.GetCurrentTotalAnswers();
@@ -116,8 +129,15 @@ public class MatchLobbyScript : PanelScript {
             {
                 ScoreAnswersToWin.text = TotalAnswers.ToString();
             }
+            Debug.Log("Antes foreach PArtcipants info...");
+            if (participants == null)
+            {
+                Debug.Log("Participants null..");
+                
+            }
             foreach (Participant participant in participants)
             {
+                Debug.Log("Dentro de foreach..." + i.ToString());
                 if (infoPlayers[i].PlayerNameLabel != null)
                 {
                     if (MyParticipantID == participant.ParticipantId)
@@ -127,6 +147,7 @@ public class MatchLobbyScript : PanelScript {
                         infoPlayers[i].PlayerNameLabel.text = participant.DisplayName;
                     }
                 }
+                Debug.Log("Dentro de foreach...Mitad");
                 if (infoPlayers[i].PlayerStatusLabel != null)
                 {
                     string partstatus = "participant" +  participant.Status.ToString();

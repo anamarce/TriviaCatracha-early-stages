@@ -10,9 +10,9 @@ namespace x16
 
         public override void ActionPerformed()
         {
-
+            Messenger.Broadcast("SignInMessage");
 		
-			Managers.Social.SignIn(false);
+			
         }
     }
 }

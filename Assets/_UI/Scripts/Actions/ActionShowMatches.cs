@@ -22,7 +22,7 @@ namespace x16
 				return;
 			}
             
-            Managers.Social.ShowAndAcceptMatchInvitations();
+            Messenger.Broadcast("ActionShowMatches");
             
         }
 		public void  Dissapear()

@@ -113,7 +113,7 @@ public class MatchPlayScript : PanelScript {
         bool IsWinner = Managers.Social.CheckWinner();
         if (IsWinner)
         {
-            Managers.Social.FinishMatch();
+           // Managers.Social.FinishMatch();
 
             LabelAnswer.color = Color.white;
             LabelAnswer.text = Localization.Localize("youwon");
@@ -124,7 +124,7 @@ public class MatchPlayScript : PanelScript {
         {
             if (Managers.Social.GetCurrentConsecutiveAnswers() == Globals.Constants.IntervalAnswers)
             {
-                Managers.Social.TriggerNextTurn();
+          //      Managers.Social.TriggerNextTurn();
                 if (ButtonFailed != null)
                     NGUITools.SetActive(ButtonFailed.gameObject, true);
        
@@ -155,7 +155,7 @@ public class MatchPlayScript : PanelScript {
             LabelAnswer.text = Localization.Localize("wronganswer");
 	     }
         TurnOffTimerSound();
-        Managers.Social.TriggerNextTurn();
+     //   Managers.Social.TriggerNextTurn();
 
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);
@@ -198,7 +198,7 @@ public class MatchPlayScript : PanelScript {
 
         }
         TurnOffTimerSound();
-        Managers.Social.TriggerNextTurn();
+     //   Managers.Social.TriggerNextTurn();
 
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);

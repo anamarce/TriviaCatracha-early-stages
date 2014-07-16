@@ -10,59 +10,50 @@ using System.Collections;
 	   private static SocialManager socialManager;
 		public static SocialManager Social
 		{
-			get { Validate();return socialManager; }
+			get { return socialManager; }
 		}
 
         private static GameManager gameManager;
         public static GameManager Game
         {
-            get { Validate();return gameManager; }
+            get { return gameManager; }
         }
 	
         private static AudioManager audioManager;
         public static AudioManager Audio
         {
-            get {Validate(); return audioManager; }
+            get { return audioManager; }
         }
 	
         private static EffectsManager effectsManager;
         public static EffectsManager Effects
         {
-            get { Validate();return effectsManager; }
+            get { return effectsManager; }
         }
 	
         private static DataManager dataManager;
         public static DataManager Data
         {
-            get {Validate(); return dataManager; }
+            get { return dataManager; }
         }
 
         private static PlatformManager platformManager;
         public static PlatformManager Platform
         {
-            get { Validate(); return platformManager; }
+            get {  return platformManager; }
         }
 
         private static TriviaApi triviaManager;
         public static TriviaApi Trivia
         {
-            get { Validate(); return triviaManager; }
+            get {  return triviaManager; }
         }
 	   private static PanelManager panelManager;
 	   public static PanelManager SceneManager
  	   {
-		get { Validate(); return panelManager; }
+		get {  return panelManager; }
 	   }
-        static void Validate()
-        {
-            if(gameManager==null || audioManager ==null  || effectsManager==null
-		   || dataManager == null || platformManager == null || socialManager == null  
-                || triviaManager ==null)
-            {
-                Application.LoadLevel("Xtudio16StartScene");
-		    
-            }
-        }
+     
 	
 	
         void Start ()
@@ -79,7 +70,7 @@ using System.Collections;
             triviaManager = GetComponent<TriviaApi>();
 		    panelManager = GetComponent<PanelManager>();
 	  
-            DontDestroyOnLoad(this);
+             DontDestroyOnLoad(this);
 	
 		
         }
