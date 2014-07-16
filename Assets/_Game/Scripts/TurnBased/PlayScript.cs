@@ -1,4 +1,5 @@
-﻿using GooglePlayGames;
+﻿using System.Collections.Generic;
+using GooglePlayGames;
 using GooglePlayGames.BasicApi.Multiplayer;
 using UnityEngine;
 using System.Collections;
@@ -124,4 +125,72 @@ public class PlayScript : MonoBehaviour {
         return "";
     }
 
+    public string GetCurrentMatchStatus()
+    {
+        if (mMatch != null)
+            return mMatch.Status.ToString();
+        else
+        {
+            return "";
+        }
+    }
+
+    public string GetCurrentMatchParticipantID()
+    {
+        if (mMatch != null)
+            return mMatch.SelfParticipantId;
+        else
+        {
+            return "";
+        }
+    }
+
+    public List<Participant> GetCurrentMatchParticipants()
+    {
+        if (mMatch != null)
+        {
+            Debug.Log("No es null");
+            return mMatch.Participants;
+        }
+        else
+        {
+            Debug.Log("es null");
+            return null;
+        }
+    }
+    public int GetCurrentTotalAnswers()
+    {
+        if (mMatchData != null)
+            return mMatchData.topanswers;
+
+        return 0;
+    }
+    public int GetCurrentMatchScoreParticipantID(string participantId)
+    {
+        if (mMatchData != null)
+            if (participantId == mMatchData.Player1)
+            {
+                return mMatchData.Player1Answers;
+            }
+            else
+            {
+                return mMatchData.Player2Answers;
+            }
+
+            
+        else
+        {
+            return 0;
+        }
+    }
+    public bool CanIPlayCurrentMatch()
+    {
+        bool canPlay = false;
+        if (mMatch != null)
+        {
+            canPlay = (mMatch.Status == TurnBasedMatch.MatchStatus.Active &&
+                            mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
+        }
+        return canPlay;
+    }
 }

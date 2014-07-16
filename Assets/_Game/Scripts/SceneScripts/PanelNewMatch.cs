@@ -5,7 +5,9 @@ public class PanelNewMatch : PanelScript
 {
 
 	// Use this for initialization
+   
 
+  
     // Like start
     void OnEnable()
     {

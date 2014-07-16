@@ -16,14 +16,14 @@ public class MatchData
     public string Player1 = "";
     public string Player2 = "";
 
-    private int Player1Answers = 0;
-    private int Player2Answers = 0;
+    public int Player1Answers = 0;
+    public int Player2Answers = 0;
 
-    private bool Player1Wins = false;
-    private bool Player2Wins = false;
+    public  bool Player1Wins = false;
+    public bool Player2Wins = false;
 
 
-    public int topanswers = 5;
+    public int topanswers = 20;
     public string PlayerWon = "";
 
     

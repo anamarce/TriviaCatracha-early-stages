@@ -23,6 +23,8 @@ public class PanelMainScene : PanelScript {
         Debug.Log("PanelMainScene Start");
         Messenger.AddListener("ActionShowMatches" , ShowMatches);
         Messenger.AddListener("ActionSigInOut", signInOut);
+        Messenger.AddListener("ActionCreateMatch", CreateMatch);
+        Messenger.AddListener("ActionCreateQuickMatch", CreateQuickMatch);
 
         PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
      
@@ -30,6 +32,15 @@ public class PanelMainScene : PanelScript {
      
     }
 
+    void CreateMatch()
+    {
+        PlayGamesPlatform.Instance.TurnBased.CreateWithInvitationScreen(1, 1,0, OnMatchStarted);
+    }
+
+    void CreateQuickMatch()
+    {
+        PlayGamesPlatform.Instance.TurnBased.CreateQuickMatch(1, 1, 0, OnMatchStarted);
+    }
     void ShowMatches()
     {
         PlayGamesPlatform.Instance.TurnBased.AcceptFromInbox(OnMatchStarted);

@@ -29,14 +29,12 @@ public class MatchLobbyScript : PanelScript {
 
 	void OnEnable ()
 	{
-        Debug.Log("MatchLobbyScript antes de CleanUI");
+    
 		CleanUI();
-		
-        Debug.Log("MatchLobbyScript despues de CleanUI");
-
-	  
-        
+	
         RenderInfo();
+        RenderParticipantsInfo();
+        RenderTurnStatus();
 
 	   
 	}
@@ -70,23 +68,68 @@ public class MatchLobbyScript : PanelScript {
         if (PlayGameButton != null)
             PlayGameButton.isEnabled = false;
         if (MatchStatusLabel != null)
-            MatchStatusLabel.text = Localization.Localize(Managers.Social.GetCurrentMatchStatus());
+            MatchStatusLabel.text = Localization.Localize(PlayGame.GetCurrentMatchStatus());
 
-        Debug.Log("Antes de PArtcipants info...");
-        RenderParticipantsInfo();
-        Debug.Log("Antes de RenderTurnStatus info...");
-
-        RenderTurnStatus();
-
+      
     }
 
-    private void RenderTurnStatus()
+  
+    private void RenderParticipantsInfo()
     {
-        if (Managers.Social.CanIPlayCurrentMatch())
+        if (infoPlayers != null && infoPlayers.Length > 0)
         {
            
-        
-            if (TurnStatusLabel != null)
+            Debug.Log("Iniciando PArtcipants info...");
+
+            string MyParticipantID = PlayGame.GetCurrentMatchParticipantID();  // Managers.Social.GetCurrentMatchParticipantID();
+            participants = PlayGame.GetCurrentMatchParticipants(); //   Managers.Social.GetCurrentMatchParticipants();
+
+
+            int TotalAnswers = PlayGame.GetCurrentTotalAnswers(); // Managers.Social.GetCurrentTotalAnswers();
+            if (ScoreAnswersToWin != null)
+            {
+                ScoreAnswersToWin.text = TotalAnswers.ToString();
+            }
+          
+            if (participants == null)
+            {
+                Debug.Log("Participants null..");
+                
+            }
+            int i = 0;
+            foreach (Participant participant in participants)
+            {
+                Debug.Log("Dentro de foreach..." + i.ToString());
+                if (infoPlayers[i].PlayerNameLabel != null)
+                {
+                    if (MyParticipantID == participant.ParticipantId)
+                        infoPlayers[i].PlayerNameLabel.text = "*" + participant.DisplayName;
+                    else
+                    {
+                        infoPlayers[i].PlayerNameLabel.text = participant.DisplayName;
+                    }
+                }
+                Debug.Log("Dentro de foreach...Mitad");
+                if (infoPlayers[i].PlayerStatusLabel != null)
+                {
+                    string partstatus = "participant" +  participant.Status.ToString();
+                    infoPlayers[i].PlayerStatusLabel.text = Localization.Localize(partstatus);
+                }
+                if (infoPlayers[i].PlayerScoreLabel != null)
+                {
+                    int score = PlayGame.GetCurrentMatchScoreParticipantID(participant.ParticipantId); //Managers.Social.GetCurrentMatchScoreParticipantID(participant.ParticipantId);
+                    infoPlayers[i].PlayerScoreLabel.text = System.Convert.ToString(score);
+                }
+                i++;
+               
+            }
+        }
+    }
+    private void RenderTurnStatus()
+    {
+        if (PlayGame.CanIPlayCurrentMatch())
+        {
+           if (TurnStatusLabel != null)
             {
                 TurnStatusLabel.text = Localization.Localize("matchisyourturn");
                 if (PlayGameButton != null)
@@ -104,7 +147,7 @@ public class MatchLobbyScript : PanelScript {
             }
             if (TurnStatusLabel != null)
             {
-                string status = Managers.Social.ExplainWhyICantPlay();
+                string status = PlayGame.ExplainWhyICantPlay();
                 if (status != "")
                     TurnStatusLabel.text = Localization.Localize(status);
                 else
@@ -113,54 +156,6 @@ public class MatchLobbyScript : PanelScript {
                 }
             }
 
-        }
-    }
-    private void RenderParticipantsInfo()
-    {
-        if (infoPlayers != null && infoPlayers.Length > 0)
-        {
-            int i = 0;
-            Debug.Log("Iniciando PArtcipants info...");
-        
-            string MyParticipantID = Managers.Social.GetCurrentMatchParticipantID();
-            participants = Managers.Social.GetCurrentMatchParticipants();
-            int TotalAnswers = Managers.Social.GetCurrentTotalAnswers();
-            if (ScoreAnswersToWin != null)
-            {
-                ScoreAnswersToWin.text = TotalAnswers.ToString();
-            }
-            Debug.Log("Antes foreach PArtcipants info...");
-            if (participants == null)
-            {
-                Debug.Log("Participants null..");
-                
-            }
-            foreach (Participant participant in participants)
-            {
-                Debug.Log("Dentro de foreach..." + i.ToString());
-                if (infoPlayers[i].PlayerNameLabel != null)
-                {
-                    if (MyParticipantID == participant.ParticipantId)
-                        infoPlayers[i].PlayerNameLabel.text = "=>" + participant.DisplayName;
-                    else
-                    {
-                        infoPlayers[i].PlayerNameLabel.text = participant.DisplayName;
-                    }
-                }
-                Debug.Log("Dentro de foreach...Mitad");
-                if (infoPlayers[i].PlayerStatusLabel != null)
-                {
-                    string partstatus = "participant" +  participant.Status.ToString();
-                    infoPlayers[i].PlayerStatusLabel.text = Localization.Localize(partstatus);
-                }
-                if (infoPlayers[i].PlayerScoreLabel != null)
-                {
-                    int score = Managers.Social.GetCurrentMatchScoreParticipantID(participant.ParticipantId);
-                    infoPlayers[i].PlayerScoreLabel.text = System.Convert.ToString(score);
-                }
-                i++;
-                //Debug.Log(participant.DisplayName + "-" + participant.ParticipantId + "-" + participant.Status.ToString());
-            }
         }
     }
 
