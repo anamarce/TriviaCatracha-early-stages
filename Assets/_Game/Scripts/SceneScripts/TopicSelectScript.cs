@@ -4,6 +4,7 @@ using System.Collections;
 public class TopicSelectScript : PanelScript
 {
 
+    public PlayScript PlayGame;
     public UILabel TopicNameLabel;
     public UISprite TopicSprite;
     public UILabel CurrentScore;
@@ -23,11 +24,15 @@ public class TopicSelectScript : PanelScript
 
     private int CurrentTopicIndex = -1;
 	// Use this for initialization
-	
 
+    void Start()
+    {
+        Messenger.AddListener("SpinButtonClicked", SpinHandler);
+
+    }
     void OnEnable()
     {
-        Messenger.Cleanup();
+       
         SpinStarted = false;
         Random.seed = (int)Time.time;
         SpinButton.isEnabled = true;
@@ -36,12 +41,12 @@ public class TopicSelectScript : PanelScript
         if (CurrentScore != null)
         {
             string temp = string.Format("{0}/{1}",
-                Managers.Social.GetCurrentMatchScore(),
-                Managers.Social.mMatchData.topanswers);
+                PlayGame.GetCurrentMatchScore(),
+                PlayGame.mMatchData.topanswers);
             CurrentScore.text = temp;
         }
 
-        Messenger.AddListener("SpinButtonClicked", SpinHandler);
+      
     }
 
     void SpinHandler()
@@ -68,7 +73,7 @@ public class TopicSelectScript : PanelScript
 
                 string topickey = Managers.Trivia.GetTopicName(CurrentTopicIndex);
                 TopicNameLabel.text = Localization.Localize(topickey);
-                //Debug.Log("Topic:" + TopicNameLabel.text);
+               
                 CountTopicTimes = CountTopicTimes +1;
 
                 TopicSprite.spriteName = Managers.Trivia.GetSpritName(CurrentTopicIndex);

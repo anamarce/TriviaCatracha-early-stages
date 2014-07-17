@@ -2,19 +2,19 @@
 
 "Imagotipo-Trivia-Geek.png":
 {
-	"frame": {"x":2,"y":246,"w":209,"h":512},
+	"frame": {"x":2,"y":276,"w":209,"h":512},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":209,"h":512},
 	"sourceSize": {"w":209,"h":512}
 },
-"XtudioLogo.png":
+"Logo_Xtudio16_Final.png":
 {
-	"frame": {"x":2,"y":2,"w":302,"h":242},
+	"frame": {"x":2,"y":2,"w":351,"h":272},
 	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":302,"h":242},
-	"sourceSize": {"w":302,"h":242}
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":351,"h":272},
+	"sourceSize": {"w":353,"h":274}
 }},
 "meta": {
 	"app": "http://www.texturepacker.com",
@@ -23,6 +23,6 @@
 	"format": "RGBA8888",
 	"size": {"w":512,"h":1024},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:c303e544668974df04a91930c5c837c2$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ea4030662ba1fc996479cd150b9dbd5c$"
 }
 }

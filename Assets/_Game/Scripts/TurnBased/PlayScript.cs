@@ -52,7 +52,9 @@ public class PlayScript : MonoBehaviour {
             // brand-new match in that case.
 
             Debug.Log("mMatchData se crea");
-            mMatchData = new MatchData(mMatch.Data);
+            mMatchData = new MatchData(mMatch.Data,mMatch);
+            Debug.Log("Player1:" + mMatchData.Player1 + "-Player2:" + mMatchData.Player2);
+
         }
         catch (MatchData.UnsupportedMatchFormatException ex)
         {
@@ -192,5 +194,178 @@ public class PlayScript : MonoBehaviour {
                             mMatch.TurnStatus == TurnBasedMatch.MatchTurnStatus.MyTurn);
         }
         return canPlay;
+    }
+    public int GetCurrentMatchScore()
+    {
+        if (mMatch != null)
+            return GetCurrentMatchScoreParticipantID(mMatch.SelfParticipantId);
+        else
+            return 0;
+    }
+
+    public void IncrementCurrentConsecutiveAnswers()
+    {
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                mMatchData.AddConsecutiveScoreParticipantID(mMatch.SelfParticipantId, 1);
+            }
+        }
+    }
+
+    public void IncrementCorrectAnswers()
+    {
+
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                mMatchData.AddScoreParticipantID(mMatch.SelfParticipantId, 1);
+
+            }
+
+        }
+    }
+
+    public void ResetConsecutiveAnswers()
+    {
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                mMatchData.Player1ConsecutiveAnswers = 0;
+                mMatchData.Player2ConsecutiveAnswers = 0;
+
+            }
+
+        }
+    }
+
+    public int GetCurrentConsecutiveAnswers()
+    {
+        int cant = -1;
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                cant = mMatchData.GetCurrentConsecutivesAnswers(mMatch.SelfParticipantId);
+            }
+        }
+        return cant;
+    }
+
+    public bool CheckWinner()
+    {
+        if (mMatch != null)
+        {
+            if (mMatchData != null)
+            {
+                int currentScore = mMatchData.GetScoreParticipantID(mMatch.SelfParticipantId);
+                if (currentScore == mMatchData.topanswers)
+                    return true;
+                else
+                    return false;
+
+            }
+        }
+        return false;
+    }
+    public void FinishMatch()
+    {
+        // define the match's outcome
+        MatchOutcome outcome = new MatchOutcome();
+        outcome.SetParticipantResult(mMatch.SelfParticipantId, MatchOutcome.ParticipantResult.Win);
+       if (mMatch.SelfParticipantId==mMatchData.Player1)
+            outcome.SetParticipantResult(mMatchData.Player2, MatchOutcome.ParticipantResult.Loss);
+       else
+       {
+           outcome.SetParticipantResult(mMatchData.Player1, MatchOutcome.ParticipantResult.Loss);
+           
+       }
+        mMatchData.PlayerWon = mMatch.SelfParticipantId;
+
+        PlayGamesPlatform.Instance.TurnBased.Finish(mMatch.MatchId, mMatchData.ToBytes(),
+                   outcome, (bool success) =>
+                  {
+                      if (success)
+                          mFinalMessage = "YOU WON!!";
+                      else
+                      {
+                          mFinalMessage = "Error winning";
+                      }
+                  });
+        Debug.Log(mFinalMessage);
+    }
+
+    public void TriggerNextTurn()
+    {
+        if (mMatch != null)
+        {
+            if (mMatch.AvailableAutomatchSlots == 0)
+            {
+                mMatchData.SelectOpponent(mMatch.SelfParticipantId);
+                this.ResetConsecutiveAnswers();
+
+                PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                    (mMatch.MatchId, mMatchData.ToBytes(),
+                        mMatchData.CurrentPlayer,
+                        (bool success) =>
+                        {
+                            mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
+                            if (!success) // Handle error
+                            {
+                                
+                            }
+                        }
+                    );
+                Debug.Log(mFinalMessage);
+            }
+            else // is a quick match
+            {
+                mMatchData.CurrentPlayer = "";
+                this.ResetConsecutiveAnswers();
+                PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                (mMatch.MatchId, mMatchData.ToBytes(), null
+                   ,
+                  (bool success) =>
+                  {
+                      mFinalMessage = success ? "Done for now!" : "ERROR sending turn.";
+                      if (!success) // Handle error
+                      {
+                          
+                      }
+                  }
+                );
+                Debug.Log(mFinalMessage);
+
+
+            }
+
+
+
+        }
+    }
+
+    public void TriggerMyTurnAgain()
+    {
+        if (mMatch != null)
+        {
+
+            PlayGamesPlatform.Instance.TurnBased.TakeTurn
+                (mMatch.MatchId, mMatchData.ToBytes(),
+                    mMatch.SelfParticipantId,
+                    (bool success) =>
+                    {
+                        mFinalMessage = success ? "Again!" : "ERROR sending turn.";
+                        if (!success) // Handle error
+                        {
+                            
+                        }
+                    }
+                );
+            Debug.Log(mFinalMessage);
+
+        }
     }
 }

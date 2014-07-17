@@ -17,6 +17,7 @@ public enum QUESTIONSTATUS
 public class LoadingQuestionScript : PanelScript {
 
 	// Use this for initialization
+    public PlayScript PlayGame;
     public UILabel labelError;
     public UIButton ButtonGoBack;
 

@@ -45,13 +45,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 2
-      y: 246
+      y: 276
       width: 209
       height: 512
     inner:
       serializedVersion: 2
       x: 2
-      y: 246
+      y: 276
       width: 209
       height: 512
     rotated: 0
@@ -59,24 +59,24 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: XtudioLogo
+  - name: Logo_Xtudio16_Final
     outer:
       serializedVersion: 2
       x: 2
       y: 2
-      width: 302
-      height: 242
+      width: 351
+      height: 272
     inner:
       serializedVersion: 2
       x: 2
       y: 2
-      width: 302
-      height: 242
+      width: 351
+      height: 272
     rotated: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
+    paddingLeft: .00284900283
+    paddingRight: .00284900283
+    paddingTop: .0036764706
+    paddingBottom: .0036764706
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

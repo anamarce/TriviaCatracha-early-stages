@@ -1,6 +1,7 @@
 ﻿
 
 
+using GooglePlayGames.BasicApi.Multiplayer;
 using UnityEngine;
 
 using System.IO;
@@ -10,7 +11,7 @@ using System.IO;
 
 public class MatchData
 {
-    private const int Header = 201402; // Para numero de version
+    private const int Header = 201403; // Para numero de version
 
     public string CurrentPlayer = "";
     public string Player1 = "";
@@ -25,6 +26,9 @@ public class MatchData
 
     public int topanswers = 20;
     public string PlayerWon = "";
+
+    public int Player1ConsecutiveAnswers = 0;
+    public int Player2ConsecutiveAnswers = 0;
 
     
     public MatchData()
@@ -59,18 +63,35 @@ public class MatchData
     }
 
 
-    public MatchData(byte[] b) : this()
+    public MatchData(byte[] b, TurnBasedMatch match) : this()
     {
         if (b != null)
         {
             ReadFromBytes(b);
-        
-          
+            if (this.Player2 == "")
+            {
+                if(match.AvailableAutomatchSlots==0)
+                {
+                    this.Player2 = match.Participants[1].ParticipantId;
+                    Debug.Log("Opponent Updated:" + this.Player2);
+                }
+            }
         }
         else
         {
-            
-            Debug.Log("Game has started, matchDataNull");
+           
+            this.Player1 = match.SelfParticipantId;
+            Debug.Log("First Time:" + this.Player1);
+
+            this.CurrentPlayer = match.SelfParticipantId;
+            if (match.AvailableAutomatchSlots==0)
+            {
+              
+                this.Player2 = match.Participants[1].ParticipantId;
+                Debug.Log("Opponent:" + this.Player2);
+            }
+
+           
         }
     }
 
@@ -87,6 +108,8 @@ public class MatchData
         w.Write(this.Player2Answers);
         w.Write(this.topanswers);
         w.Write(this.PlayerWon);
+        w.Write(this.Player1ConsecutiveAnswers);
+        w.Write(this.Player2ConsecutiveAnswers);
         
         
         w.Close();
@@ -112,7 +135,8 @@ public class MatchData
         this.Player2Answers = r.ReadInt32();
         this.topanswers = r.ReadInt32();
         this.PlayerWon = r.ReadString();
-
+        this.Player1ConsecutiveAnswers = r.ReadInt32();
+        this.Player2ConsecutiveAnswers = r.ReadInt32();
 
 
     }
@@ -135,5 +159,53 @@ public class MatchData
                               CurrentPlayer={4}",Player1,Player1Answers,Player2,Player2Answers,
                                                 CurrentPlayer);
 
+    }
+
+    public void ResetCurrentConsecutiveAnswers(string selfParticipantId)
+    {
+        if (selfParticipantId == Player1)
+        {
+            Player1ConsecutiveAnswers = 0;
+        }
+        else
+        {
+            Player2ConsecutiveAnswers =0;
+        }
+
+    }
+    public void AddConsecutiveScoreParticipantID(string selfParticipantId, int answers)
+    {
+        if (selfParticipantId == Player1)
+        {
+            Player1ConsecutiveAnswers += answers;
+        }
+        else
+        {
+            Player2ConsecutiveAnswers += answers;
+        }
+    }
+
+    public int GetCurrentConsecutivesAnswers(string selfParticipantId)
+    {
+        if (selfParticipantId == Player1)
+        {
+            return Player1ConsecutiveAnswers;
+        }
+        else
+        {
+            return Player2ConsecutiveAnswers;
+        }
+    }
+
+    public void SelectOpponent(string selfParticipantId)
+    {
+        if (selfParticipantId == Player1)
+        {
+            CurrentPlayer = Player2;
+        }
+        else
+        {
+            CurrentPlayer = Player1;
+        }
     }
 }

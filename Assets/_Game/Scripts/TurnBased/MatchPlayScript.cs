@@ -14,6 +14,7 @@ public enum PlAYSTATUS
 public class MatchPlayScript : PanelScript {
 
 	// Use this for initialization
+    public PlayScript PlayGame;
     public UILabel LabelTime;
     public UILabel LabelTopic;
     public UILabel LabelQuestion;
@@ -34,15 +35,15 @@ public class MatchPlayScript : PanelScript {
 	void Start ()
 	{
 		TimeToAnswer=25F;
-      
+        Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
+        Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
 	}
 
     void OnEnable()
     {
-		Messenger.Cleanup();
-		Messenger.AddListener<int>("CorrectOptionPressed", CorrectOptionHandler);
-		Messenger.AddListener<int>("WrongOptionPressed", WrongOptionHandler);
-
+		
+		
+        TimeToAnswer = 25F;
         CurrentStatus = PlAYSTATUS.NOTANSWER;
 		CurrentIndexSelected= -1;
 		endTime = Time.time + TimeToAnswer;
@@ -104,16 +105,16 @@ public class MatchPlayScript : PanelScript {
             LabelAnswer.text = Localization.Localize("correctanswer");
     		
         }
-
-        Managers.Social.IncrementCorrectAnswers();
-        Managers.Social.IncrementCurrentConsecutiveAnswers(1);
+        PlayGame.IncrementCorrectAnswers();
+        PlayGame.IncrementCurrentConsecutiveAnswers();
 
 
         TurnOffTimerSound();
-        bool IsWinner = Managers.Social.CheckWinner();
+        bool IsWinner = PlayGame.CheckWinner(); // Managers.Social.CheckWinner();
         if (IsWinner)
         {
            // Managers.Social.FinishMatch();
+            PlayGame.FinishMatch();
 
             LabelAnswer.color = Color.white;
             LabelAnswer.text = Localization.Localize("youwon");
@@ -122,9 +123,12 @@ public class MatchPlayScript : PanelScript {
         }
         else
         {
-            if (Managers.Social.GetCurrentConsecutiveAnswers() == Globals.Constants.IntervalAnswers)
+            if (PlayGame.GetCurrentConsecutiveAnswers() == Globals.Constants.IntervalAnswers)
             {
-          //      Managers.Social.TriggerNextTurn();
+        
+              
+                PlayGame.TriggerNextTurn();
+
                 if (ButtonFailed != null)
                     NGUITools.SetActive(ButtonFailed.gameObject, true);
        
@@ -133,7 +137,7 @@ public class MatchPlayScript : PanelScript {
             }
             else
             {
-                Managers.Social.TriggerMyTurnAgain();
+                PlayGame.TriggerMyTurnAgain();
                 if (ButtonContinue != null)
                     NGUITools.SetActive(ButtonContinue.gameObject, true);
 
@@ -155,8 +159,8 @@ public class MatchPlayScript : PanelScript {
             LabelAnswer.text = Localization.Localize("wronganswer");
 	     }
         TurnOffTimerSound();
-     //   Managers.Social.TriggerNextTurn();
-
+    
+        PlayGame.TriggerNextTurn();
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);
        
@@ -198,7 +202,8 @@ public class MatchPlayScript : PanelScript {
 
         }
         TurnOffTimerSound();
-     //   Managers.Social.TriggerNextTurn();
+    
+        PlayGame.TriggerNextTurn();
 
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);
@@ -262,7 +267,7 @@ public class MatchPlayScript : PanelScript {
 				if (LabelTime != null)
 				{
 					LabelTime.text = timeLeft.ToString();
-					Debug.Log("LabelTime" + LabelTime.text);
+					
 				}
 			}
 	        else
