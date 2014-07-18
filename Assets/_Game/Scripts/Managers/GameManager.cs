@@ -6,12 +6,13 @@ using UnityEngine;
     public  class GameManager : MonoBehaviour {
 
 	    public Preferences preferences = new Preferences();
-	
-	
+
+        public int Adcounting = 0; 	
         void Start()
         {
      
-            Time.timeScale = 1.0f;
+           
+            Adcounting = 0;
 		    preferences.LoadPreferences();
 		    Localization.instance.currentLanguage = preferences.CurrentLanguage;
      

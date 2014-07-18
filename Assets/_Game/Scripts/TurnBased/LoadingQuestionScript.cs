@@ -54,7 +54,7 @@ public class LoadingQuestionScript : PanelScript {
 		else
 		{
 		
-           GetAndCachedQuestion(Managers.Social.GetCurrentMatchID(),
+           GetAndCachedQuestion(PlayGame.GetCurrentMatchID(),
                              Managers.Trivia.CurrentTopicIndexSelected,
                              languagecode);
 		}

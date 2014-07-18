@@ -15,48 +15,21 @@ namespace x16
     public static class Globals
     {
 
-		#region class utils
-        public class utils
+		
+        public class LeaderBoards
         {
+            public static string TopGeekLeaderBoard = "CgkIwdz54IMaEAIQAg";
 
-            public static bool ValidUsername(string username)
-            {
-
-                Regex rex = new Regex(@"^[a-zA-Z]{1}[a-zA-Z0-9]{1}[a-zA-Z0-9\._\-]{1,13}$");
-
-
-                if (rex.IsMatch(username))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            public static bool ValidPassword(string password)
-            {
-
-                Regex len = new Regex("^.{8,20}$");
-                Regex num = new Regex("\\d");
-                Regex alpha = new Regex("\\D");
-                Regex special = new Regex(@"[><%#@\*\+\?\!\&\-]"); // Put  here more special characters
-
-                if (len.IsMatch(password) && num.IsMatch(password) && alpha.IsMatch(password) )
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
         }
-		#endregion
 
-        public class GoogleCredentials
+        public class Achievements
         {
-            public string TopGeekLeaderBoard = "CgkIwdz54IMaEAIQAg";
+            public static string GeekStarter = "CgkIwdz54IMaEAIQAw";
+            public static string GeekPro = "CgkIwdz54IMaEAIQBA";
+            public static string GeekMaster = " CgkIwdz54IMaEAIQBQ";
+            public static string ChosenOne = "  CgkIwdz54IMaEAIQBg";
+            public static string PeacockGeek = " CgkIwdz54IMaEAIQBw";
+
 
         }
 
@@ -76,18 +49,9 @@ namespace x16
             public static int MaxAnswers = 20;
             public static int IntervalAnswers = 5;
 
+            public static int Adinterval = 3;
         }
-        public class GameEvents
-        {
-            // Build Strings with this format  TypeParameter, Name, Event
-            // For example a player dies ...    Player_DieEvent
-            // a player hits a obstacle ...  PlayerGameObject_HitObstacleEvent
-            // receive 2 parameters, the player , the gameObject that he hits ..
-
-            public static string DamageEvent_GameOjectFloat = "DamageEvent_GameOjectFloat";
-        
-        }
-
+       
       
 
 

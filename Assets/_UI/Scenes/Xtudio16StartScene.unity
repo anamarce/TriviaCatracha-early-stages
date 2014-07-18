@@ -2075,6 +2075,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 312254082}
+  - 114: {fileID: 312254084}
   - 114: {fileID: 312254083}
   m_Layer: 8
   m_Name: Actions
@@ -2109,6 +2110,19 @@ MonoBehaviour:
   Delay: 0
   Enabled: 1
   SceneName: MainScene
+--- !u!114 &312254084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 312254081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32120a27ebd1a894bbe16c00ca4baf17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  Enabled: 1
 --- !u!1 &318915969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,6 +3255,7 @@ MonoBehaviour:
   preferences:
     CurrentLanguage: English
     EnableSound: 1
+  Adcounting: 0
 --- !u!114 &502293336
 MonoBehaviour:
   m_ObjectHideFlags: 0

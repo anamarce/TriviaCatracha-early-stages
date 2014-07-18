@@ -163,8 +163,8 @@ public class MatchPlayScript : PanelScript {
         PlayGame.TriggerNextTurn();
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);
-       
-      
+
+        Managers.Game.Adcounting++;
 
     }
 	void ChangeColor ()
@@ -207,8 +207,8 @@ public class MatchPlayScript : PanelScript {
 
         if (ButtonFailed != null)
             NGUITools.SetActive(ButtonFailed.gameObject, true);
-       
 
+        Managers.Game.Adcounting++;
     }
     void ShowInitialInfo()
     {

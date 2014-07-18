@@ -368,4 +368,13 @@ public class PlayScript : MonoBehaviour {
 
         }
     }
+
+    public string GetCurrentMatchID()
+    {
+        if (mMatch != null)
+        {
+            return mMatch.MatchId;
+        }
+        return "";
+    }
 }
