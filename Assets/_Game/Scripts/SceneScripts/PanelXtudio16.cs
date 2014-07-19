@@ -21,6 +21,8 @@ public class PanelXtudio16 : PanelScript
             if (success)
             {
                 Debug.Log("PanelXtudio16.cs:Start:Success Login");
+            
+                CloudManager.Instance.LoadFromCloud();
                // SwitchToMain();
                 Managers.SceneManager.LoadLevel("MainScene");
             }

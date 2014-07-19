@@ -59,10 +59,15 @@ public class SocialManager : MonoBehaviour {
     {
 			Social.ShowAchievementsUI();
     }
-
+    
     public void UpdateAchievements()
     {
-        
+
+        //((PlayGamesPlatform)Social.Active).IncrementAchievement(
+        //  Globals.Achievements.GeekStarter, 1, (bool success) =>
+        //  {
+        //      // handle success or failure
+        //  });
     }
 		
 

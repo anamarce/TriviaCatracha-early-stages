@@ -22,10 +22,10 @@ namespace x16
 
         }
 
-        public class Achievements
+        public class Achievements 
         {
-            public static string GeekStarter = "CgkIwdz54IMaEAIQAw";
-            public static string GeekPro = "CgkIwdz54IMaEAIQBA";
+            public static string GeekStarter = "CgkIwdz54IMaEAIQCA";
+            public static string GeekPro = " CgkIwdz54IMaEAIQCQ";
             public static string GeekMaster = " CgkIwdz54IMaEAIQBQ";
             public static string ChosenOne = "  CgkIwdz54IMaEAIQBg";
             public static string PeacockGeek = " CgkIwdz54IMaEAIQBw";

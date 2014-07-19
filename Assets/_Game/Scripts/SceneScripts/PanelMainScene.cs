@@ -2,6 +2,7 @@
 using GooglePlayGames.BasicApi.Multiplayer;
 using UnityEngine;
 using System.Collections;
+using x16;
 
 public class PanelMainScene : PanelScript {
 
@@ -29,7 +30,10 @@ public class PanelMainScene : PanelScript {
         PlayGamesPlatform.Instance.TurnBased.RegisterMatchDelegate(OnGotMatch);
      
         PlayGamesPlatform.Instance.RegisterInvitationDelegate(OnGotInvitation);
-     
+
+       
+
+       
     }
 
     void CreateMatch()
@@ -49,6 +53,7 @@ public class PanelMainScene : PanelScript {
     void signInOut()
     {
         PlayGamesPlatform.Instance.SignOut();
+     
         Managers.SceneManager.LoadLevel("Xtudio16");
 
     }
