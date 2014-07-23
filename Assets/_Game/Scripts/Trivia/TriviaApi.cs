@@ -55,7 +55,7 @@ public class TriviaApi : MonoBehaviour
 
    // [HideInInspector]
     public string[] TopicsParseKey;
- //   = {"Anime","Books", "Comics","ComputerSystems","Movies",
+ //  There are set in the inspector = {"Anime","Books", "Comics","ComputerSystems","Movies",
 	//                                      "Technology","TvSeries","VideoGames"};
 
 

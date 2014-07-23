@@ -48,6 +48,53 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
         ((PlayGamesPlatform)Social.Active).LoadState(0, this);
     }
 
+    public void UpdateTopicsAnswers(int topicindex, int val)
+    {
+        mProgress.IncrementTopicCorrectAnswers(topicindex, val);
+    }
+    public void FinishMatch(int score)
+    {
+        mProgress.TotalScore += score;
+        mProgress.Dirty = true;
+        SaveProgress();
+       // ReportAllProgress();
+        
+    }
+    public void SaveProgress()
+    {
+        if (mProgress.Dirty)
+        {
+            mProgress.SaveToDisk();
+            SaveToCloud();
+        }
+    }
+    void ReportAllProgress()
+    {
+        UpdateAchievements();
+        PostToLeaderboard();
+        SaveToCloud();
+    }
+
+    void UpdateAchievements()
+    {
+        
+    }
+
+    void PostToLeaderboard()
+    {
+        
+    }
+
+    void SaveToCloud()
+    {
+        if (Authenticated)
+        {
+            // Cloud save is not in ISocialPlatform, it's a Play Games extension,
+            // so we have to break the abstraction and use PlayGamesPlatform:
+            Debug.Log("Saving progress to the cloud...");
+            ((PlayGamesPlatform)Social.Active).UpdateState(0, mProgress.ToBytes(), this);
+        }
+    }
      public void OnStateLoaded(bool success, int slot, byte[] data) 
      {
       
@@ -60,6 +107,13 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
 
     public void OnStateSaved(bool success, int slot)
     {
+        if (!success)
+        {
+            Debug.LogWarning("Failed to save state to the cloud.");
+
+            // try to save later:
+            mProgress.Dirty = true;
+        }
     }
 
 

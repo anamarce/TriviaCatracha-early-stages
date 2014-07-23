@@ -24,11 +24,11 @@ namespace x16
 
         public class Achievements 
         {
-            public static string GeekStarter = "CgkIwdz54IMaEAIQCA";
-            public static string GeekPro = " CgkIwdz54IMaEAIQCQ";
-            public static string GeekMaster = " CgkIwdz54IMaEAIQBQ";
-            public static string ChosenOne = "  CgkIwdz54IMaEAIQBg";
-            public static string PeacockGeek = " CgkIwdz54IMaEAIQBw";
+            public static string GeekStarter     = "CgkIwdz54IMaEAIQCA";
+            public static string GeekPro         = "CgkIwdz54IMaEAIQCQ";
+            public static string GeekMaster      = "CgkIwdz54IMaEAIQBQ";
+            public static string ChosenOne       = "CgkIwdz54IMaEAIQBg";
+            public static string PeacockGeek     = "CgkIwdz54IMaEAIQBw";
 
 
         }
@@ -50,6 +50,7 @@ namespace x16
             public static int IntervalAnswers = 5;
 
             public static int Adinterval = 3;
+            public static int MaxTopics = 8;
         }
        
       
