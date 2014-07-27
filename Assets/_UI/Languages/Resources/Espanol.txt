@@ -4,7 +4,7 @@ settingstitle = Opciones
 newmatch  =  Nueva Partida>
 newmatchtitle = Nueva Partida
 matches =  Partidas>
-leaderboards =  Tablas de Lideres>
+leaderboards =  Tablas de Líderes>
 achievements =  Logros>
 signout = Desloguearse>
 signin = Autenticar>
@@ -14,8 +14,8 @@ back = < Regresar
 about = Acerca
 english = Ingles
 spanish = Espanol
-numberopponents = Numero de Oponentes
-quickmatch = Partida Rapida >
+numberopponents = Número de Oponentes
+quickmatch = Partida Rápida >
 invitematch= Crear Partida >
 or = O
 sound = Sonido
@@ -28,7 +28,7 @@ turnstatus = Estado del Turno
 Active = Activa
 Expired = Terminada
 Cancelled = Cancelada
-AutoMatching = Auto Seleccionando
+AutoMatching =Auto Seleccionando
 Complete = Completada
 Deleted = Borrada
 Unknown = Indefinida
@@ -37,8 +37,8 @@ myturn = Adelante, es tu Turno!!
 theirturn = Por favor espera, NO es tu Turno :(
 invitedtomatch = Has sido invitado a esta Partida :D
 
- matchfinishedwon = Partida termino, GANASTE !!!
- matchfinishedlost = Partida termino, PERDISTE !!!
+ matchfinishedwon = Partida terminó, GANASTE !!!
+ matchfinishedlost = Partida terminó, PERDISTE !!!
  matchcancelled = Esta partida fue cancelada !!
  matchawaiting = Esta partida esta esperando jugadores...
  matcherror = Esta partida no puede seguir debido a un error
@@ -48,23 +48,23 @@ invitedtomatch = Has sido invitado a esta Partida :D
  participantNotInvitedYet = No Invitado
  participantInvited = Invitado
  participantJoined = Jugando
- participantDeclined = Declin�
- participantLeft = Se march�
- participantFinished = Termin�
+ participantDeclined = Declinó
+ participantLeft = Se marchó
+ participantFinished = Terminó
  participantUnresponsive = Sin responder
  participantUnknown  = ?
  
   playgame = Jugar >
   playingmatch = Jugando la Partida
   
- matchtopicselect = Seleccion de Tema
+ matchtopicselect = Seleccionando Tema
  
 Anime= Anime
 Comics = Historietas 
-ComputerSystems = Sistemas de Computacion
-Movies = Peliculas
-Technology = Tecnologia y Ciencia
-TvSeries= Series de Television
+ComputerSystems = Sistemas de Computación
+Movies = Películas
+Technology = Tecnología y Ciencia
+TvSeries= Series de Televisión
 VideoGames = Video Juegos
 Books= Libros
 
@@ -76,10 +76,13 @@ correctanwerstowin = Meta para ganar:
 givechancetootherplayer = 5 respuestas consecutivas...
 retrievingquestion = Cargando pregunta..	
 loadingmessage = Cargando ...	
-errorloadingquestion= Error de Conexion .. trate de nuevo
+errorloadingquestion= Error de Conexión, intente de nuevo o regrese al menú 
+principal para intentar mas tarde
 answerquestion = Obtenga Pregunta >
 spintopic = Revolver Temas
 
 matchinfomessage = Seleccione su oponente de su lista de amigos
-quickmatchinfomessage = El juego seleccionar� un oponente al azar
+quickmatchinfomessage = El juego seleccionará un oponente al azar
 siginfirst = Autenticarse primero!
+
+testlocalize=Colección

@@ -76,10 +76,12 @@ correctanwerstowin = Goal to win:
 givechancetootherplayer = 5 in a row ...	
 retrievingquestion = Retrieving Question..	
 loadingmessage = Loading ...	
-errorloadingquestion= Connection Error ..try again
+errorloadingquestion= Connection Error ..try again or go back to main menu to try later
 answerquestion = Get question >
 spintopic = Spin Topics
 
 matchinfomessage = Select your opponent from your friend's list
 quickmatchinfomessage = The Game will select a random opponent
 siginfirst = Sign-In first!
+
+testlocalize=Coleccionn

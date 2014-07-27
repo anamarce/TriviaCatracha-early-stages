@@ -61,6 +61,7 @@ public class UILocalize : MonoBehaviour
 		// If we still don't have a key, leave the value as blank
 		string val = string.IsNullOrEmpty(key) ? "" : loc.Get(key);
 
+    
 		if (lbl != null)
 		{
 			// If this is a label used by input, we should localize its default value instead

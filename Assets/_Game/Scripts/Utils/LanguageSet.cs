@@ -7,16 +7,19 @@ public class LanguageSet : MonoBehaviour {
 	public UIPopupList popuplist;
     public SoundSet soundSetList;
 	void Start () {
-        Debug.Log("LanguageSet Start");
+   
+	}
+	void OnEnable()
+	{
+		
 		if (popuplist!=null)
 		{
 			//Debug.Log( Managers.Game.preferences.CurrentLanguage);
 			popuplist.selection = Managers.Game.preferences.CurrentLanguage;
 			
 		}
-	
+
 	}
-	
 	void OnSelectionChange (string val)
 	{
         Debug.Log(val);

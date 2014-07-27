@@ -96,7 +96,9 @@ public class ByteReader
 		}
 		return sb.ToString();
 #else
+
 		return Encoding.UTF8.GetString(buffer, start, count);
+	   
 #endif
 	}
 
@@ -145,6 +147,7 @@ public class ByteReader
 		while (canRead)
 		{
 			string line = ReadLine();
+        
 			if (line == null) break;
 			if (line.StartsWith("//")) continue;
 
@@ -159,6 +162,7 @@ public class ByteReader
 				string key = split[0].Trim();
 				string val = split[1].Trim().Replace("\\n", "\n");
 				dict[key] = val;
+               
 			}
 		}
 		return dict;

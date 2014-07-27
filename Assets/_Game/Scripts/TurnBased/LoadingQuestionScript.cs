@@ -20,6 +20,8 @@ public class LoadingQuestionScript : PanelScript {
     public PlayScript PlayGame;
     public UILabel labelError;
     public UIButton ButtonGoBack;
+    public UIButton ButtonMainMenu;
+
 
     public float TimeToTimeOut = 25F;
     
@@ -35,6 +37,10 @@ public class LoadingQuestionScript : PanelScript {
 
     void OnEnable()
     {
+		if (labelError != null)
+		{
+			labelError.text = "";
+		}
 
         endTime = Time.time + TimeToTimeOut;
         timeLeft = (int)TimeToTimeOut;
@@ -44,6 +50,10 @@ public class LoadingQuestionScript : PanelScript {
         if (ButtonGoBack != null)
         {
             NGUITools.SetActive(ButtonGoBack.gameObject, false);
+        }
+        if (ButtonMainMenu != null)
+        {
+            NGUITools.SetActive(ButtonMainMenu.gameObject, false);
         }
         string languagecode = Managers.Game.preferences.GetLanguagePrefix();
 
@@ -149,6 +159,11 @@ public class LoadingQuestionScript : PanelScript {
 	        {
                 NGUITools.SetActive(ButtonGoBack.gameObject, true);
 	        }
+            if (ButtonMainMenu != null)
+            {
+                NGUITools.SetActive(ButtonMainMenu.gameObject, true);
+            }
+
 	    }
 	    if (qstatus == QUESTIONSTATUS.LOADING)
 	    {
