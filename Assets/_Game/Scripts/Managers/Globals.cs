@@ -29,7 +29,16 @@ namespace x16
             public static string GeekMaster      = "CgkIwdz54IMaEAIQBQ";
             public static string ChosenOne       = "CgkIwdz54IMaEAIQBg";
             public static string PeacockGeek     = "CgkIwdz54IMaEAIQBw";
+            public static string[] AchievementsIDS = 
+            {
+            "CgkIwdz54IMaEAIQCA", 
+            "CgkIwdz54IMaEAIQCQ",
+            "CgkIwdz54IMaEAIQBQ" ,
+            "CgkIwdz54IMaEAIQBg",
+            "CgkIwdz54IMaEAIQBw"
+            };
 
+            public static int[] TotalMatchesRequired = { 29, 71, 173, 281, 541 };
 
         }
 

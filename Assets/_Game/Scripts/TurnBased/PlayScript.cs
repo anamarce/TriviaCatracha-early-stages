@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi.Multiplayer;
 using UnityEngine;
@@ -12,7 +13,9 @@ public class PlayScript : MonoBehaviour {
 
     public TurnBasedMatch mMatch = null;
     public MatchData mMatchData = null;
+    [HideInInspector]
     public bool CanPlayCurrentPlayer = false;
+     [HideInInspector]
     public string mFinalMessage = null;
 
     private string mErrorMessage = null;
@@ -75,12 +78,33 @@ public class PlayScript : MonoBehaviour {
         // if the match is in the completed state, acknowledge it
         if (mMatch.Status == TurnBasedMatch.MatchStatus.Complete)
         {
+            
+            Debug.Log("Ak MatchComplete");
             PlayGamesPlatform.Instance.TurnBased.AcknowledgeFinished(mMatch.MatchId,
                     (bool success) =>
                     {
-                        if (!success)
+                        if (success)
+                        {
+                            // Update leaderboards, achievements, progress for the
+                            // winner and the loser
+                            if (mMatchData.PlayerWon == mMatch.SelfParticipantId)
+                            {
+                                // Increments by one the number of matches won
+                                // and also checks if got achiviements and new position in leaderboard
+                                // and saves correct questions in app state
+                                CloudManager.Instance.FinishMatch(1); // The winner 
+                            }
+                            else
+                            {
+                                // and also checks if got achiviements and new position in leaderboard
+                                // and saves correct questions in app state
+                                CloudManager.Instance.FinishMatch(0); // The loser
+                            }
+                        }
+                        else
                         {
                             Debug.LogError("Error acknowledging match finish.");
+                            
                         }
                     });
         }
@@ -289,7 +313,10 @@ public class PlayScript : MonoBehaviour {
                    outcome, (bool success) =>
                   {
                       if (success)
+                      {
                           mFinalMessage = "YOU WON!!";
+                        
+                      }
                       else
                       {
                           mFinalMessage = "Error winning";

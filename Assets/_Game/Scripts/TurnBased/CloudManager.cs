@@ -1,15 +1,25 @@
-﻿using GooglePlayGames.BasicApi;
+﻿using System;
+using GooglePlayGames.BasicApi;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using GooglePlayGames;
+using x16;
 
+[Serializable]
+class MyAchievement
+{
+    public string AchievementID;
+    public int Goal;
+
+}
 public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
 {
     private static CloudManager sInstance = new CloudManager();
 
     private GameProgress mProgress;
   
+
     // list of achievements we know we have unlocked (to avoid making repeated calls to the API)
     private Dictionary<string, bool> mUnlockedAchievements = new Dictionary<string, bool>();
    
@@ -55,7 +65,7 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
         mProgress.TotalScore += score;
         mProgress.Dirty = true;
         SaveProgress();
-       // ReportAllProgress();
+        ReportAllProgress();
         
     }
     public void SaveProgress()
@@ -68,7 +78,6 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
     }
     void ReportAllProgress()
     {
-      
         UnlockAchievements();
         PostToLeaderboard();
         SaveToCloud();
@@ -76,22 +85,18 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
 
     private void UnlockAchievements()
     {
-        //int totalStars = mProgress.TotalStars;
-        //int i;
-        //for (i = 0; i < GameIds.Achievements.ForTotalStars.Length; i++)
-        //{
-        //    int starsRequired = GameIds.Achievements.TotalStarsRequired[i];
-        //    if (totalStars >= starsRequired)
-        //    {
-        //        UnlockAchievement(GameIds.Achievements.ForTotalStars[i]);
-        //    }
-        //}
+        int totalMatches = mProgress.TotalScore;
+    
+        for (int i = 0; i < Globals.Achievements.AchievementsIDS.Length; i++)
+        {
+            int matchesRequired = Globals.Achievements.TotalMatchesRequired[i];
+            if (totalMatches >= matchesRequired)
+            {
+                UnlockAchievement(Globals.Achievements.AchievementsIDS[i]);
+            }
+        }
 
-        //if (mProgress.AreAllLevelsCleared())
-        //{
-        //    UnlockAchievement(GameIds.Achievements.ClearAllLevels);
-        //}
-    }
+       }
 
     public void UnlockAchievement(string achId)
     {
@@ -104,7 +109,14 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
 
     void PostToLeaderboard()
     {
-        
+        int score = mProgress.TotalScore;
+        if (Authenticated && score > mHighestPostedScore)
+        {
+            // post score to the leaderboard
+            Social.ReportScore(score, Globals.LeaderBoards.TopGeekLeaderBoard, (bool success) => { });
+            mHighestPostedScore = score;
+        }
+
     }
 
     void SaveToCloud()
@@ -146,7 +158,17 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
      }
     public byte[] OnStateConflict(int slot, byte[] local, byte[] server)
     {
-        return null;
+        Debug.Log("Conflict callback called. Resolving conflict.");
+
+        // decode byte arrays into game progress and merge them
+        GameProgress localProgress = local == null ?
+            new GameProgress() : GameProgress.FromBytes(local);
+        GameProgress serverProgress = server == null ?
+            new GameProgress() : GameProgress.FromBytes(server);
+        localProgress.MergeWith(serverProgress);
+
+        // resolve conflict
+        return localProgress.ToBytes();
     }
 
     public void OnStateSaved(bool success, int slot)

@@ -21,7 +21,7 @@ public class PanelMainScene : PanelScript {
 
     public void Start()
     {
-        Debug.Log("PanelMainScene Start");
+      
         Messenger.AddListener("ActionShowMatches" , ShowMatches);
         Messenger.AddListener("ActionSigInOut", signInOut);
         Messenger.AddListener("ActionCreateMatch", CreateMatch);
@@ -70,7 +70,7 @@ public class PanelMainScene : PanelScript {
         Debug.Log("PlayGame LaunchMAtch");
         PlayGame.LaunchMatch(match);
 
-      //  gameObject.GetComponent<PlayGui>().LaunchMatch(match);
+     
     }
     protected void OnGotMatch(TurnBasedMatch match, bool shouldAutoLaunch)
     {
@@ -117,6 +117,7 @@ public class PanelMainScene : PanelScript {
         {
             // if shouldAutoAccept is false, we got this invitation in the background, so
             // we should not jump directly into the game
+            Debug.Log("MainMenu.cs:OnGotInvitation:False");
             mIncomingInvite = invitation;
         }
     }

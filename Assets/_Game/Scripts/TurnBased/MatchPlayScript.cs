@@ -98,7 +98,7 @@ public class MatchPlayScript : PanelScript {
 		CurrentIndexSelected = index;
         if (LabelAnswer != null)
         {
-           // Invoke("ChangeColor", 0.1F);
+         
             OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "boton-verde";
            
             LabelAnswer.color = Color.green;
@@ -107,7 +107,7 @@ public class MatchPlayScript : PanelScript {
         }
         PlayGame.IncrementCorrectAnswers();
         PlayGame.IncrementCurrentConsecutiveAnswers();
-
+        CloudManager.Instance.UpdateTopicsAnswers(Managers.Trivia.CurrentTopicIndexSelected, 1);
 
         TurnOffTimerSound();
         bool IsWinner = PlayGame.CheckWinner(); // Managers.Social.CheckWinner();
