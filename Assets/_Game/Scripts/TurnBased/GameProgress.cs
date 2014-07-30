@@ -56,6 +56,11 @@ public class GameProgress  {
         return GameProgress.FromString(s);
     }
 
+    public static GameProgress FromBytes(byte[] b)
+    {
+        return GameProgress.FromString(System.Text.ASCIIEncoding.Default.GetString(b));
+    }
+
     public static GameProgress FromString(string s)
     {
         //Formato es
@@ -67,7 +72,7 @@ public class GameProgress  {
 
         GameProgress gp = new GameProgress();
         string[] p = s.Split(new char[] { ':' });
-        if (!p[0].Equals("TGV1"))
+        if (!p[0].Equals(Globals.Constants.CurrentVersion))
         {
             Debug.LogError("Failed to parse game progress from: " + s);
             return gp;
@@ -80,7 +85,23 @@ public class GameProgress  {
       
         return gp;
     }
-   
+    public void MergeWith(GameProgress other)
+    {
+        int i;
+        for (i = 0; i < TopicCount; i++)
+        {
+            if (other.AnswersByTopics[i] > AnswersByTopics[i])
+            {
+                AnswersByTopics[i] = other.AnswersByTopics[i];
+                mDirty = true;
+            }
+        }
+        if (other.mHighestPostedScore > mHighestPostedScore)
+        {
+            mHighestPostedScore = other.mHighestPostedScore;
+            mDirty = true;
+        }
+    }
    
     public override string ToString()
     {

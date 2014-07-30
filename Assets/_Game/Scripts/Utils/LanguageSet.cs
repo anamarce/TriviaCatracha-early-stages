@@ -9,7 +9,7 @@ public class LanguageSet : MonoBehaviour {
 	void Start () {
    
 	}
-	void OnEnable()
+	public void EnableInitial()
 	{
 		
 		if (popuplist!=null)

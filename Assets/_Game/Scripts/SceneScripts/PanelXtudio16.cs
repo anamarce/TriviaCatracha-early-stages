@@ -10,7 +10,7 @@ public class PanelXtudio16 : PanelScript
 
     void Start()
     {
-        Debug.Log("Iniciando PanelXtudio16");
+       
         mAuthOnStart = true;
         Messenger.Cleanup();
         Messenger.AddListener("SignInMessage", SigInMethod);

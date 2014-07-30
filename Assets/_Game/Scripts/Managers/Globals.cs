@@ -51,6 +51,9 @@ namespace x16
 
             public static int Adinterval = 3;
             public static int MaxTopics = 8;
+            public static string CurrentVersion ="TGV1";
+
+            
         }
        
       

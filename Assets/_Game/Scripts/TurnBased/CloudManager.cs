@@ -12,9 +12,7 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
   
     // list of achievements we know we have unlocked (to avoid making repeated calls to the API)
     private Dictionary<string, bool> mUnlockedAchievements = new Dictionary<string, bool>();
-    // achievement increments we are accumulating locally, waiting to send to the games API
-    private Dictionary<string, int> mPendingIncrements = new Dictionary<string, int>();
-
+   
     // what is the highest score we have posted to the leaderboard?
     private int mHighestPostedScore = 0;  // In this case the amount of matchs the player wins
 
@@ -70,14 +68,38 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
     }
     void ReportAllProgress()
     {
-        UpdateAchievements();
+      
+        UnlockAchievements();
         PostToLeaderboard();
         SaveToCloud();
     }
 
-    void UpdateAchievements()
+    private void UnlockAchievements()
     {
-        
+        //int totalStars = mProgress.TotalStars;
+        //int i;
+        //for (i = 0; i < GameIds.Achievements.ForTotalStars.Length; i++)
+        //{
+        //    int starsRequired = GameIds.Achievements.TotalStarsRequired[i];
+        //    if (totalStars >= starsRequired)
+        //    {
+        //        UnlockAchievement(GameIds.Achievements.ForTotalStars[i]);
+        //    }
+        //}
+
+        //if (mProgress.AreAllLevelsCleared())
+        //{
+        //    UnlockAchievement(GameIds.Achievements.ClearAllLevels);
+        //}
+    }
+
+    public void UnlockAchievement(string achId)
+    {
+        if (Authenticated && !mUnlockedAchievements.ContainsKey(achId))
+        {
+            Social.ReportProgress(achId, 100.0f, (bool success) => { });
+            mUnlockedAchievements[achId] = true;
+        }
     }
 
     void PostToLeaderboard()
@@ -97,9 +119,31 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
     }
      public void OnStateLoaded(bool success, int slot, byte[] data) 
      {
-      
-     }
+         Debug.Log("Cloud load callback, success=" + success);
+         if (success)
+         {
+             ProcessCloudData(data);
+         }
+         else
+         {
+             Debug.LogWarning("Failed to load from cloud. Network problems?");
+         }
 
+       // report any progress we have to report
+         ReportAllProgress();
+     }
+     void ProcessCloudData(byte[] cloudData)
+     {
+         if (cloudData == null)
+         {
+             Debug.Log("No data saved to the cloud yet...");
+             return;
+         }
+         Debug.Log("Decoding cloud data from bytes.");
+         GameProgress progress = GameProgress.FromBytes(cloudData);
+         Debug.Log("Merging with existing game progress.");
+         mProgress.MergeWith(progress);
+     }
     public byte[] OnStateConflict(int slot, byte[] local, byte[] server)
     {
         return null;

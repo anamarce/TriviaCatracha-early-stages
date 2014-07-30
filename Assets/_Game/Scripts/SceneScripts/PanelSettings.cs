@@ -3,7 +3,12 @@ using System.Collections;
 
 public class PanelSettings : PanelScript
 {
+    public LanguageSet LS;
 
-	// Use this for initialization
+    void OnEnable()
+    {
+      Debug.Log("Setting mmmm");
+      LS.EnableInitial();
+    }
 
 }
