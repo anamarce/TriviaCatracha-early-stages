@@ -62,6 +62,7 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
     }
     public void FinishMatch(int score)
     {
+        Debug.Log("FinishMatch:ActualScore:" + mProgress.TotalScore);
         mProgress.TotalScore += score;
         mProgress.Dirty = true;
         SaveProgress();
