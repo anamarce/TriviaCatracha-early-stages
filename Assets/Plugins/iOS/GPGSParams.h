@@ -11,13 +11,15 @@
 
 AppId=894361824833
 BundleId=com.xtudio16.triviageek
-ClientId=894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com
+ClientId=
+894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com
 
 */
 
 #define kAppID "894361824833"
 #define kBundleID "com.xtudio16.triviageek"
-#define kClientID "894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com"
+#define kClientID "
+894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com"
 
 #endif
 
