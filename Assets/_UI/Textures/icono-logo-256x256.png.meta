@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 0b96f224b3e93c24a8b08145f4df58e5
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: icono-logo-256x256
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -24,9 +26,9 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50

@@ -1,6 +1,8 @@
 fileFormatVersion: 2
 guid: 217320836f6e59d4a8edf840cc0374b3
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: Fondo-1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
