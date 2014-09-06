@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: LogosTrivaPrefab
+  m_Name: LogosPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,21 +39,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 543979742e196cd44816e91d1479ec9f, type: 2}
+  material: {fileID: 2100000, guid: ca3f9cf051825457ba0280a0663f5bed, type: 2}
   sprites:
-  - name: Imagotipo-Trivia-Geek
+  - name: Honduras-logo-World-Cup-2014.jpg
     outer:
       serializedVersion: 2
       x: 2
-      y: 276
-      width: 209
-      height: 512
+      y: 2
+      width: 411
+      height: 375
     inner:
       serializedVersion: 2
       x: 2
-      y: 276
-      width: 209
-      height: 512
+      y: 2
+      width: 411
+      height: 375
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
@@ -63,13 +63,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 2
-      y: 2
+      y: 379
       width: 351
       height: 272
     inner:
       serializedVersion: 2
       x: 2
-      y: 2
+      y: 379
       width: 351
       height: 272
     rotated: 0
