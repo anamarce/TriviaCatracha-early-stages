@@ -9,15 +9,15 @@
   the post-processing script) that need to get information from this
   file:
 
-AppId=894361824833
-BundleId=com.xtudio16.triviageek
-ClientId=894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com
+AppId=69436147995
+BundleId=com.xtudio16.triviacatracha
+ClientId=69436147995-4t3u2vanctc2pc4r3g1simahh3iib0qq.apps.googleusercontent.com
 
 */
 
-#define kAppID "894361824833"
-#define kBundleID "com.xtudio16.triviageek"
-#define kClientID "894361824833-7hi8f5o9cu9pcf8bild6kiu1rnfl55dg.apps.googleusercontent.com"
+#define kAppID "69436147995"
+#define kBundleID "com.xtudio16.triviacatracha"
+#define kClientID "69436147995-4t3u2vanctc2pc4r3g1simahh3iib0qq.apps.googleusercontent.com"
 
 #endif
 

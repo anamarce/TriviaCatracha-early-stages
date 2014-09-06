@@ -15,19 +15,15 @@ public class LanguageSet : MonoBehaviour {
 		if (popuplist!=null)
 		{
 			//Debug.Log( Managers.Game.preferences.CurrentLanguage);
-			popuplist.selection = Managers.Game.preferences.CurrentLanguage;
-			
+
+
 		}
 
 	}
 	void OnSelectionChange (string val)
 	{
-        Debug.Log(val);
-	    if (val != "English")
-	        val = "Espanol";
-		Managers.Game.preferences.CurrentLanguage = val;
-		Managers.Game.preferences.SavePreferences();
-		Localization.instance.currentLanguage = Managers.Game.preferences.CurrentLanguage;
+        Managers.Game.preferences.SavePreferences();
+
 	    if (soundSetList!=null)
             soundSetList.RefreshOptions();
     }

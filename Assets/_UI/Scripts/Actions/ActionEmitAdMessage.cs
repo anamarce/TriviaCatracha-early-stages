@@ -11,11 +11,6 @@ namespace x16
 
         public override void ActionPerformed()
         {
-            if (Managers.Game.Adcounting == Globals.Constants.Adinterval)
-            {
-                Managers.Game.Adcounting = 0;
-                Messenger.Broadcast("ShowAd");
-            }
            
         }
     }

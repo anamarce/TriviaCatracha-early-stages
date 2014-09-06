@@ -10,13 +10,14 @@ public class Preferences
 
   
    
-    public string CurrentLanguage;
+    
 	public bool EnableSound;
+
 
 
     public Preferences()
     {
-		CurrentLanguage = Globals.Constants.Languages[0];
+	
 		EnableSound = true;
     }
 
@@ -33,12 +34,7 @@ public class Preferences
         else
             EnableSound = true;
         
-		// Language
-        if (PlayerPrefs.HasKey("Language"))
-        {
-			CurrentLanguage = PlayerPrefs.GetString("Language");
-		}
-
+	
          
 
     }
@@ -51,17 +47,9 @@ public class Preferences
             PlayerPrefs.SetString("EnableSound", "OFF");
 
       
-        PlayerPrefs.SetString("Language", CurrentLanguage);
+      
         PlayerPrefs.Save();
     }
 
-    public string GetLanguagePrefix()
-    {
-        if (CurrentLanguage == Globals.Constants.Languages[0])
-            return "EN";
-        else
-        
-            return "ES";
-        
-    }
+    
 }

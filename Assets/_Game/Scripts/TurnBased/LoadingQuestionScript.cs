@@ -55,7 +55,7 @@ public class LoadingQuestionScript : PanelScript {
         {
             NGUITools.SetActive(ButtonMainMenu.gameObject, false);
         }
-        string languagecode = Managers.Game.preferences.GetLanguagePrefix();
+
 
 		if (!Managers.Trivia.TopicsLoaded)
 		{
@@ -65,11 +65,11 @@ public class LoadingQuestionScript : PanelScript {
 		{
 		
            GetAndCachedQuestion(PlayGame.GetCurrentMatchID(),
-                             Managers.Trivia.CurrentTopicIndexSelected,
-                             languagecode);
+                             Managers.Trivia.CurrentTopicIndexSelected
+                             );
 		}
 	}
-    public void GetAndCachedQuestion(string matchID, int currentTopicIndex, string LanguageCode)
+    public void GetAndCachedQuestion(string matchID, int currentTopicIndex)
     {
         try
         {
@@ -77,7 +77,7 @@ public class LoadingQuestionScript : PanelScript {
             Managers.Trivia.SetCachedQuestion(CachedQuestion);
 
 
-            string ParseObjectID = LanguageCode + Managers.Trivia.GetTopicName(currentTopicIndex);
+            string ParseObjectID = Managers.Trivia.GetTopicName(currentTopicIndex);
             int CountQuestions = 0;
 
             CountQuestions = Managers.Trivia.GetCountQuestion(ParseObjectID);
