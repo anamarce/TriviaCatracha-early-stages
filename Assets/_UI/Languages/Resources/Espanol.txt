@@ -59,14 +59,14 @@ invitedtomatch = Has sido invitado a esta Partida :D
   
  matchtopicselect = Seleccionando Tema
  
-Anime= Anime
-Comics = Historietas 
-ComputerSystems = Sistemas de Computación
-Movies = Películas
-Technology = Tecnología y Ciencia
-TvSeries= Series de Televisión
-VideoGames = Video Juegos
-Books= Libros
+Arte= Arte
+Cultura = Cultura
+Economia = Economia
+Geografia = Geografia
+Historia = Historia
+Literatura = Literatura
+Musica = Musica
+Politica = Politica
 
 correctanswer = Correcto!!!
 wronganswer = Incorrecto :(

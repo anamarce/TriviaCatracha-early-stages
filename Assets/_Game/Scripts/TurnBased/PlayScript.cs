@@ -19,7 +19,7 @@ public class PlayScript : MonoBehaviour {
     public string mFinalMessage = null;
 
     private string mErrorMessage = null;
-    private string matchLanguage = "EN";
+    private string matchLanguage = "ES";
     private int CurrentConsecutiveAnswers = 0;
 
     private const float MaxTurnTime = 8.0f;

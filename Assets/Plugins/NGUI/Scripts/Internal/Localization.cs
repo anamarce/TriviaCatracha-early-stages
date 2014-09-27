@@ -54,7 +54,7 @@ public class Localization : MonoBehaviour
 	/// Language the localization manager will start with.
 	/// </summary>
 
-	public string startingLanguage = "English";
+	public string startingLanguage = "Espanol";
 
 	/// <summary>
 	/// Available list of languages.

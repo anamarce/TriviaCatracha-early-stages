@@ -13,7 +13,7 @@ public class SocialManager : MonoBehaviour {
 	private bool userAuthenticated =false;
 	// the match the player is being offered to play right now
 	
-    private string matchLanguage = "EN";
+    private string matchLanguage = "ES";
 	
 
   

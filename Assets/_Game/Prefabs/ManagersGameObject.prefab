@@ -70,9 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preferences:
-    CurrentLanguage: Espanol
     EnableSound: 1
-  Adcounting: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,23 +129,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TopicsLoaded: 0
   TopicsParseKey:
-  - Anime
-  - Books
-  - Comics
-  - ComputerSystems
-  - Movies
-  - Technology
-  - TvSeries
-  - VideoGames
+  - Arte
+  - Cultura
+  - Economia
+  - Geografia
+  - Historia
+  - Literatura
+  - Musica
+  - Politica
   TopicsSprites:
-  - tarjeta-anime
-  - tarjeta-libros
-  - tarjeta-comic
-  - taarjeta-comp-sys
-  - tarjeta-movie
-  - tarjeta-tecnologia
-  - tarjeta-tvseries
-  - tarjeta-videojuego
+  - tarjeta-arte
+  - tarjeta-cultura
+  - tarjeta-economia
+  - taarjeta-geografia
+  - tarjeta-historia
+  - tarjeta-literatura
+  - tarjeta-musica
+  - tarjeta-politica
   LangParseCode:
   - EN
   - ES
