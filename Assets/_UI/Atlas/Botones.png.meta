@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: cccbecce786f142c185c1cb3f5281e10
+guid: b043bdfeeff24474798774a0258c0e26
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Logos
+    21300000: Botones
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,14 +22,14 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: 4
+  maxTextureSize: 4096
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 2
+    aniso: 4
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 0
+    wrapMode: 1
+  nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
