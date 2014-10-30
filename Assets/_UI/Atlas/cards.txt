@@ -1,76 +1,76 @@
 {"frames": {
 
-"Trivia Catracha Cards-01.png":
+"Card_Arte.png":
 {
-	"frame": {"x":2106,"y":2146,"w":1050,"h":2138},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":4,"w":1050,"h":2138},
-	"sourceSize": {"w":1050,"h":2142}
-},
-"Trivia Catracha Cards-02.png":
-{
-	"frame": {"x":2,"y":4290,"w":1050,"h":2142},
+	"frame": {"x":2,"y":2,"w":416,"h":627},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":627},
+	"sourceSize": {"w":416,"h":627}
 },
-"Trivia Catracha Cards-03.png":
+"Card_Cultura.png":
 {
-	"frame": {"x":2,"y":2146,"w":1050,"h":2142},
+	"frame": {"x":839,"y":584,"w":418,"h":526},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
+	"spriteSourceSize": {"x":0,"y":0,"w":418,"h":526},
+	"sourceSize": {"w":418,"h":526}
 },
-"Trivia Catracha Cards-04.png":
+"Card_Economia.png":
 {
-	"frame": {"x":1054,"y":4286,"w":1046,"h":2142},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":4,"y":0,"w":1046,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
-},
-"Trivia Catracha Cards-05.png":
-{
-	"frame": {"x":2106,"y":2,"w":1050,"h":2142},
+	"frame": {"x":2,"y":631,"w":417,"h":622},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
+	"spriteSourceSize": {"x":0,"y":0,"w":417,"h":622},
+	"sourceSize": {"w":417,"h":622}
 },
-"Trivia Catracha Cards-06.png":
+"Card_Geografia.png":
 {
-	"frame": {"x":1054,"y":2,"w":1050,"h":2142},
+	"frame": {"x":1261,"y":2,"w":420,"h":579},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":579},
+	"sourceSize": {"w":420,"h":579}
 },
-"Trivia Catracha Cards-07.png":
+"Card_Historia.png":
 {
-	"frame": {"x":1054,"y":2146,"w":1050,"h":2138},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":4,"w":1050,"h":2138},
-	"sourceSize": {"w":1050,"h":2142}
-},
-"Trivia Catracha Cards-08.png":
-{
-	"frame": {"x":2,"y":2,"w":1050,"h":2142},
+	"frame": {"x":2,"y":1255,"w":417,"h":590},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
-	"sourceSize": {"w":1050,"h":2142}
+	"spriteSourceSize": {"x":0,"y":0,"w":417,"h":590},
+	"sourceSize": {"w":417,"h":590}
+},
+"Card_Literatura.png":
+{
+	"frame": {"x":420,"y":2,"w":417,"h":596},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":417,"h":596},
+	"sourceSize": {"w":417,"h":596}
+},
+"Card_Musica.png":
+{
+	"frame": {"x":839,"y":2,"w":420,"h":580},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":580},
+	"sourceSize": {"w":420,"h":580}
+},
+"Card_Politica.png":
+{
+	"frame": {"x":1261,"y":583,"w":420,"h":573},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":573},
+	"sourceSize": {"w":420,"h":573}
 }},
 "meta": {
 	"app": "http://www.texturepacker.com",
 	"version": "1.0",
 	"image": "cards.png",
 	"format": "RGBA8888",
-	"size": {"w":4096,"h":8192},
+	"size": {"w":2048,"h":2048},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:e0274f7fcd3d5c57bde55b685a9b2d70$"
+	"smartupdate": "$TexturePacker:SmartUpdate:5a36da38dadb6dffd17cffb3940360c5$"
 }
 }

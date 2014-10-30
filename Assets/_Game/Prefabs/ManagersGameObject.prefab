@@ -138,14 +138,14 @@ MonoBehaviour:
   - Musica
   - Politica
   TopicsSprites:
-  - tarjeta-arte
-  - tarjeta-cultura
-  - tarjeta-economia
-  - taarjeta-geografia
-  - tarjeta-historia
-  - tarjeta-literatura
-  - tarjeta-musica
-  - tarjeta-politica
+  - Card_Arte
+  - Card_Cultura
+  - Card_Economia
+  - Card_Geografia
+  - Card_Historia
+  - Card_Literatura
+  - Card_Musica
+  - Card_Politica
   LangParseCode:
   - EN
   - ES

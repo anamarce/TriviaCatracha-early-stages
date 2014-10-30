@@ -1,8 +1,7 @@
 fileFormatVersion: 2
 guid: 04f9317a18fe64c64a97083e56027dc9
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: cards
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -22,7 +21,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -3
+  textureFormat: 4
   maxTextureSize: 4096
   textureSettings:
     filterMode: 2
