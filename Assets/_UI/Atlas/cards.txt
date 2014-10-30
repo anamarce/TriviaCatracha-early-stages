@@ -1,0 +1,76 @@
+{"frames": {
+
+"Trivia Catracha Cards-01.png":
+{
+	"frame": {"x":2106,"y":2146,"w":1050,"h":2138},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":1050,"h":2138},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-02.png":
+{
+	"frame": {"x":2,"y":4290,"w":1050,"h":2142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-03.png":
+{
+	"frame": {"x":2,"y":2146,"w":1050,"h":2142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-04.png":
+{
+	"frame": {"x":1054,"y":4286,"w":1046,"h":2142},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":1046,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-05.png":
+{
+	"frame": {"x":2106,"y":2,"w":1050,"h":2142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-06.png":
+{
+	"frame": {"x":1054,"y":2,"w":1050,"h":2142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-07.png":
+{
+	"frame": {"x":1054,"y":2146,"w":1050,"h":2138},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":1050,"h":2138},
+	"sourceSize": {"w":1050,"h":2142}
+},
+"Trivia Catracha Cards-08.png":
+{
+	"frame": {"x":2,"y":2,"w":1050,"h":2142},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1050,"h":2142},
+	"sourceSize": {"w":1050,"h":2142}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "cards.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":8192},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e0274f7fcd3d5c57bde55b685a9b2d70$"
+}
+}
