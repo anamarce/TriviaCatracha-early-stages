@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0875864998, g: .359260648, b: .397058845, a: 1}
+  mColor: {r: .999945939, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 292021528e7d4e545bc02d2c60da292e, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 0, g: 0, b: 0, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -2192,7 +2192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -2922,7 +2922,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
-  mText: Match Lobby
+  mText: Partidas
   mMaxLineWidth: 0
   mEncoding: 1
   mMaxLineCount: 0
@@ -3628,7 +3628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -4446,7 +4446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 292021528e7d4e545bc02d2c60da292e, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .000324395078, g: .0100827143, b: .0220588446, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
@@ -4714,7 +4714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -4772,7 +4772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .00021626339, b: .00021626339, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -5927,7 +5927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &718296887
 Transform:
   m_ObjectHideFlags: 0
@@ -5951,7 +5951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
+  mMat: {fileID: 0}
   mTex: {fileID: 0}
   mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
   mPivot: 4
@@ -6326,7 +6326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -6654,7 +6654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 1
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
@@ -7873,13 +7873,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
-  mTex: {fileID: 0}
+  mMat: {fileID: 2100000, guid: 851c79c8e0c404ac8b6062740bca7c1f, type: 2}
+  mTex: {fileID: 2800000, guid: e4b6e22e88a7b47228a480aa098d742d, type: 3}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 6
-  mAtlas: {fileID: 0}
-  mSpriteName: boton-verde-respuesta-correcta
+  mAtlas: {fileID: 11400000, guid: 065877d2c0252415c82e1262a8e63688, type: 2}
+  mSpriteName: Button-03-Restart
   mFillCenter: 1
   mType: 1
   mFillDirection: 4
@@ -7939,7 +7939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -8292,7 +8292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -8460,13 +8460,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
-  mText: 'Sonido
-
-'
+  mText: Sonido
   mMaxLineWidth: 0
   mEncoding: 1
   mMaxLineCount: 0
@@ -9028,7 +9026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -9219,7 +9217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 12
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -10179,8 +10177,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1394481585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 111, z: 0}
-  m_LocalScale: {x: 204, y: 248, z: 1}
+  m_LocalPosition: {x: 1.00024414, y: 2.00042725, z: 0}
+  m_LocalScale: {x: 424, y: 742.612244, z: 1}
   m_Children: []
   m_Father: {fileID: 1196723050}
   m_RootOrder: 4
@@ -10201,7 +10199,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 2
   mAtlas: {fileID: 11400000, guid: 766a1f5b0b1224945aa79daa2760a32a, type: 2}
-  mSpriteName: Card_Arte
+  mSpriteName: Trivia Catracha Cards-02
   mFillCenter: 1
   mType: 1
   mFillDirection: 4
@@ -10248,7 +10246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -10800,7 +10798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -11039,7 +11037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0875864998, g: .359260648, b: .397058845, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -11707,7 +11705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -12020,7 +12018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -12241,7 +12239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 9
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -12297,13 +12295,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
-  mTex: {fileID: 0}
+  mMat: {fileID: 2100000, guid: 851c79c8e0c404ac8b6062740bca7c1f, type: 2}
+  mTex: {fileID: 2800000, guid: e4b6e22e88a7b47228a480aa098d742d, type: 3}
   mColor: {r: .977941155, g: .0143815009, b: .0143815009, a: 1}
   mPivot: 4
   mDepth: 5
-  mAtlas: {fileID: 0}
-  mSpriteName: Boton-rojo-respuesta
+  mAtlas: {fileID: 11400000, guid: 065877d2c0252415c82e1262a8e63688, type: 2}
+  mSpriteName: Button-03-Close
   mFillCenter: 1
   mType: 1
   mFillDirection: 4
@@ -12350,7 +12348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 851c79c8e0c404ac8b6062740bca7c1f, type: 2}
   mTex: {fileID: 2800000, guid: e4b6e22e88a7b47228a480aa098d742d, type: 3}
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: .823529422, g: .429930806, b: .429930806, a: 1}
   mPivot: 4
   mDepth: 2
   mAtlas: {fileID: 11400000, guid: 065877d2c0252415c82e1262a8e63688, type: 2}
@@ -12504,7 +12502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 292021528e7d4e545bc02d2c60da292e, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: 0, g: 0, b: .000324395078, a: 1}
+  mColor: {r: .992647052, g: .992647052, b: .992647052, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: 09e5011c55971234884443f4bff0b955, type: 2}
@@ -12562,7 +12560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .176419854, g: .0836396813, b: .875, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 13
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
@@ -12938,7 +12936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 3
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}
@@ -13541,7 +13539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 7e113eda1cc861b43890ffa7624f86cc, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mDepth: 3
   mFont: {fileID: 11400000, guid: 1cf936489bcb96f4fbb06e59d80ccaaf, type: 2}
@@ -14458,7 +14456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mMat: {fileID: 2100000, guid: 240eeb940639a9249897548bc6237f08, type: 2}
   mTex: {fileID: 0}
-  mColor: {r: .0147058964, g: .000648789282, b: .000648789282, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11400000, guid: bedffba80c0cadc458d3214ab89a53e4, type: 2}

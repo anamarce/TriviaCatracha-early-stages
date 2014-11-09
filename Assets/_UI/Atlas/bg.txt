@@ -1,0 +1,68 @@
+{"frames": {
+
+"1575476.jpg":
+{
+	"frame": {"x":1738,"y":638,"w":224,"h":399},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":224,"h":399},
+	"sourceSize": {"w":224,"h":399}
+},
+"1821276.jpg":
+{
+	"frame": {"x":1508,"y":638,"w":228,"h":396},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":396},
+	"sourceSize": {"w":228,"h":396}
+},
+"3D-Rainbow-Wallpaper-Design-for-Computer.jpg":
+{
+	"frame": {"x":2,"y":1172,"w":500,"h":822},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":822},
+	"sourceSize": {"w":500,"h":822}
+},
+"8711-old-study-1280x800-digital-art-wallpaper.jpg":
+{
+	"frame": {"x":504,"y":2,"w":500,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":744},
+	"sourceSize": {"w":500,"h":744}
+},
+"Book-iPad-wallpaper-Lost-in-a-Good-Book.jpg":
+{
+	"frame": {"x":1508,"y":2,"w":500,"h":634},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":634},
+	"sourceSize": {"w":500,"h":634}
+},
+"tumblr_static_cool-hd-wallpaper.jpg":
+{
+	"frame": {"x":1006,"y":2,"w":500,"h":670},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":670},
+	"sourceSize": {"w":500,"h":670}
+},
+"vladstudio-wallpapers-cartoon-googlelibrary-wallpaper-quality-high-widescreen-array-wallwuzz-hd-wallpaper-6863.jpg":
+{
+	"frame": {"x":2,"y":2,"w":500,"h":1168},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":1168},
+	"sourceSize": {"w":500,"h":1168}
+}},
+"meta": {
+	"app": "http://www.texturepacker.com",
+	"version": "1.0",
+	"image": "bg.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":2048},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:039d213d933df08ec0aa944cec718490$"
+}
+}

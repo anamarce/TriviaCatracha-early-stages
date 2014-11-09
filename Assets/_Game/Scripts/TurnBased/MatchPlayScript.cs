@@ -74,7 +74,7 @@ public class MatchPlayScript : PanelScript {
 
 		for(int i = 0 ; i<OptionButtons.Length;i++)
 		{
-			OptionButtons[i].SpriteOption.spriteName = "Button";
+			OptionButtons[i].SpriteOption.spriteName = "Background-03-Round";
 
 		}
 		if (ButtonContinue != null)
@@ -99,7 +99,7 @@ public class MatchPlayScript : PanelScript {
         if (LabelAnswer != null)
         {
          
-            OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "Highlight";
+			OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "Button-03-Accept";
            
             LabelAnswer.color = Color.green;
             LabelAnswer.text = Localization.Localize("correctanswer");
@@ -154,7 +154,7 @@ public class MatchPlayScript : PanelScript {
         if (LabelAnswer != null)
         {
            // Invoke("ChangeColor", 0.1F);
-            OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "X";
+			OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "Button-03-Death";
             LabelAnswer.color = Color.red;
             LabelAnswer.text = Localization.Localize("wronganswer");
 	     }
@@ -172,7 +172,7 @@ public class MatchPlayScript : PanelScript {
 
 	    if (CurrentStatus == PlAYSTATUS.CORRECT)
 	    {
-	        OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "Highligh";
+			OptionButtons[CurrentIndexSelected].SpriteOption.spriteName = "Button-03-Accept";
 	    }
 	    else
 	    {

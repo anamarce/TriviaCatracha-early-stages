@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: CardTarjetasPrefab
+  m_Name: BgPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.42241549, y: 2.51302838, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,147 +39,129 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 759a1e793be801c4abd069b7c21f2830, type: 2}
+  material: {fileID: 2100000, guid: 755f22d320b5b4ca3acae1a998ae0729, type: 2}
   sprites:
-  - name: Trivia Catracha Cards-01
+  - name: 1575476.jpg
+    outer:
+      serializedVersion: 2
+      x: 1738
+      y: 638
+      width: 224
+      height: 399
+    inner:
+      serializedVersion: 2
+      x: 1738
+      y: 638
+      width: 224
+      height: 399
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: 1821276.jpg
     outer:
       serializedVersion: 2
       x: 1508
-      y: 1024
-      width: 500
-      height: 1020
+      y: 638
+      width: 228
+      height: 396
     inner:
       serializedVersion: 2
       x: 1508
-      y: 1024
-      width: 500
-      height: 1020
+      y: 638
+      width: 228
+      height: 396
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Trivia Catracha Cards-02
+  - name: 3D-Rainbow-Wallpaper-Design-for-Computer.jpg
     outer:
       serializedVersion: 2
-      x: 1508
-      y: 2
+      x: 2
+      y: 1172
       width: 500
-      height: 1020
+      height: 822
     inner:
       serializedVersion: 2
-      x: 1508
-      y: 2
+      x: 2
+      y: 1172
       width: 500
-      height: 1020
+      height: 822
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Trivia Catracha Cards-03
-    outer:
-      serializedVersion: 2
-      x: 1006
-      y: 1024
-      width: 500
-      height: 1020
-    inner:
-      serializedVersion: 2
-      x: 1006
-      y: 1024
-      width: 500
-      height: 1020
-    rotated: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Trivia Catracha Cards-04
-    outer:
-      serializedVersion: 2
-      x: 1006
-      y: 2
-      width: 500
-      height: 1020
-    inner:
-      serializedVersion: 2
-      x: 1006
-      y: 2
-      width: 500
-      height: 1020
-    rotated: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Trivia Catracha Cards-05
-    outer:
-      serializedVersion: 2
-      x: 504
-      y: 1024
-      width: 500
-      height: 1020
-    inner:
-      serializedVersion: 2
-      x: 504
-      y: 1024
-      width: 500
-      height: 1020
-    rotated: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Trivia Catracha Cards-06
+  - name: 8711-old-study-1280x800-digital-art-wallpaper.jpg
     outer:
       serializedVersion: 2
       x: 504
       y: 2
       width: 500
-      height: 1020
+      height: 744
     inner:
       serializedVersion: 2
       x: 504
       y: 2
       width: 500
-      height: 1020
+      height: 744
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Trivia Catracha Cards-07
+  - name: Book-iPad-wallpaper-Lost-in-a-Good-Book.jpg
     outer:
       serializedVersion: 2
-      x: 2
-      y: 1024
+      x: 1508
+      y: 2
       width: 500
-      height: 1020
+      height: 634
     inner:
       serializedVersion: 2
-      x: 2
-      y: 1024
+      x: 1508
+      y: 2
       width: 500
-      height: 1020
+      height: 634
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: Trivia Catracha Cards-08
+  - name: tumblr_static_cool-hd-wallpaper.jpg
+    outer:
+      serializedVersion: 2
+      x: 1006
+      y: 2
+      width: 500
+      height: 670
+    inner:
+      serializedVersion: 2
+      x: 1006
+      y: 2
+      width: 500
+      height: 670
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: vladstudio-wallpapers-cartoon-googlelibrary-wallpaper-quality-high-widescreen-array-wallwuzz-hd-wallpaper-6863.jpg
     outer:
       serializedVersion: 2
       x: 2
       y: 2
       width: 500
-      height: 1020
+      height: 1168
     inner:
       serializedVersion: 2
       x: 2
       y: 2
       width: 500
-      height: 1020
+      height: 1168
     rotated: 0
     paddingLeft: 0
     paddingRight: 0
