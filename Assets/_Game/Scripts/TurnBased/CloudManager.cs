@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
 using System.Collections;
@@ -114,7 +114,7 @@ public class CloudManager : GooglePlayGames.BasicApi.OnStateLoadedListener
         if (Authenticated && score > mHighestPostedScore)
         {
             // post score to the leaderboard
-            Social.ReportScore(score, Globals.LeaderBoards.TopGeekLeaderBoard, (bool success) => { });
+//		    Social.ReportScore(score, Globals.LeaderBoards.TopCatrachoLeaderBoard, (bool success) => { });
             mHighestPostedScore = score;
         }
 
