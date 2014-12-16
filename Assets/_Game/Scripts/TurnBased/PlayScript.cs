@@ -5,6 +5,8 @@ using GooglePlayGames.BasicApi.Multiplayer;
 using UnityEngine;
 using System.Collections;
 using x16;
+using System;
+
 
 public class PlayScript : MonoBehaviour {
 
@@ -80,7 +82,8 @@ public class PlayScript : MonoBehaviour {
         {
             
             Debug.Log("Ak MatchComplete");
-            PlayGamesPlatform.Instance.TurnBased.AcknowledgeFinished(mMatch.MatchId,
+
+            PlayGamesPlatform.Instance.TurnBased.AcknowledgeFinished(mMatch,
                     (bool success) =>
                     {
                         if (success)
@@ -309,7 +312,7 @@ public class PlayScript : MonoBehaviour {
        }
         mMatchData.PlayerWon = mMatch.SelfParticipantId;
 
-        PlayGamesPlatform.Instance.TurnBased.Finish(mMatch.MatchId, mMatchData.ToBytes(),
+        PlayGamesPlatform.Instance.TurnBased.Finish(mMatch, mMatchData.ToBytes(),
                    outcome, (bool success) =>
                   {
                       if (success)
@@ -335,7 +338,7 @@ public class PlayScript : MonoBehaviour {
                 this.ResetConsecutiveAnswers();
 
                 PlayGamesPlatform.Instance.TurnBased.TakeTurn
-                    (mMatch.MatchId, mMatchData.ToBytes(),
+                    (mMatch, mMatchData.ToBytes(),
                         mMatchData.CurrentPlayer,
                         (bool success) =>
                         {
@@ -353,7 +356,7 @@ public class PlayScript : MonoBehaviour {
                 mMatchData.CurrentPlayer = "";
                 this.ResetConsecutiveAnswers();
                 PlayGamesPlatform.Instance.TurnBased.TakeTurn
-                (mMatch.MatchId, mMatchData.ToBytes(), null
+                (mMatch, mMatchData.ToBytes(), null
                    ,
                   (bool success) =>
                   {
@@ -380,7 +383,7 @@ public class PlayScript : MonoBehaviour {
         {
 
             PlayGamesPlatform.Instance.TurnBased.TakeTurn
-                (mMatch.MatchId, mMatchData.ToBytes(),
+                (mMatch, mMatchData.ToBytes(),
                     mMatch.SelfParticipantId,
                     (bool success) =>
                     {

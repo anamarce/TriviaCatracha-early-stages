@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 851c79c8e0c404ac8b6062740bca7c1f, type: 2}
   sprites:
-  - name: Background-03-Oval
+  - name: Background-02-Oval
     outer:
       serializedVersion: 2
       x: 375
@@ -59,7 +59,7 @@ MonoBehaviour:
     paddingRight: .012448133
     paddingTop: .00662251655
     paddingBottom: .0198675506
-  - name: Background-03-Rectangle
+  - name: Background-02-Rectangle
     outer:
       serializedVersion: 2
       x: 2
@@ -77,7 +77,7 @@ MonoBehaviour:
     paddingRight: .00808625296
     paddingTop: .00662251655
     paddingBottom: .0198675506
-  - name: Background-03-Round
+  - name: Background-02-Round
     outer:
       serializedVersion: 2
       x: 476
@@ -95,7 +95,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Background-03-Square
+  - name: Background-02-Square
     outer:
       serializedVersion: 2
       x: 2
@@ -113,7 +113,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012820513
     paddingBottom: .012820513
-  - name: Button-03-Accept
+  - name: Button-02-Accept
     outer:
       serializedVersion: 2
       x: 792
@@ -131,7 +131,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Achievement
+  - name: Button-02-Achievement
     outer:
       serializedVersion: 2
       x: 634
@@ -149,7 +149,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Back
+  - name: Button-02-Back
     outer:
       serializedVersion: 2
       x: 160
@@ -167,7 +167,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-BGM
+  - name: Button-02-BGM
     outer:
       serializedVersion: 2
       x: 318
@@ -185,7 +185,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-BGMOff
+  - name: Button-02-BGMOff
     outer:
       serializedVersion: 2
       x: 2
@@ -203,7 +203,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Chat
+  - name: Button-02-Chat
     outer:
       serializedVersion: 2
       x: 476
@@ -221,7 +221,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Close
+  - name: Button-02-Close
     outer:
       serializedVersion: 2
       x: 792
@@ -239,7 +239,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Death
+  - name: Button-02-Death
     outer:
       serializedVersion: 2
       x: 634
@@ -257,7 +257,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Decrease
+  - name: Button-02-Decrease
     outer:
       serializedVersion: 2
       x: 792
@@ -275,7 +275,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: 0
     paddingBottom: .012820513
-  - name: Button-03-Dollar
+  - name: Button-02-Dollar
     outer:
       serializedVersion: 2
       x: 318
@@ -293,7 +293,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Down
+  - name: Button-02-Down
     outer:
       serializedVersion: 2
       x: 2
@@ -311,7 +311,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-DownArrow
+  - name: Button-02-DownArrow
     outer:
       serializedVersion: 2
       x: 160
@@ -329,7 +329,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Download
+  - name: Button-02-Download
     outer:
       serializedVersion: 2
       x: 634
@@ -347,7 +347,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: 0
     paddingBottom: .012820513
-  - name: Button-03-Facebook
+  - name: Button-02-Facebook
     outer:
       serializedVersion: 2
       x: 476
@@ -365,7 +365,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Heart
+  - name: Button-02-Heart
     outer:
       serializedVersion: 2
       x: 792
@@ -383,7 +383,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Help
+  - name: Button-02-Help
     outer:
       serializedVersion: 2
       x: 634
@@ -401,7 +401,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Highscore
+  - name: Button-02-Highscore
     outer:
       serializedVersion: 2
       x: 318
@@ -419,7 +419,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-HorizontalSlider
+  - name: Button-02-HorizontalSlider
     outer:
       serializedVersion: 2
       x: 476
@@ -437,7 +437,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: 0
     paddingBottom: .012820513
-  - name: Button-03-Increase
+  - name: Button-02-Increase
     outer:
       serializedVersion: 2
       x: 318
@@ -455,7 +455,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012820513
     paddingBottom: 0
-  - name: Button-03-Info
+  - name: Button-02-Info
     outer:
       serializedVersion: 2
       x: 2
@@ -473,7 +473,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-LeaderBoard
+  - name: Button-02-LeaderBoard
     outer:
       serializedVersion: 2
       x: 160
@@ -491,7 +491,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012820513
     paddingBottom: 0
-  - name: Button-03-LeftArrow
+  - name: Button-02-LeftArrow
     outer:
       serializedVersion: 2
       x: 160
@@ -509,7 +509,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-LevelSelect
+  - name: Button-02-LevelSelect
     outer:
       serializedVersion: 2
       x: 476
@@ -527,7 +527,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Like
+  - name: Button-02-Like
     outer:
       serializedVersion: 2
       x: 792
@@ -545,7 +545,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Lock
+  - name: Button-02-Lock
     outer:
       serializedVersion: 2
       x: 634
@@ -563,7 +563,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Mail
+  - name: Button-02-Mail
     outer:
       serializedVersion: 2
       x: 2
@@ -581,7 +581,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: 0
     paddingBottom: .012820513
-  - name: Button-03-MainMenu
+  - name: Button-02-MainMenu
     outer:
       serializedVersion: 2
       x: 318
@@ -599,7 +599,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Menu
+  - name: Button-02-Menu
     outer:
       serializedVersion: 2
       x: 2
@@ -617,7 +617,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Multiplayer
+  - name: Button-02-Multiplayer
     outer:
       serializedVersion: 2
       x: 160
@@ -635,7 +635,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Mute
+  - name: Button-02-Mute
     outer:
       serializedVersion: 2
       x: 476
@@ -653,7 +653,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Next
+  - name: Button-02-Next
     outer:
       serializedVersion: 2
       x: 792
@@ -671,7 +671,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Pause
+  - name: Button-02-Pause
     outer:
       serializedVersion: 2
       x: 634
@@ -689,7 +689,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Refresh
+  - name: Button-02-Refresh
     outer:
       serializedVersion: 2
       x: 318
@@ -707,7 +707,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Restart
+  - name: Button-02-Restart
     outer:
       serializedVersion: 2
       x: 2
@@ -725,7 +725,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-RightArrow
+  - name: Button-02-RightArrow
     outer:
       serializedVersion: 2
       x: 160
@@ -743,7 +743,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Settings
+  - name: Button-02-Settings
     outer:
       serializedVersion: 2
       x: 476
@@ -761,7 +761,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Share
+  - name: Button-02-Share
     outer:
       serializedVersion: 2
       x: 776
@@ -779,7 +779,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012820513
     paddingBottom: 0
-  - name: Button-03-Sound
+  - name: Button-02-Sound
     outer:
       serializedVersion: 2
       x: 792
@@ -797,7 +797,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Store
+  - name: Button-02-Store
     outer:
       serializedVersion: 2
       x: 634
@@ -815,7 +815,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Trash
+  - name: Button-02-Trash
     outer:
       serializedVersion: 2
       x: 318
@@ -833,7 +833,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Twitter
+  - name: Button-02-Twitter
     outer:
       serializedVersion: 2
       x: 2
@@ -851,7 +851,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Up
+  - name: Button-02-Up
     outer:
       serializedVersion: 2
       x: 160
@@ -869,7 +869,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-UpArrow
+  - name: Button-02-UpArrow
     outer:
       serializedVersion: 2
       x: 476
@@ -887,7 +887,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-Upload
+  - name: Button-02-Upload
     outer:
       serializedVersion: 2
       x: 618
@@ -905,7 +905,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012820513
     paddingBottom: 0
-  - name: Button-03-UserProfile
+  - name: Button-02-UserProfile
     outer:
       serializedVersion: 2
       x: 318
@@ -923,7 +923,7 @@ MonoBehaviour:
     paddingRight: .012820513
     paddingTop: .012987013
     paddingBottom: .012987013
-  - name: Button-03-VerticalSlider
+  - name: Button-02-VerticalSlider
     outer:
       serializedVersion: 2
       x: 160

@@ -1,4 +1,4 @@
-﻿
+
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
@@ -50,7 +50,7 @@ public class SocialManager : MonoBehaviour {
     {
 	
 			Social.ShowLeaderboardUI();
-			((PlayGamesPlatform) Social.Active).ShowLeaderboardUI(Globals.LeaderBoards.TopGeekLeaderBoard);
+//			((PlayGamesPlatform) Social.Active).ShowLeaderboardUI(Globals.LeaderBoards.TopCatrachoLeaderBoard);
 		
 	
 	}
@@ -63,11 +63,6 @@ public class SocialManager : MonoBehaviour {
     public void UpdateAchievements()
     {
 
-        //((PlayGamesPlatform)Social.Active).IncrementAchievement(
-        //  Globals.Achievements.GeekStarter, 1, (bool success) =>
-        //  {
-        //      // handle success or failure
-        //  });
     }
 		
 

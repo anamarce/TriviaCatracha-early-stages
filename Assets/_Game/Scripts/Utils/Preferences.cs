@@ -7,13 +7,7 @@ using x16;
 public class Preferences
 {
 
-
-  
-   
-    
 	public bool EnableSound;
-
-
 
     public Preferences()
     {
@@ -33,10 +27,6 @@ public class Preferences
         }
         else
             EnableSound = true;
-        
-	
-         
-
     }
 
     public void SavePreferences()
@@ -45,11 +35,6 @@ public class Preferences
             PlayerPrefs.SetString("EnableSound","ON");
         else
             PlayerPrefs.SetString("EnableSound", "OFF");
-
-      
-      
         PlayerPrefs.Save();
     }
-
-    
 }
