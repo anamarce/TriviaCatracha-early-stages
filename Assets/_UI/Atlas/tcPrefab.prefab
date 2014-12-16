@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: FisrtScreenPrefab
+  m_Name: tcPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,21 +39,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 57b04f2881083407385017cd24177f54, type: 2}
+  material: {fileID: 2100000, guid: 748cc689929e84e548e586c2f0430b72, type: 2}
   sprites:
-  - name: first
+  - name: bluebg.jpg
     outer:
       serializedVersion: 2
       x: 2
       y: 2
       width: 500
-      height: 1000
+      height: 1020
     inner:
       serializedVersion: 2
       x: 2
       y: 2
       width: 500
-      height: 1000
+      height: 1020
     rotated: 0
     paddingLeft: 0
     paddingRight: 0

@@ -1,6 +1,3 @@
 lastUpgrade=00900
 proj.AppId=69436147995
 android.SetupDone=true
-ios.ClientId=69436147995-4t3u2vanctc2pc4r3g1simahh3iib0qq.apps.googleusercontent.com
-ios.BundleId=com.xtudio16.triviacatracha
-ios.SetupDone=true
